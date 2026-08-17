@@ -31,8 +31,8 @@ export default function Benefits () {
   ]
 
   return (
-    <section className='relative overflow-hidden bg-[#A7DDD2]/30'>
-      <div aria-hidden='true' className='pointer-events-none absolute bottom-0 right-0 hidden items-end gap-1 text-[#29B380]/15 lg:flex xl:right-6'>
+    <section className='relative overflow-hidden bg-[#B9DCF5]/30'>
+      <div aria-hidden='true' className='pointer-events-none absolute bottom-0 right-0 hidden items-end gap-1 text-[#1A68A3]/15 lg:flex xl:right-6'>
         <Building2 className='h-20 w-20' strokeWidth={1.2}/>
         <Factory className='h-28 w-28' strokeWidth={1.2}/>
         <FerrisWheel className='h-24 w-24' strokeWidth={1.2}/>
@@ -40,22 +40,22 @@ export default function Benefits () {
 
       <div className='container relative z-10 mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-14'>
         <div className='max-w-6xl'>
-          <h2 className='text-2xl font-bold leading-tight text-[#153933] sm:text-3xl'>Benefits of Using Waste Services Ltd</h2>
+          <h2 className='text-2xl font-bold leading-tight text-[#11224D] sm:text-3xl'>Benefits of Using Waste Services Ltd</h2>
 
           <div className='mt-6 space-y-5 sm:mt-8 sm:space-y-6'>
             {benefits.map((benefit, index) => (
               <div
                 key={benefit.title}
                 tabIndex={0}
-                className='group relative flex items-start gap-3 overflow-hidden rounded-xl border border-transparent px-3 py-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-[#29B380]/30 hover:bg-white/75 hover:shadow-[0_10px_30px_rgba(7,127,127,0.12)] focus-visible:-translate-y-0.5 focus-visible:border-[#29B380]/40 focus-visible:bg-white/75 focus-visible:outline-none focus-visible:shadow-[0_10px_30px_rgba(7,127,127,0.12)] sm:gap-4 sm:px-4'
+                className='group relative flex items-start gap-3 overflow-hidden rounded-xl border border-transparent px-3 py-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-[#1A68A3]/30 hover:bg-white/75 hover:shadow-[0_10px_30px_rgba(26,104,163,0.12)] focus-visible:-translate-y-0.5 focus-visible:border-[#1A68A3]/40 focus-visible:bg-white/75 focus-visible:outline-none focus-visible:shadow-[0_10px_30px_rgba(26,104,163,0.12)] sm:gap-4 sm:px-4'
               >
-                <span aria-hidden='true' className='absolute inset-y-3 left-0 w-1 origin-bottom scale-y-0 rounded-full bg-[#29B380] transition-transform duration-300 group-hover:scale-y-100 group-focus:scale-y-100'/>
-                <span className='flex size-8 shrink-0 items-center justify-center rounded-full bg-[#077F7F] text-base font-bold text-white shadow-sm transition-all duration-300 group-hover:scale-110 group-hover:bg-[#29B380] group-hover:shadow-md group-focus:scale-110 group-focus:bg-[#29B380] sm:size-9 sm:text-lg'>
+                <span aria-hidden='true' className='absolute inset-y-3 left-0 w-1 origin-bottom scale-y-0 rounded-full bg-[#1A68A3] transition-transform duration-300 group-hover:scale-y-100 group-focus:scale-y-100'/>
+                <span className='flex size-8 shrink-0 items-center justify-center rounded-full bg-[#11224D] text-base font-bold text-white shadow-sm transition-all duration-300 group-hover:scale-110 group-hover:bg-[#1A68A3] group-hover:shadow-md group-focus:scale-110 group-focus:bg-[#1A68A3] sm:size-9 sm:text-lg'>
                   {index + 1}
                 </span>
 
                 <div className='min-w-0 pt-0.5'>
-                  <h3 className='text-lg font-bold leading-tight text-[#153933] transition-colors duration-300 group-hover:text-[#077F7F] group-focus:text-[#077F7F] sm:text-xl'>{benefit.title}</h3>
+                  <h3 className='text-lg font-bold leading-tight text-[#11224D] transition-colors duration-300 group-hover:text-[#11224D] group-focus:text-[#11224D] sm:text-xl'>{benefit.title}</h3>
                   <div className='mt-1 space-y-2 text-sm leading-relaxed text-black/65 sm:text-base'>
                     {benefit.paragraphs.map((paragraph) => (
                       <p key={paragraph}>{paragraph}</p>

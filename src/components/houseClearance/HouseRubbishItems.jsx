@@ -20,7 +20,7 @@ export default function HouseRubbishItems() {
   return (
     <section className='bg-white'>
       <div className='mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-16'>
-        <h2 className='text-2xl font-bold leading-tight text-[#153933] sm:text-3xl'>
+        <h2 className='text-2xl font-bold leading-tight text-[#11224D] sm:text-3xl'>
           All kinds of house rubbish cleared in Chingford
         </h2>
 
@@ -30,9 +30,9 @@ export default function HouseRubbishItems() {
 
         <div className='mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5'>
           {items.map((item) => (
-            <div key={item} className='group flex min-h-10 items-center justify-between gap-3 rounded-full bg-[#A7DDD2]/35 px-4 py-2 text-sm font-medium text-[#153933] transition duration-300 hover:-translate-y-0.5 hover:bg-[#29B380] hover:shadow-md sm:text-base'>
+            <div key={item} className='group flex min-h-10 items-center justify-between gap-3 rounded-full bg-[#B9DCF5]/35 px-4 py-2 text-sm font-medium text-[#11224D] transition duration-300 hover:-translate-y-0.5 hover:bg-[#1A68A3] hover:shadow-md sm:text-base'>
               <span className='min-w-0 leading-tight'>{item}</span>
-              <Recycle aria-hidden='true' className='size-5 shrink-0 text-[#077F7F]/45 transition duration-300 group-hover:rotate-12 group-hover:scale-110 group-hover:text-[#153933]' strokeWidth={2.5} />
+              <Recycle aria-hidden='true' className='size-5 shrink-0 text-[#11224D]/45 transition duration-300 group-hover:rotate-12 group-hover:scale-110 group-hover:text-[#11224D]' strokeWidth={2.5} />
             </div>
           ))}
         </div>

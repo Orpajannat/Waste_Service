@@ -12,30 +12,30 @@ export default function Navbar () {
             {name: "Prices", href: "/#prices"},
             {name: "House Clearance", href: "/houseClearance"},
             {name: "Garden Clearance", href: "/gardenClearance"},
-            {name: "Flat Clearance", href: "/flat-clearance"},
-            {name: "Garage Clearance", href: "/garage-clearance"},
-            {name: "Furniture Removal & Disposal", href: "/furniture-removal"},
-            {name: "Builders Waste Removal", href: "/builders-waste-removal"},
-            {name: "Junk Collection", href: "/junk-collection"},
-            {name: "Wait & Load", href: "/wait-and-load"},
+            {name: "Flat Clearance", href: "/flatClearance"},
+            {name: "Garage Clearance", href: "/garageClearance"},
+            {name: "Furniture Removal & Disposal", href: "/furnitureRemoval"},
+            {name: "Builders Waste Removal", href: "/buildersWasteRemoval"},
+            {name: "Junk Collection", href: "/junkCollection"},
+            {name: "Wait & Load", href: "/waitAndLoad"},
         ]
         },
         {itemName: "Commercial Waste", href: "/",
         subItem:[
-            {name: "Builders Waste Removal", href: "/commercial/builders-waste-removal"},
-            {name: "Office Waste Clearance", href: "/commercial/office-waste-clearance"},
-            {name: "Fly Tipping Clearance", href: "/commercial/fly-tipping-clearance"},
-            {name: "Restaurant Clearance", href: "/commercial/restaurant-clearance"},
+            {name: "Builders Waste Removal", href: "/buildersWasteRemoval"},
+            {name: "Office Waste Clearance", href: "/officeWasteClearance"},
+            {name: "Fly Tipping Clearance", href: "/flyTippingClearance"},
+            {name: "Restaurant Clearance", href: "/restaurantClearance"},
         ]
         },
-        {itemName: "Rubbish Removal", href: "/",
+        {itemName: "Cleaning", href: "/",
         subItem:[
-            {name: "Window Cleaning", href: "/window-cleaning"},
-            {name: "Communal Area Cleaning", href: "/communal-area-cleaning"},
-            {name: "Ground Maintainance", href: "/ground-maintainance"},
+            {name: "Window Cleaning", href: "/windowCleaning"},
+            {name: "Communal Area Cleaning", href: "/communalAreaCleaning"},
+            {name: "Ground Maintainance", href: "/groundMaintainance"},
         ]
         },
-        {itemName: "Rubbish Removal", href: "/",
+        {itemName: "Garden Services", href: "/",
         subItem:[
             {name: "Lawn Mowing", href: "/lawnMowing"},
             {name: "Hedge Cutting", href: "/hedgeCutting"},
@@ -49,7 +49,7 @@ export default function Navbar () {
         },
     ]
   return (
-    <nav className='order-first bg-[#077F7F] text-white lg:order-last lg:py-5 lg:text-current' aria-label='Main navigation'>
+    <nav className='order-first bg-[#11224D] text-white lg:order-last lg:py-2 lg:text-current' aria-label='Main navigation'>
         <div className='container mx-auto'>
             <button
                 type='button'
@@ -69,15 +69,18 @@ export default function Navbar () {
             {navItems.map((navItem, index)=>(
                 <div
                 key={`${navItem.itemName}-${index}`}
-                className='relative border-b border-white/15 last:border-0 lg:border-0'>
+                className='group relative border-b border-white/15 last:border-0 lg:border-0'>
                     {navItem.subItem ? (
                         <button
                         type='button'
                         aria-expanded={navOpen === index}
                         onClick={()=>setNavOpen(navOpen === index ? null : index)}
-                        className='flex w-full flex-row items-center justify-between py-3 text-left font-semibold hover:text-gray-300 lg:w-auto lg:justify-start lg:py-0 lg:hover:text-white/50'>
+                        className='flex w-full flex-row items-center justify-between py-3 text-left font-semibold hover:text-gray-300 lg:w-auto lg:justify-start lg:py-0 lg:hover:text-white/50 hover:cursor-pointer'>
                             {navItem.itemName}
-                            <ChevronDown size={16}/>
+                            <ChevronDown
+                            aria-hidden='true'
+                            size={16}
+                            className='ml-1 transition-transform duration-200 lg:group-hover:rotate-180 lg:group-focus-within:rotate-180'/>
                         </button>
                     ) : (
                         <Link
@@ -87,9 +90,9 @@ export default function Navbar () {
                             {navItem.itemName}
                         </Link>
                     )}
-                    {navOpen === index && navItem.subItem && (
+                    {navItem.subItem && (
                         <div
-                        className='pb-2 lg:absolute lg:-right-10 lg:top-10 lg:z-50 lg:bg-[#077F7F] lg:py-5'>
+                        className={`${navOpen === index ? 'block' : 'hidden'} pb-2 lg:absolute lg:-right-10 lg:top-10 lg:z-50 lg:hidden lg:bg-[#11224D] lg:py-5 lg:shadow-2xl lg:shadow-black/25 lg:group-hover:block lg:group-focus-within:block`}>
                             {navItem.subItem.map((subItem)=> (
                                 <Link
                                 key={subItem.href}
@@ -98,7 +101,7 @@ export default function Navbar () {
                                    setNavOpen(null)
                                   setMenuOpen(false)
                                      }}
-                                className='block cursor-pointer border-t border-white/15 px-4 py-2 lg:text-nowrap lg:border-b lg:border-t-0 lg:px-10'>
+                                className='block cursor-pointer border-t border-white/15 px-4 py-2 transition-colors duration-150 lg:text-nowrap lg:border-b lg:border-t-0 lg:px-10 lg:hover:bg-white/15 lg:hover:text-white lg:focus-visible:bg-white/15 lg:focus-visible:outline-none'>
                                     {subItem.name}
                                 </Link>
                             ))}

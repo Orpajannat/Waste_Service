@@ -10,11 +10,11 @@ export default function Hero () {
             <h1 className='text-2xl font-semibold leading-tight sm:text-3xl lg:text-4xl'>
                 House Clearance Rubbish Removal in Chingford
             </h1>
-            <button type='button' className='group flex flex-row items-center gap-2 rounded-lg bg-[#29B380] px-4 py-2 font-bold text-black hover:bg-[#19452A] hover:text-white/80'>
+            <button type='button' className='group flex flex-row items-center gap-2 rounded-lg bg-[#1A68A3] px-4 py-2 font-bold text-black hover:bg-[#0D3A66] hover:text-white/80'>
                 Check Prices & Book
                 <ArrowRight className='transition duration-300 group-hover:translate-x-1'/>
             </button>
-            <p className='text-sm leading-relaxed text-green-100/80 sm:text-base'>
+            <p className='text-sm leading-relaxed text-blue-100/80 sm:text-base'>
                 Our house clearance and rubbish removal services save you money, heavy lifting and trips to the local Chingford dump
             </p>
         </div>

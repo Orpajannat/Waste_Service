@@ -56,10 +56,10 @@ export default function FAQ() {
   ]
 
   return (
-    <main className='bg-[#A7DDD2]/20'>
-      <header className='bg-[#077F7F]/70 px-4 py-10 text-center sm:px-6 sm:py-12'>
+    <main className='bg-[#B9DCF5]/20'>
+      <header className='bg-[#11224D]/70 px-4 py-10 text-center sm:px-6 sm:py-12'>
         <div className='mx-auto flex max-w-6xl items-center justify-center gap-3'>
-          <HelpCircle className='hidden size-10 text-[#A7DDD2] sm:block' aria-hidden='true' />
+          <HelpCircle className='hidden size-10 text-[#B9DCF5] sm:block' aria-hidden='true' />
           <h1 className='text-3xl font-bold uppercase leading-tight text-white sm:text-4xl lg:text-5xl'>
             Frequently Asked Questions
           </h1>
@@ -69,8 +69,8 @@ export default function FAQ() {
       <div className='mx-auto w-full max-w-6xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-14'>
         <div className='space-y-4'>
           {questions.map(({ question, answers }) => (
-            <article key={question} className='group rounded-xl border border-[#29B380]/15 bg-white p-5 transition duration-300 hover:-translate-y-1 hover:border-[#29B380]/45 hover:shadow-[0_12px_30px_rgba(7,127,127,0.12)] sm:p-6'>
-              <h2 className='text-lg font-bold text-[#153933] transition-colors group-hover:text-[#077F7F] sm:text-xl'>
+            <article key={question} className='group rounded-xl border border-[#1A68A3]/15 bg-white p-5 transition duration-300 hover:-translate-y-1 hover:border-[#1A68A3]/45 hover:shadow-[0_12px_30px_rgba(26,104,163,0.12)] sm:p-6'>
+              <h2 className='text-lg font-bold text-[#11224D] transition-colors group-hover:text-[#11224D] sm:text-xl'>
                 {question}
               </h2>
               <div className='mt-2 space-y-3 text-sm leading-relaxed text-neutral-700 sm:text-base'>
@@ -80,23 +80,23 @@ export default function FAQ() {
           ))}
         </div>
 
-        <section className='mt-4 rounded-xl border border-[#29B380]/15 bg-white p-5 transition duration-300 hover:border-[#29B380]/45 hover:shadow-[0_12px_30px_rgba(7,127,127,0.12)] sm:p-6'>
-          <h2 className='text-lg font-bold text-[#153933] sm:text-xl'>Surcharges for some items</h2>
+        <section className='mt-4 rounded-xl border border-[#1A68A3]/15 bg-white p-5 transition duration-300 hover:border-[#1A68A3]/45 hover:shadow-[0_12px_30px_rgba(26,104,163,0.12)] sm:p-6'>
+          <h2 className='text-lg font-bold text-[#11224D] sm:text-xl'>Surcharges for some items</h2>
           <p className='mt-2 text-sm leading-relaxed text-neutral-700 sm:text-base'>
             To cover the fees levied by waste transfer sites, the following items may carry an additional charge:
           </p>
           <div className='mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3'>
             {surcharges.map((item) => (
-              <div key={item} className='group/item flex min-h-12 items-center gap-3 rounded-lg bg-[#A7DDD2]/30 px-4 py-3 text-sm text-[#153933] transition duration-300 hover:bg-[#29B380] hover:shadow-md sm:text-base'>
-                <CirclePlus className='size-5 shrink-0 text-[#077F7F] transition-transform duration-300 group-hover/item:rotate-90' aria-hidden='true' />
+              <div key={item} className='group/item flex min-h-12 items-center gap-3 rounded-lg bg-[#B9DCF5]/30 px-4 py-3 text-sm text-[#11224D] transition duration-300 hover:bg-[#1A68A3] hover:shadow-md sm:text-base'>
+                <CirclePlus className='size-5 shrink-0 text-[#11224D] transition-transform duration-300 group-hover/item:rotate-90' aria-hidden='true' />
                 <span>{item}</span>
               </div>
             ))}
           </div>
         </section>
 
-        <section className='mt-4 rounded-xl border border-[#29B380]/15 bg-white p-5 transition duration-300 hover:-translate-y-1 hover:border-[#29B380]/45 hover:shadow-[0_12px_30px_rgba(7,127,127,0.12)] sm:p-6'>
-          <h2 className='text-lg font-bold text-[#153933] sm:text-xl'>What waste or rubbish cannot be collected?</h2>
+        <section className='mt-4 rounded-xl border border-[#1A68A3]/15 bg-white p-5 transition duration-300 hover:-translate-y-1 hover:border-[#1A68A3]/45 hover:shadow-[0_12px_30px_rgba(26,104,163,0.12)] sm:p-6'>
+          <h2 className='text-lg font-bold text-[#11224D] sm:text-xl'>What waste or rubbish cannot be collected?</h2>
           <div className='mt-2 space-y-3 text-sm leading-relaxed text-neutral-700 sm:text-base'>
             <p>We can&apos;t remove raw meat or fish, paints, solvents, chemicals, oil, petrol, diesel, gas bottles or fire extinguishers.</p>
             <p>We also can&apos;t work at heights, so the waste will need to be safely accessible.</p>

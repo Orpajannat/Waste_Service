@@ -2,8 +2,8 @@ export default function LawnMowingServices() {
   return (
     <section className='bg-white'>
       <div className='mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-16'>
-        <div className='rounded-2xl border-l-4 border-[#29B380] px-5 py-6 transition duration-300 hover:bg-[#A7DDD2]/20 hover:shadow-[0_12px_30px_rgba(7,127,127,0.10)] sm:px-7 sm:py-8 lg:px-9'>
-          <h2 className='text-2xl font-bold uppercase leading-tight text-[#153933] sm:text-3xl lg:text-4xl'>
+        <div className='rounded-2xl border-l-4 border-[#1A68A3] px-5 py-6 transition duration-300 hover:bg-[#B9DCF5]/20 hover:shadow-[0_12px_30px_rgba(26,104,163,0.10)] sm:px-7 sm:py-8 lg:px-9'>
+          <h2 className='text-2xl font-bold uppercase leading-tight text-[#11224D] sm:text-3xl lg:text-4xl'>
             Lawn Mowing Services in Chingford
           </h2>
 

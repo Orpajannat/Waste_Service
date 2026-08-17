@@ -3,9 +3,9 @@ import GardenHero from '@/components/gradenClearance/GardenHero'
 import GetPrices from '@/components/houseClearance/GetPrices'
 import ServiceHighlights from '@/components/houseClearance/ServiceHighlights'
 import WhyChooseUs from '@/components/houseClearance/WhyChooseUs'
-import GardenRubbishItems from '@/components/gardenClearance/GardenRubbishItems'
 import React from 'react'
 import QuoteForm from '@/components/home/QuoteForm'
+import GardenRubbishItems from '@/components/gradenClearance/GardenRubbishItems'
 
 export default function page () {
   return (

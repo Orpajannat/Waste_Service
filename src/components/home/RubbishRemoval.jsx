@@ -22,7 +22,7 @@ export default function RubbishRemoval () {
                     <div
                     key={index}
                     className='flex min-w-0 flex-row items-start gap-2 sm:gap-3'>
-                        <Recycle className='mt-0.5 size-5 shrink-0 text-[#1fa87a] sm:size-6' />
+                        <Recycle className='mt-0.5 size-5 shrink-0 text-[#1A68A3] sm:size-6' />
                         <p className='min-w-0 text-base leading-snug text-black/60 sm:text-lg'>{list.title}</p>
                     </div>
                 ))}

@@ -5,7 +5,7 @@ import ServiceList from './ServiceList'
 export default function RubbishService () {
   return (
     <div>
-        <div className='relative w-full overflow-hidden bg-[#153933]'>
+        <div className='relative w-full overflow-hidden bg-[#11224D]'>
             <Image src={"/images/Place.webp"} alt="" fill sizes='100vw' className='object-cover object-center'/>
             <Image src={"/images/Black.png"} alt="" fill sizes='100vw' className='object-cover opacity-75'/>
             <ServiceList/>
