@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react'
 import Link from 'next/link';
-import { House, ChevronDown, Menu } from 'lucide-react';
+import { ChevronDown, ChevronRight, Menu } from 'lucide-react';
 
 export default function Navbar () {
     const[navOpen, setNavOpen]= useState(null)
@@ -49,33 +49,32 @@ export default function Navbar () {
         },
     ]
   return (
-    <nav className='order-first bg-[#11224D] text-white lg:order-last lg:py-2 lg:text-current' aria-label='Main navigation'>
-        <div className='container mx-auto'>
+    <nav className='order-1 w-auto shrink-0 bg-transparent text-[#11224D] lg:order-2 lg:min-w-0 lg:flex-1 lg:py-2' aria-label='Main navigation'>
+        <div>
             <button
                 type='button'
                 aria-expanded={menuOpen}
                 aria-controls='main-menu'
                 onClick={() => setMenuOpen(!menuOpen)}
-                className='flex w-full items-center gap-2 px-4 py-2 text-xl font-normal uppercase sm:px-6 lg:hidden'
+                aria-label='Toggle navigation menu'
+                className='flex items-center justify-center rounded-md p-1.5 text-[#11224D] transition-colors hover:bg-[#EAF2FB] lg:hidden'
             >
-                <Menu aria-hidden='true' size={32} strokeWidth={3} />
-                <span>Menu</span>
+                <Menu aria-hidden='true' size={28} strokeWidth={3} />
             </button>
             <div
                 id='main-menu'
-                className={`${menuOpen ? 'flex' : 'hidden'} flex-col border-t border-white/20 px-4 pb-3 sm:px-6 lg:flex lg:flex-row lg:items-center lg:justify-center lg:gap-7 lg:border-0 lg:px-4 lg:pb-0 xl:gap-10`}
+                className={`${menuOpen ? 'flex' : 'hidden'} absolute inset-x-0 top-full mt-2 max-h-[calc(100vh-6rem)] flex-col overflow-y-auto rounded-2xl border border-[#11224D]/10 bg-white/95 px-4 pb-3 shadow-xl backdrop-blur-md sm:px-6 lg:static lg:mt-0 lg:flex lg:max-h-none lg:flex-row lg:items-center lg:justify-center lg:gap-1 lg:overflow-visible lg:rounded-none lg:border-0 lg:bg-transparent lg:px-1 lg:pb-0 lg:shadow-none lg:backdrop-blur-none xl:gap-5 xl:px-2`}
             >
-            <Link href='/' aria-label='Home' className='hidden shrink-0 hover:text-white/50 lg:block'><House /></Link>
             {navItems.map((navItem, index)=>(
                 <div
                 key={`${navItem.itemName}-${index}`}
-                className='group relative border-b border-white/15 last:border-0 lg:border-0'>
+                className={`group relative w-full border-b border-[#11224D]/10 last:border-0 lg:w-auto lg:border-0 ${(index === 1 || index === 2) ? 'lg:hidden' : ''}`}>
                     {navItem.subItem ? (
                         <button
                         type='button'
                         aria-expanded={navOpen === index}
                         onClick={()=>setNavOpen(navOpen === index ? null : index)}
-                        className='flex w-full flex-row items-center justify-between py-3 text-left font-semibold hover:text-gray-300 lg:w-auto lg:justify-start lg:py-0 lg:hover:text-white/50 hover:cursor-pointer'>
+                        className='flex w-full cursor-pointer flex-row items-center justify-between py-3 text-left font-semibold text-[#11224D] transition-colors hover:text-[#1A68A3] lg:w-auto lg:justify-center lg:whitespace-nowrap lg:py-0 lg:text-center lg:text-base'>
                             {navItem.itemName}
                             <ChevronDown
                             aria-hidden='true'
@@ -86,13 +85,13 @@ export default function Navbar () {
                         <Link
                         href={navItem.href}
                         onClick={() => setMenuOpen(false)}
-                        className='flex w-full flex-row items-center justify-between py-3 text-left font-semibold hover:text-gray-300 lg:w-auto lg:justify-start lg:py-0 lg:hover:text-white/50'>
+                        className='flex w-full flex-row items-center justify-start py-3 text-left font-semibold text-[#11224D] transition-colors hover:text-[#1A68A3] lg:w-auto lg:justify-center lg:whitespace-nowrap lg:py-0 lg:text-center lg:text-base'>
                             {navItem.itemName}
                         </Link>
                     )}
                     {navItem.subItem && (
                         <div
-                        className={`${navOpen === index ? 'block' : 'hidden'} pb-2 lg:absolute lg:-right-10 lg:top-10 lg:z-50 lg:hidden lg:bg-[#11224D] lg:py-5 lg:shadow-2xl lg:shadow-black/25 lg:group-hover:block lg:group-focus-within:block`}>
+                        className={`${navOpen === index ? 'block' : 'hidden'} pb-2 text-[#11224D] lg:absolute lg:-right-10 lg:top-10 lg:z-50 lg:hidden lg:rounded-md lg:bg-white/90 lg:py-3 lg:shadow-2xl lg:shadow-black/20 lg:group-hover:block lg:group-focus-within:block`}>
                             {navItem.subItem.map((subItem)=> (
                                 <Link
                                 key={subItem.href}
@@ -101,9 +100,32 @@ export default function Navbar () {
                                    setNavOpen(null)
                                   setMenuOpen(false)
                                      }}
-                                className='block cursor-pointer border-t border-white/15 px-4 py-2 transition-colors duration-150 lg:text-nowrap lg:border-b lg:border-t-0 lg:px-10 lg:hover:bg-white/15 lg:hover:text-white lg:focus-visible:bg-white/15 lg:focus-visible:outline-none'>
+                                className='block cursor-pointer border-t border-[#11224D]/10 px-4 py-2 text-left text-[#11224D] transition-colors duration-150 hover:bg-[#EAF2FB] hover:text-[#11224D] focus-visible:bg-[#EAF2FB] focus-visible:text-[#11224D] focus-visible:outline-none lg:text-nowrap lg:border-b lg:border-t-0 lg:px-10 lg:text-left'>
                                     {subItem.name}
                                 </Link>
+                            ))}
+                            {index === 0 && navItems.slice(1, 3).map((nestedItem) => (
+                                <div key={nestedItem.itemName} className='group/nested relative hidden lg:block'>
+                                    <button
+                                      type='button'
+                                      className='flex w-full cursor-pointer items-center justify-between gap-6 border-b border-[#11224D]/10 px-10 py-2 text-nowrap text-[#11224D] transition-colors duration-150 hover:bg-[#EAF2FB] focus-visible:bg-[#EAF2FB] focus-visible:outline-none'
+                                    >
+                                      <span>{nestedItem.itemName}</span>
+                                      <ChevronRight aria-hidden='true' className='size-4 transition-transform group-hover/nested:translate-x-1' />
+                                    </button>
+
+                                    <div className='absolute left-full top-0 z-50 hidden min-w-max rounded-md bg-white/95 py-3 shadow-2xl shadow-black/20 backdrop-blur-md group-hover/nested:block group-focus-within/nested:block'>
+                                      {nestedItem.subItem.map((nestedSubItem) => (
+                                        <Link
+                                          key={nestedSubItem.href}
+                                          href={nestedSubItem.href}
+                                          className='block border-b border-[#11224D]/10 px-10 py-2 text-center text-nowrap text-[#11224D] transition-colors duration-150 last:border-b-0 hover:bg-[#EAF2FB] focus-visible:bg-[#EAF2FB] focus-visible:outline-none'
+                                        >
+                                          {nestedSubItem.name}
+                                        </Link>
+                                      ))}
+                                    </div>
+                                </div>
                             ))}
                         </div>
                     )}

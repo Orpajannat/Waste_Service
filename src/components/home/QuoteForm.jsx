@@ -94,7 +94,7 @@ export default function QuoteForm() {
           </label>
 
           <button
-            className='min-h-12 w-full rounded-md bg-[#11224D] px-6 text-lg font-bold text-[#eceff5] transition hover:bg-[#eceff5] hover:text-[#11224D] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/40 active:scale-[0.99] sm:text-xl hover:border-2 border-[#11224D]'
+            className='min-h-12 w-full rounded-md bg-[#11224D] px-6 text-lg font-bold text-[#eceff5] transition hover:bg-[#eceff5] hover:text-[#11224D] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/40 active:scale-[0.99] sm:text-xl'
             type='submit'
           >
             SEND

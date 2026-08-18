@@ -5,11 +5,13 @@ import RubbishRemoval from "@/components/home/RubbishRemoval";
 import RubbishService from "@/components/home/RubbishService";
 import QuoteForm from "@/components/home/QuoteForm";
 import SecondaryNav from "@/components/layout/SecondaryNav";
+import Hero from "@/components/home/Hero";
 
 export default function Home() {
   return (
     <div>
       <main>
+        <Hero/>
         <SecondaryNav/>
         <Order/>
         <RubbishRemoval/>

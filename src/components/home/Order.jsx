@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import { ChevronRight } from 'lucide-react';
+import { ChevronRight, Recycle } from 'lucide-react';
 
 export default function Order () {
     const Items=[
@@ -47,17 +47,23 @@ export default function Order () {
   return (
     <div className='bg-[#B9DCF5]/30'>
         <div className='container mx-auto flex max-w-7xl flex-col items-center justify-center gap-4 px-4 py-8 text-center sm:px-6 sm:py-10 md:gap-5 lg:px-8 lg:py-14'>
-            <h1 className='text-3xl font-bold leading-tight text-[#11224D] sm:text-4xl lg:text-5xl'>Order Chingford Rubbish Removal</h1>
-            <h2 className='text-xl font-semibold leading-snug text-[#11224D] sm:text-2xl lg:text-3xl'>Get prices &amp; book your waste collection Online:</h2>
+            <div className='flex max-w-full flex-row items-center justify-center gap-2 rounded-full border border-[#11224D]/10 bg-[#4974AF]/20 px-2 py-1 shadow-xl'>
+                <Recycle aria-hidden='true' className='size-5 shrink-0 text-[#11224D]'/>
+                <p className='text-sm text-[#11224D] sm:text-base'>We take it all. You relax.</p>
+            </div>
+            <div>
+                <h1 className='text-3xl font-bold leading-tight text-[#11224D] sm:text-4xl lg:text-5xl'>Order Chingford</h1>
+                <h1 className='text-3xl font-bold leading-tight text-[#0497E2] sm:text-4xl lg:text-5xl'>Rubbish Removal</h1>
+            </div>
+            <h2 className='text-lg leading-snug text-[#11224D] sm:text-2xl lg:text-3xl'>Get <span className='font-semibold text-[#0497E2]'>prices &amp; book</span> your waste collection Online:</h2>
             <p className='max-w-4xl text-sm leading-relaxed text-neutral-500 sm:text-base'>We can sort out those awkward clearance jobs that you haven&apos;t got round to. Everything from DIY waste to old mattresses.</p>
-            <div id='prices' className='mt-3 grid w-full scroll-mt-6 grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-5'>
+            <div id='prices' className='mt-3 grid w-full scroll-mt-24 grid-cols-1 gap-3 sm:gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-5'>
                 {Items.map((item, index)=>(
                     <div
-                    id="prices"
                     key={index}
-                    className="group flex min-h-24 min-w-0 flex-row items-center justify-between gap-3 rounded-lg bg-linear-to-r from-[#1A68A3] to-[#eceef0] p-4 text-left transition duration-300 hover:-translate-y-1 hover:shadow-lg sm:min-h-28 sm:gap-4 sm:p-5">
+                    className="group flex min-h-24 min-w-0 flex-row items-center justify-between gap-2 rounded-lg bg-linear-to-r from-[#1A68A3] via-[#11224D] to-[#1A68A3] p-3 text-left transition duration-300 hover:-translate-y-1 hover:shadow-lg sm:min-h-28 sm:gap-3 sm:p-4">
                         <div className='flex min-w-0 flex-row items-center gap-3 sm:gap-4'>
-                            <div className='relative size-16 shrink-0 overflow-hidden rounded-lg bg-white p-2 sm:size-18'>
+                            <div className='relative size-16 shrink-0 overflow-hidden rounded-full bg-white p-2 sm:size-18'>
                                 <Image
                                     src={item.image}
                                     alt={item.title}
@@ -66,10 +72,10 @@ export default function Order () {
                                     className='object-contain p-2 transition duration-300 group-hover:scale-105'
                                 />
                             </div>
-                            <p className='min-w-0 text-base font-semibold leading-snug text-[#11224D] sm:text-lg'>{item.title}</p>
+                            <p className='min-w-0 text-base font-semibold leading-snug text-white sm:text-lg'>{item.title}</p>
                         </div>
                         <div className='shrink-0 transition duration-300 group-hover:translate-x-1 sm:group-hover:translate-x-2'>
-                            <ChevronRight className='text-[#11224D]'/>
+                            <ChevronRight aria-hidden='true' className='text-white'/>
                         </div>
                     </div>
                 ))}
