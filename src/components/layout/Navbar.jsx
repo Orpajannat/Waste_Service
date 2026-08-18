@@ -14,10 +14,7 @@ export default function Navbar () {
             {name: "Garden Clearance", href: "/gardenClearance"},
             {name: "Flat Clearance", href: "/flatClearance"},
             {name: "Garage Clearance", href: "/garageClearance"},
-            {name: "Furniture Removal & Disposal", href: "/furnitureRemoval"},
-            {name: "Builders Waste Removal", href: "/buildersWasteRemoval"},
-            {name: "Junk Collection", href: "/junkCollection"},
-            {name: "Wait & Load", href: "/waitAndLoad"},
+            {name: "Builders Waste Removal", href: "/buildersWasteRemoval"}
         ]
         },
         {itemName: "Commercial Waste", href: "/",
