@@ -3,6 +3,8 @@ import HedgeCuttingServices from '@/components/hedgeCutting/HedgeCuttingServices
 import HedgeCuttingDetails from '@/components/hedgeCutting/HedgeCuttingDetails'
 import GardenServiceCards from '@/components/lawnMowing/GardenServiceCards'
 import QuoteForm from '@/components/home/QuoteForm'
+import GetPrices from '@/components/houseClearance/GetPrices'
+import HowItWorks from '@/components/home/HowItWorks'
 
 export default function HedgeCuttingPage () {
   return (
@@ -11,6 +13,8 @@ export default function HedgeCuttingPage () {
       <HedgeCuttingServices/>
       <HedgeCuttingDetails/>
       <GardenServiceCards/>
+      <HowItWorks/>
+      <GetPrices/>
       <QuoteForm/>
     </main>
   )

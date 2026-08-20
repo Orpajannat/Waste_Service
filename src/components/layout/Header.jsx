@@ -23,10 +23,10 @@ export default function Header () {
 
             <div className='order-3 ml-auto flex shrink-0 items-center justify-center gap-3 lg:ml-0'>
                 <a href='tel:02082266477' className='hidden whitespace-nowrap text-lg font-bold leading-none text-[#0398E9] xl:block'>020 8226 6477</a>
-                <button className='group flex items-center justify-center gap-2 rounded-full border border-[#11224D] bg-[#11224D] px-3 py-1.5 text-sm font-semibold text-white transition-colors hover:bg-white hover:text-[#11224D] sm:px-5 lg:px-4 xl:px-6'>
+                <Link href="/#prices" className='group flex items-center justify-center gap-2 rounded-full border border-[#11224D] bg-[#11224D] px-3 py-1.5 text-sm font-semibold text-white transition-colors hover:bg-white hover:text-[#11224D] sm:px-5 lg:px-4 xl:px-6'>
                     Prices &amp; Book
                     <ArrowRight className='size-5 rounded-full bg-white p-1 text-[#11224D] transition duration-200 group-hover:translate-x-1'/>
-                </button>
+                </Link >
             </div>
         </div>
     </header>

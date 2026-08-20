@@ -7,6 +7,7 @@ import ServiceHighlights from '@/components/houseClearance/ServiceHighlights'
 import HouseRubbishItems from '@/components/houseClearance/HouseRubbishItems'
 import React from 'react'
 import QuoteForm from '@/components/home/QuoteForm'
+import HowItWorks from '@/components/home/HowItWorks'
 
 export default function page () {
   return (
@@ -16,6 +17,7 @@ export default function page () {
         <RubbishService/>
         <HouseClearanceServices/>
         <WhyChooseUs/>
+        <HowItWorks/>
         <ServiceHighlights/>
         <HouseRubbishItems/>
         <QuoteForm/>

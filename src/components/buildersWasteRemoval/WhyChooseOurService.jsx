@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Building2, Check, FerrisWheel, Landmark } from 'lucide-react'
+import { Building2, Check, ChevronRight, FerrisWheel, Landmark } from 'lucide-react'
 
 const reasons = [
   'London trusted #best builders waste removal',
@@ -34,7 +34,7 @@ const steps = [
 
 export default function WhyChooseOurService() {
   return (
-    <section className='relative overflow-hidden bg-[#B9DCF5]/25'>
+    <section className='relative overflow-hidden bg-linear-to-b from-[#E9F4FC] to-[#FFFFFF]'>
       <div aria-hidden='true' className='pointer-events-none absolute -bottom-6 -right-6 hidden items-end gap-1 text-[#11224D]/10 lg:flex'>
         <Landmark className='h-24 w-24' strokeWidth={1} />
         <Building2 className='h-36 w-24' strokeWidth={1} />
@@ -46,16 +46,70 @@ export default function WhyChooseOurService() {
           Why choose London Waste Services Ltd for Builders Waste Removal?
         </h2>
 
-        <ul className='mt-5 grid gap-x-8 gap-y-1 sm:grid-cols-2 lg:grid-cols-3'>
-          {reasons.map((reason) => (
-            <li key={reason} className='group flex items-start gap-3 rounded-lg px-2 py-2.5 text-sm text-[#344054] transition duration-300 motion-safe:hover:-translate-y-0.5 hover:bg-white hover:shadow-md sm:text-base'>
-              <Check aria-hidden='true' className='mt-0.5 size-5 shrink-0 text-[#1A68A3] transition-transform duration-300 motion-safe:group-hover:scale-125' strokeWidth={4} />
-              <span className='leading-relaxed'>{reason}</span>
-            </li>
-          ))}
-        </ul>
+        <div className='mt-5 grid grid-cols-1 gap-4 sm:grid-cols-1 lg:mt-6 lg:grid-cols-2 lg:gap-5'>
 
-        <p className='mt-2 text-sm text-[#344054] sm:text-base'>
+          {reasons.map((reason, index) => (
+
+            <div
+              key={reason}
+              className='group relative flex min-h-20 cursor-pointer items-center gap-4 overflow-hidden rounded-2xl border border-[#11224D]/10 bg-white px-4 py-4 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-[#0497E2]/30 hover:shadow-xl hover:shadow-[#11224D]/10 sm:px-5'
+            >
+
+              <div className='absolute left-0 top-0 h-full w-1 bg-[#0497E2] transition-all duration-500 group-hover:w-2' />
+
+              <div className='flex size-12 shrink-0 items-center justify-center rounded-xl bg-[#11224D]/5 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 group-hover:bg-[#11224D]'>
+
+                <Check
+                  aria-hidden='true'
+                  className='size-6 text-[#11224D] transition-all duration-500 group-hover:scale-125 group-hover:text-white'
+                  strokeWidth={2.5}
+                />
+
+              </div>
+
+              <div className='min-w-0 flex-1'>
+
+                <div className='mb-1 flex items-center gap-2'>
+
+                  <span className='text-xs font-bold tracking-widest text-[#0497E2]'>
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
+
+                  <span className='h-px w-5 bg-[#0497E2]/30 transition-all duration-500 group-hover:w-10' />
+
+                </div>
+
+                <p className='text-base font-bold leading-snug text-[#11224D] transition-colors duration-300 group-hover:text-[#0497E2] sm:text-lg'>
+                  {reason}
+                </p>
+
+              </div>
+
+            </div>
+
+          ))}
+
+        </div>
+
+        <a
+          href='tel:02082266477'
+          className='group mt-8 flex w-full items-center justify-center gap-3 rounded-2xl bg-[#11224D] px-5 py-4 text-center text-sm font-bold uppercase leading-relaxed text-white shadow-lg shadow-[#11224D]/10 transition-all duration-500 hover:-translate-y-1 hover:bg-[#0497E2] hover:shadow-xl hover:shadow-[#0497E2]/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#11224D] sm:px-7 sm:text-base lg:text-lg'
+        >
+          <span>
+            Call us today for more information on our builders waste removal services -
+            <strong className='ml-1 whitespace-nowrap'>020 8226 6477</strong>
+          </span>
+
+          <span className='flex size-9 shrink-0 items-center justify-center rounded-full bg-white/10 transition-all duration-500 group-hover:bg-white group-hover:text-[#11224D]'>
+            <ChevronRight
+              aria-hidden='true'
+              className='size-5 transition-transform duration-500 group-hover:translate-x-1'
+              strokeWidth={3}
+            />
+          </span>
+        </a>
+
+        <p className='mt-6 text-sm text-[#344054] sm:text-base'>
           For helpful information and common FAQs -{' '}
           <Link href='/faq' className='font-semibold text-[#11224D] underline-offset-2 transition hover:text-[#1A68A3] hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1A68A3]'>Click here</Link>
         </p>

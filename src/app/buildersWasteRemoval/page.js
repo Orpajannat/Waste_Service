@@ -7,12 +7,14 @@ import GetPrices from '@/components/houseClearance/GetPrices'
 import ServiceHighlights from '@/components/houseClearance/ServiceHighlights'
 import BuildersWasteInfo from '@/components/buildersWasteRemoval/BuildersWasteInfo'
 import React from 'react'
+import HowItWorks from '@/components/home/HowItWorks'
 
 export default function page () {
   return (
     <div>
         <BuildersHero/>
         <GetPrices/>
+        <HowItWorks/>
         <RubbishService/>
         <BuildersWasteServices/>
         <WhyChooseOurService/>

@@ -14,9 +14,10 @@ export default function GardenRubbishItems() {
   return (
     <section className='bg-white'>
       <div className='mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-16'>
-        <h2 className='text-2xl font-bold leading-tight text-[#11224D] sm:text-3xl'>
+        <h2 className='text-2xl font-bold leading-tight text-[#11224D] sm:text-3xl lg:text-4xl'>
           All kinds of garden rubbish cleared in Chingford
         </h2>
+        <div className='h-1 w-12 rounded-full bg-linear-to-r from-[#11224D] to-[#4873AF]'></div>
 
         <p className='mt-5 text-sm leading-relaxed text-neutral-700 sm:text-base'>
           These are just some of the examples of the garden waste we have cleared already this year:
@@ -26,12 +27,12 @@ export default function GardenRubbishItems() {
           {items.map((item) => (
             <div
               key={item}
-              className='group flex min-h-10 items-center justify-between gap-3 rounded-full bg-[#B9DCF5]/35 px-4 py-2 text-sm font-medium text-[#11224D] transition duration-300 hover:-translate-y-0.5 hover:bg-[#1A68A3] hover:shadow-md sm:text-base'
+              className='group flex min-h-10 items-center justify-between gap-3 rounded-full bg-[#B9DCF5]/35 px-4 py-2 text-sm font-medium text-[#11224D] transition duration-300 hover:-translate-y-0.5 hover:bg-[#1A68A3] hover:text-white hover:shadow-md sm:text-base'
             >
-              <span className='min-w-0 leading-tight'>{item}</span>
+              <span className='min-w-0 leading-tight group-hover:text-white'>{item}</span>
               <Recycle
                 aria-hidden='true'
-                className='size-5 shrink-0 text-[#11224D]/45 transition duration-300 group-hover:rotate-12 group-hover:scale-110 group-hover:text-[#11224D]'
+                className='size-5 shrink-0 text-[#11224D]/45 transition duration-300 group-hover:rotate-12 group-hover:scale-110 group-hover:text-white'
                 strokeWidth={2.5}
               />
             </div>

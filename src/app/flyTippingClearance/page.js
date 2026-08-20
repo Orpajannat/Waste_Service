@@ -4,6 +4,7 @@ import FlyTippedRubbishRemoval from '@/components/flyTippingClearance/FlyTippedR
 import RubbishService from '@/components/home/RubbishService'
 import WhyChooseUs from '@/components/houseClearance/WhyChooseUs'
 import QuoteForm from '@/components/home/QuoteForm'
+import HowItWorks from '@/components/home/HowItWorks'
 
 export default function FlyTippingClearancePage () {
   return (
@@ -11,6 +12,7 @@ export default function FlyTippingClearancePage () {
       <FlyHero/>
       <FlyTippedRubbishRemoval/>
       <WhyChooseUs/>
+      <HowItWorks/>
       <RubbishService/>
       <FlyTippingServices/>
       <QuoteForm/>

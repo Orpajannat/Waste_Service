@@ -1,3 +1,4 @@
+import HowItWorks from '@/components/home/HowItWorks'
 import QuoteForm from '@/components/home/QuoteForm'
 import RubbishService from '@/components/home/RubbishService'
 import GetPrices from '@/components/houseClearance/GetPrices'
@@ -17,6 +18,7 @@ export default function page () {
         <OfficeWasteServices/>
         <WhyChooseUs/>
         <ServiceHighlights/>
+        <HowItWorks/>
         <HouseRubbishItems/>
         <QuoteForm/>
     </div>

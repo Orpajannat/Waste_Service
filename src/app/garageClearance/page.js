@@ -1,4 +1,5 @@
 import GarageHero from '@/components/garageClearance/GarageHero'
+import HowItWorks from '@/components/home/HowItWorks'
 import QuoteForm from '@/components/home/QuoteForm'
 import RubbishService from '@/components/home/RubbishService'
 import GetPrices from '@/components/houseClearance/GetPrices'
@@ -12,6 +13,7 @@ export default function page () {
     <div>
         <GarageHero/>
         <GetPrices/>
+        <HowItWorks/>
         <WhyChooseUs/>
         <ServiceHighlights/>
         <RubbishService/>

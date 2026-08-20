@@ -6,6 +6,7 @@ import WhyChooseUs from '@/components/houseClearance/WhyChooseUs'
 import React from 'react'
 import QuoteForm from '@/components/home/QuoteForm'
 import GardenRubbishItems from '@/components/gradenClearance/GardenRubbishItems'
+import HowItWorks from '@/components/home/HowItWorks'
 
 export default function page () {
   return (
@@ -14,6 +15,7 @@ export default function page () {
         <GetPrices/>
         <GardenClearanceService/>
         <WhyChooseUs/>
+        <HowItWorks/>
         <ServiceHighlights/>
         <GardenRubbishItems/>
         <QuoteForm/>

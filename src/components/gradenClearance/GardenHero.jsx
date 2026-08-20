@@ -10,7 +10,7 @@ export default function GardenHero () {
             <h1 className='text-2xl font-semibold leading-tight sm:text-3xl lg:text-4xl'>
                 Chingford Garden Clearance
             </h1>
-            <button type='button' className='group flex flex-row items-center gap-2 rounded-lg bg-[#1A68A3] px-4 py-2 font-bold text-black hover:bg-[#0D3A66] hover:text-white/80'>
+            <button type='button' className='group flex flex-row items-center gap-2 rounded-lg bg-[#11224D] px-4 py-2 text-sm font-bold text-white transition-colors hover:bg-white hover:text-[#11224D] sm:text-base'>
                 Check Prices & Book
                 <ArrowRight className='transition duration-300 group-hover:translate-x-1'/>
             </button>

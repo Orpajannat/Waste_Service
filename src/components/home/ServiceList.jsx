@@ -4,12 +4,12 @@ import { ArrowRight } from 'lucide-react'
 
 export default function ServiceList () {
   const services = [
-    { image: '/images/truck.jpg', title: 'Rubbish Clearance Services', description: 'Fast and dependable clearance for household junk, unwanted items and general waste.' },
-    { image: '/images/truck.jpg', title: 'Rubbish Removal Prices', description: 'Clear, competitive pricing with flexible collection options for jobs of every size.' },
-    { image: '/images/Kitchen Appliance.png', title: 'Commercial Waste Clearance', description: 'Professional waste collections for offices, shops, restaurants and commercial sites.' },
-    { image: '/images/h.jfif', title: 'Fly Tipping Clearance', description: 'Safe and efficient removal of illegally dumped waste from private or commercial land.' },
-    { image: '/images/Furniture.png', title: 'Furniture Removal & Disposal', description: 'Responsible collection and disposal of sofas, cabinets, desks and bulky furniture.' },
-    { image: '/images/Place.webp', title: 'Local Areas Covered', description: 'Reliable rubbish collection and clearance services throughout the Home Counties.' },
+    { image: '/images/Hero.jpg', title: 'Rubbish Clearance Services', description: 'Fast and dependable clearance for household junk, unwanted items and general waste.', href: "/houseClearance" },
+    { image: '/images/img1.jpg', title: 'Rubbish Removal Prices', description: 'Clear, competitive pricing with flexible collection options for jobs of every size.', href:"/#prices" },
+    { image: '/images/img2.jpg', title: 'Commercial Waste Clearance', description: 'Professional waste collections for offices, shops, restaurants and commercial sites.', href: "/buildersWasteRemoval" },
+    { image: '/images/img3.jpg', title: 'Fly Tipping Clearance', description: 'Safe and efficient removal of illegally dumped waste from private or commercial land.', href: "/flyTippingClearance" },
+    { image: '/images/img4.jpg', title: 'Furniture Removal & Disposal', description: 'Responsible collection and disposal of sofas, cabinets, desks and bulky furniture.', href:"/#prices" },
+    { image: '/images/img5.jpg', title: 'Local Areas Covered', description: 'Reliable rubbish collection and clearance services throughout the Home Counties.', href: "/area" },
   ]
 
   return (
@@ -38,7 +38,7 @@ export default function ServiceList () {
             <div className='flex flex-1 flex-col items-center justify-center pb-5'>
               <p className='max-w-sm text-sm leading-relaxed text-white/85 opacity-0 transition-opacity delay-0 duration-200 group-hover:opacity-100 group-hover:delay-200 group-focus:opacity-100 group-focus:delay-200 sm:text-base'>{service.description}</p>
               <a
-                href='#rubbish-clearance'
+                href={service.href}
                 className='mt-5 inline-flex translate-y-3 items-center gap-2 rounded-md bg-[#1A68A3] px-5 py-2.5 font-bold uppercase opacity-0 transition-all delay-0 duration-200 hover:bg-white hover:text-[#11224D] group-hover:translate-y-0 group-hover:opacity-100 group-hover:delay-300 group-focus:translate-y-0 group-focus:opacity-100 group-focus:delay-300'
               >
                 Read More

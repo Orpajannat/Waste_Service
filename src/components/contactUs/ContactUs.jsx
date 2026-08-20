@@ -1,116 +1,277 @@
-import Link from 'next/link'
-import { Clock3, Mail, MapPin, Phone, Send, Upload } from 'lucide-react'
+"use client";
+
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  ArrowRight,
+} from "lucide-react";
 
 export default function ContactUs() {
-  const inputStyle = 'min-h-12 w-full rounded-lg border border-[#11224D]/20 bg-white px-4 text-[#11224D] outline-none transition placeholder:text-neutral-400 hover:border-[#1A68A3] focus:border-[#11224D] focus:ring-4 focus:ring-[#1A68A3]/15'
-
   return (
-    <main className='bg-[#B9DCF5]/20'>
-      <header className='bg-[#11224D]/70 px-4 py-10 text-center sm:px-6 sm:py-12'>
-        <h1 className='text-3xl font-bold uppercase leading-tight text-white sm:text-4xl lg:text-5xl'>
-          Contact Us
-        </h1>
-        <p className='mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-white/80 sm:text-base'>
-          Speak with our friendly team or send us a message for help with your waste collection.
-        </p>
-      </header>
+    <main className="min-h-screen bg-[#f7fbff] text-[#11224D]">
 
-      <div className='mx-auto grid w-full max-w-6xl gap-8 px-4 py-10 sm:px-6 sm:py-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-10 lg:px-8 lg:py-16'>
-        <aside className='space-y-6'>
-          <div className='rounded-2xl bg-[#11224D] p-6 text-white shadow-lg sm:p-8'>
-            <h2 className='text-2xl font-bold sm:text-3xl'>Customer Service Office</h2>
-            <p className='mt-2 text-sm leading-relaxed text-white/70 sm:text-base'>
-              Our team is ready to answer your questions and help arrange your collection.
+      <section className="relative overflow-hidden px-5 pb-24 pt-35 sm:px-8 lg:px-14 xl:px-20">
+
+        <div className="absolute -left-32 top-20 h-80 w-80 rounded-full bg-blue-100/40 blur-3xl" />
+        <div className="absolute -right-32 top-40 h-96 w-96 rounded-full bg-[#11224D]/5 blur-3xl" />
+
+        <div className="relative mx-auto max-w-7xl">
+
+          <div className="mx-auto max-w-4xl text-center">
+
+            <p className="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-[#087FE8]">
+              Get In Touch
             </p>
 
-            <div className='mt-7 space-y-4'>
-              <div className='group flex items-start gap-4 rounded-xl bg-white/5 p-4 transition duration-300 hover:translate-x-1 hover:bg-white/10'>
-                <MapPin className='mt-0.5 size-6 shrink-0 text-[#1A68A3]' aria-hidden='true' />
-                <address className='text-sm not-italic leading-relaxed text-white/85 sm:text-base'>
-                  Nazeing Common,<br />Bumbles Green,<br />Nazeing,<br />EN9 2SH
-                </address>
-              </div>
+            <h1 className="text-5xl font-black leading-tight text-[#11224D] md:text-7xl">
+              Let&apos;s
+              <span className="block text-[#087FE8]">
+                Talk
+              </span>
+            </h1>
 
-              <Link href='tel:02082266477' className='group flex items-center gap-4 rounded-xl bg-white/5 p-4 transition duration-300 hover:translate-x-1 hover:bg-white/10'>
-                <Phone className='size-6 shrink-0 text-[#1A68A3] transition-transform group-hover:rotate-12' aria-hidden='true' />
-                <span className='font-semibold sm:text-lg'>020 8226 6477</span>
-              </Link>
+            <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-slate-500 sm:text-lg">
+              Have a question about our services or need a free quotation?
+              Get in touch with our friendly team and we&apos;ll be happy to
+              help.
+            </p>
 
-              <Link href='mailto:info@londonwasteservices.com' className='group flex items-center gap-4 rounded-xl bg-white/5 p-4 transition duration-300 hover:translate-x-1 hover:bg-white/10'>
-                <Mail className='size-6 shrink-0 text-[#1A68A3]' aria-hidden='true' />
-                <span className='min-w-0 break-all text-sm sm:text-base'>info@londonwasteservices.com</span>
-              </Link>
-            </div>
           </div>
 
-          <div className='rounded-2xl border border-[#1A68A3]/20 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg sm:p-8'>
-            <div className='flex items-center gap-3'>
-              <Clock3 className='size-7 text-[#11224D]' aria-hidden='true' />
-              <h2 className='text-xl font-bold text-[#11224D] sm:text-2xl'>Office Opening Hours</h2>
+
+          <div className="mt-16 grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
+
+            <div className="space-y-5">
+
+              <div className="group rounded-3xl border border-slate-100 bg-white p-7 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-blue-100 hover:shadow-2xl hover:shadow-blue-100">
+
+                <div className="flex items-center gap-5">
+
+                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#11224D]/5 transition-all duration-500 group-hover:rotate-6 group-hover:scale-110 group-hover:bg-[#11224D]">
+                    <Phone className="h-6 w-6 text-[#11224D] transition-colors duration-300 group-hover:text-white" />
+                  </div>
+
+                  <div>
+                    <p className="text-sm font-semibold text-slate-400">
+                      Call Us
+                    </p>
+
+                    <a
+                      href="tel:02082266477"
+                      className="mt-1 block font-bold text-[#11224D] transition-colors duration-300 group-hover:text-[#087FE8]"
+                    >
+                      020 8226 6477
+                    </a>
+                  </div>
+
+                </div>
+
+              </div>
+
+
+              <div className="group rounded-3xl border border-slate-100 bg-white p-7 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-blue-100 hover:shadow-2xl hover:shadow-blue-100">
+
+                <div className="flex items-center gap-5">
+
+                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#11224D]/5 transition-all duration-500 group-hover:rotate-6 group-hover:scale-110 group-hover:bg-[#11224D]">
+                    <Mail className="h-6 w-6 text-[#11224D] transition-colors duration-300 group-hover:text-white" />
+                  </div>
+
+                  <div>
+                    <p className="text-sm font-semibold text-slate-400">
+                      Email Us
+                    </p>
+
+                    <a
+                      href="mailto:info@example.com"
+                      className="mt-1 block font-bold text-[#11224D] transition-colors duration-300 group-hover:text-[#087FE8]"
+                    >
+                      info@example.com
+                    </a>
+                  </div>
+
+                </div>
+
+              </div>
+
+
+              <div className="group rounded-3xl border border-slate-100 bg-white p-7 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-blue-100 hover:shadow-2xl hover:shadow-blue-100">
+
+                <div className="flex items-center gap-5">
+
+                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#11224D]/5 transition-all duration-500 group-hover:rotate-6 group-hover:scale-110 group-hover:bg-[#11224D]">
+                    <MapPin className="h-6 w-6 text-[#11224D] transition-colors duration-300 group-hover:text-white" />
+                  </div>
+
+                  <div>
+                    <p className="text-sm font-semibold text-slate-400">
+                      Location
+                    </p>
+
+                    <p className="mt-1 font-bold text-[#11224D]">
+                      London, United Kingdom
+                    </p>
+                  </div>
+
+                </div>
+
+              </div>
+
+
+              <div className="group rounded-3xl border border-slate-100 bg-white p-7 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-blue-100 hover:shadow-2xl hover:shadow-blue-100">
+
+                <div className="flex items-center gap-5">
+
+                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#11224D]/5 transition-all duration-500 group-hover:rotate-6 group-hover:scale-110 group-hover:bg-[#11224D]">
+                    <Clock className="h-6 w-6 text-[#11224D] transition-colors duration-300 group-hover:text-white" />
+                  </div>
+
+                  <div>
+                    <p className="text-sm font-semibold text-slate-400">
+                      Opening Hours
+                    </p>
+
+                    <p className="mt-1 font-bold text-[#11224D]">
+                      Available 24/7
+                    </p>
+                  </div>
+
+                </div>
+
+              </div>
+
             </div>
-            <dl className='mt-5 space-y-3 text-sm text-neutral-700 sm:text-base'>
-              <div className='flex items-center justify-between gap-4 border-b border-[#11224D]/10 pb-3'>
-                <dt className='font-semibold text-[#11224D]'>Monday – Friday</dt>
-                <dd>7am – 5pm</dd>
+
+
+            <div className="group rounded-[2rem] border border-slate-100 bg-white p-6 shadow-xl shadow-[#11224D]/5 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-100 sm:p-8 lg:p-10">
+
+              <div className="mb-8">
+
+                <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#087FE8]">
+                  Send Us A Message
+                </p>
+
+                <h2 className="mt-3 text-3xl font-black text-[#11224D] sm:text-4xl">
+                  How Can We Help?
+                </h2>
+
+                <p className="mt-3 text-sm leading-6 text-slate-500">
+                  Fill out the form below and our team will get back to you
+                  as soon as possible.
+                </p>
+
               </div>
-              <div className='flex items-center justify-between gap-4'>
-                <dt className='font-semibold text-[#11224D]'>Saturday</dt>
-                <dd>9am – 1pm</dd>
-              </div>
-            </dl>
-            <p className='mt-5 rounded-lg bg-[#B9DCF5]/30 px-4 py-3 text-sm font-semibold text-[#11224D]'>Collections carried out 6 days a week</p>
+
+
+              <form className="space-y-6">
+
+                <div className="grid gap-6 sm:grid-cols-2">
+
+                  <div className="group/input">
+
+                    <label className="mb-2 block text-sm font-bold text-[#11224D]">
+                      Your Name
+                    </label>
+
+                    <input
+                      type="text"
+                      placeholder="Enter your name"
+                      className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 text-sm outline-none transition-all duration-300 placeholder:text-slate-400 focus:border-[#087FE8] focus:bg-white focus:ring-4 focus:ring-blue-100 hover:border-[#11224D]/30"
+                    />
+
+                  </div>
+
+
+                  <div className="group/input">
+
+                    <label className="mb-2 block text-sm font-bold text-[#11224D]">
+                      Phone Number
+                    </label>
+
+                    <input
+                      type="tel"
+                      placeholder="Enter your phone number"
+                      className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 text-sm outline-none transition-all duration-300 placeholder:text-slate-400 focus:border-[#087FE8] focus:bg-white focus:ring-4 focus:ring-blue-100 hover:border-[#11224D]/30"
+                    />
+
+                  </div>
+
+                </div>
+
+
+                <div>
+
+                  <label className="mb-2 block text-sm font-bold text-[#11224D]">
+                    Email Address
+                  </label>
+
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 text-sm outline-none transition-all duration-300 placeholder:text-slate-400 focus:border-[#087FE8] focus:bg-white focus:ring-4 focus:ring-blue-100 hover:border-[#11224D]/30"
+                  />
+
+                </div>
+
+
+                <div>
+
+                  <label className="mb-2 block text-sm font-bold text-[#11224D]">
+                    Service Required
+                  </label>
+
+                  <select
+                    className="w-full cursor-pointer rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 text-sm text-slate-500 outline-none transition-all duration-300 focus:border-[#087FE8] focus:bg-white focus:ring-4 focus:ring-blue-100 hover:border-[#11224D]/30"
+                  >
+                    <option value="">Select a service</option>
+                    <option value="rubbish">Rubbish Removal</option>
+                    <option value="garden">Garden Services</option>
+                    <option value="clearance">Property Clearance</option>
+                    <option value="other">Other</option>
+                  </select>
+
+                </div>
+
+
+                <div>
+
+                  <label className="mb-2 block text-sm font-bold text-[#11224D]">
+                    Your Message
+                  </label>
+
+                  <textarea
+                    rows="5"
+                    placeholder="Tell us how we can help..."
+                    className="w-full resize-none rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 text-sm outline-none transition-all duration-300 placeholder:text-slate-400 focus:border-[#087FE8] focus:bg-white focus:ring-4 focus:ring-blue-100 hover:border-[#11224D]/30"
+                  />
+
+                </div>
+
+
+                <button
+                  type="submit"
+                  className="group flex w-full items-center justify-center gap-3 rounded-xl bg-[#11224D] px-6 py-4 font-bold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#087FE8] hover:shadow-xl hover:shadow-blue-200"
+                >
+                  Send Message
+
+                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-[#11224D] transition-all duration-300 group-hover:translate-x-1">
+                    <ArrowRight className="h-4 w-4" />
+                  </span>
+
+                </button>
+
+              </form>
+
+            </div>
+
           </div>
-        </aside>
 
-        <section className='self-start rounded-2xl border border-[#1A68A3]/20 bg-white p-5 shadow-lg sm:p-8'>
-          <h2 className='text-2xl font-bold text-[#11224D] sm:text-3xl'>Send us a message</h2>
-          <p className='mt-2 text-sm leading-relaxed text-neutral-600 sm:text-base'>Complete the form and our customer service team will get back to you.</p>
+        </div>
 
-          <form className='mt-7 space-y-4'>
-            <div className='grid gap-4 sm:grid-cols-2'>
-              <label className='sr-only' htmlFor='contact-name'>Name</label>
-              <input className={inputStyle} id='contact-name' name='name' placeholder='Name' type='text' required />
-              <label className='sr-only' htmlFor='contact-phone'>Phone</label>
-              <input className={inputStyle} id='contact-phone' name='phone' placeholder='Phone' type='tel' required />
-            </div>
+      </section>
 
-            <div className='grid gap-4 sm:grid-cols-[1.5fr_1fr]'>
-              <label className='sr-only' htmlFor='contact-email'>Email</label>
-              <input className={inputStyle} id='contact-email' name='email' placeholder='Email' type='email' required />
-              <label className='sr-only' htmlFor='contact-postcode'>Postcode</label>
-              <input className={inputStyle} id='contact-postcode' name='postcode' placeholder='Postcode' type='text' />
-            </div>
-
-            <label className='sr-only' htmlFor='contact-interest'>Area of interest</label>
-            <select className={inputStyle} id='contact-interest' name='interest' defaultValue='' required>
-              <option value='' disabled>Area of interest</option>
-              <option value='house-clearance'>House clearance</option>
-              <option value='garden-clearance'>Garden clearance</option>
-              <option value='commercial-waste'>Commercial waste</option>
-              <option value='other'>Other</option>
-            </select>
-
-            <label className='sr-only' htmlFor='contact-question'>Ask us a question</label>
-            <textarea className={`${inputStyle} min-h-36 resize-y py-3`} id='contact-question' name='question' placeholder='Ask us a question' rows='5' required />
-
-            <label className='group relative flex min-h-14 cursor-pointer items-center justify-center gap-2 rounded-lg border-2 border-dashed border-[#11224D]/30 bg-[#B9DCF5]/15 px-4 text-center text-sm font-semibold text-[#11224D] transition hover:border-[#1A68A3] hover:bg-[#B9DCF5]/30 focus-within:ring-4 focus-within:ring-[#1A68A3]/20 sm:text-base'>
-              <Upload className='size-5 shrink-0 transition-transform group-hover:-translate-y-1' aria-hidden='true' />
-              <span>Drop files here or <span className='underline'>select files</span></span>
-              <input className='absolute inset-0 cursor-pointer opacity-0' name='attachments' type='file' multiple />
-            </label>
-
-            <label className='flex cursor-pointer items-start gap-3 text-sm leading-relaxed text-neutral-700 sm:items-center'>
-              <input className='mt-1 size-4 shrink-0 accent-[#1A68A3] sm:mt-0' name='privacy-policy' type='checkbox' required />
-              <span>By ticking this box you accept our <Link className='font-semibold text-[#11224D] hover:underline' href='/privacy-policy'>Privacy Policy</Link> <span className='text-red-600'>*</span></span>
-            </label>
-
-            <button className='group flex min-h-13 w-full items-center justify-center gap-2 rounded-lg bg-[#1A68A3] px-6 text-lg font-bold text-[#11224D] transition duration-300 hover:-translate-y-1 hover:bg-[#11224D] hover:text-white hover:shadow-lg focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#1A68A3]/30' type='submit'>
-              Send Message
-              <Send className='size-5 transition-transform group-hover:translate-x-1' aria-hidden='true' />
-            </button>
-          </form>
-        </section>
-      </div>
     </main>
-  )
+  );
 }

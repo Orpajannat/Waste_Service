@@ -7,7 +7,7 @@ export default function GardenServiceCards() {
     {
       title: 'Hedge Cutting',
       image: '/images/GardenHero.jpg',
-      href: '/hedge-cutting',
+      href: '/hedgeCutting',
       position: 'object-left',
     },
     {

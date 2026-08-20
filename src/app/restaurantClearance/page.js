@@ -5,6 +5,7 @@ import RestaurantHero from '@/components/restaurantClearance/RestaurantHero'
 import RestaurantClearanceServices from '@/components/restaurantClearance/RestaurantClearanceServices'
 import RestaurantClearanceIntro from '@/components/restaurantClearance/RestaurantClearanceIntro'
 import QuoteForm from '@/components/home/QuoteForm'
+import HowItWorks from '@/components/home/HowItWorks'
 
 export default function RestaurantClearancePage () {
   return (
@@ -13,6 +14,7 @@ export default function RestaurantClearancePage () {
         <GetPrices/>
         <RestaurantClearanceIntro/>
         <WhyChooseUs/>
+        <HowItWorks/>
         <RubbishService/>
         <RestaurantClearanceServices/>
         <QuoteForm/>

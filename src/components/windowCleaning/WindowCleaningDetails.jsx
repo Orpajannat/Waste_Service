@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
-import { Building2, Check, ChevronRight, FerrisWheel, Landmark } from 'lucide-react'
+import { Building2, ChevronRight, FerrisWheel, Landmark } from 'lucide-react'
+import CheckPointCard from '../CheckPointCard'
 
 const services = [
   'Lift Areas',
@@ -23,22 +24,9 @@ const benefits = [
   "We won't leave until a customer is happy!",
 ]
 
-function CheckItem({ children }) {
-  return (
-    <li className='group flex items-start gap-3 rounded-lg px-2 py-2 text-sm text-[#344054] transition duration-300 motion-safe:hover:-translate-y-0.5 hover:bg-white/80 hover:shadow-md sm:text-base'>
-      <Check
-        aria-hidden='true'
-        className='mt-0.5 size-5 shrink-0 text-[#1A68A3] transition-transform duration-300 motion-safe:group-hover:scale-125'
-        strokeWidth={3.5}
-      />
-      <span className='leading-relaxed'>{children}</span>
-    </li>
-  )
-}
-
 export default function WindowCleaningDetails () {
   return (
-    <section className='relative overflow-hidden bg-[#B9DCF5]/25'>
+    <section className='relative overflow-hidden bg-linear-to-b from-[#FFFFFF] via-[#E9F4FC] to-[#FFFFFF]'>
       <div
         aria-hidden='true'
         className='pointer-events-none absolute -bottom-5 -right-6 hidden items-end gap-1 text-[#11224D]/15 lg:flex'
@@ -49,11 +37,12 @@ export default function WindowCleaningDetails () {
       </div>
 
       <div className='relative z-10 mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 sm:py-14 lg:px-8 lg:py-16'>
-        <h2 className='text-2xl font-bold leading-tight text-[#252525] sm:text-3xl'>
+        <h2 className='text-2xl font-bold leading-tight text-[#11224D] sm:text-3xl lg:text-4xl pb-2'>
           Highest quality Communal Area Cleaning
         </h2>
+        <div className='h-1 w-12 rounded-full bg-linear-to-r from-[#11224D] to-[#4873AF]'></div>
 
-        <div className='mt-3 max-w-5xl space-y-2 text-sm leading-relaxed text-[#344054] sm:text-base'>
+        <div className='mt-3 max-w-5xl space-y-2 text-sm leading-relaxed text-[#344054] sm:text-base pt-5'>
           <p>
             All services include toilet sanitising and cleaning, hardwood floor polishing, polish and dust of skirting boards, window frames and main windows, carpet vacuuming, door and frame treatments, and mopping of floors.
           </p>
@@ -64,7 +53,7 @@ export default function WindowCleaningDetails () {
 
         <Link
           href='tel:02082266477'
-          className='group mt-6 flex min-h-12 w-full items-center justify-center gap-2 rounded-md bg-[#11224D] px-4 py-3 text-center text-sm font-bold uppercase leading-snug text-white transition duration-300 motion-safe:hover:-translate-y-1 hover:bg-[#1A68A3] hover:text-[#11224D] hover:shadow-xl focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#1A68A3]/30 sm:text-base lg:text-xl'
+          className='group mt-8 flex w-full items-center justify-center gap-3 rounded-2xl bg-[#11224D] px-5 py-4 text-center text-sm font-bold uppercase leading-relaxed text-white shadow-lg shadow-[#11224D]/10 transition-all duration-500 hover:-translate-y-1 hover:bg-[#0497E2] hover:shadow-xl hover:shadow-[#0497E2]/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#11224D] sm:px-7 sm:text-base lg:text-lg [&>svg]:size-9 [&>svg]:rounded-full [&>svg]:bg-white/10 [&>svg]:p-2 [&>svg]:transition-all [&>svg]:duration-500 hover:[&>svg]:bg-white hover:[&>svg]:text-[#11224D]'
         >
           <span>
             Call us today for more information on our communal area cleaning services -{' '}
@@ -79,8 +68,8 @@ export default function WindowCleaningDetails () {
 
         <div className='mt-9 sm:mt-10'>
           <h3 className='font-bold text-[#3b3b3b]'>Our Chingford Treatment Includes:</h3>
-          <ul className='mt-2 grid max-w-5xl gap-x-16 sm:grid-cols-2'>
-            {services.map((service) => <CheckItem key={service}>{service}</CheckItem>)}
+          <ul className='mt-5 grid grid-cols-1 gap-4 lg:mt-6 lg:grid-cols-2 lg:gap-5'>
+            {services.map((service, index) => <CheckPointCard key={service} index={index}>{service}</CheckPointCard>)}
           </ul>
         </div>
 
@@ -88,8 +77,8 @@ export default function WindowCleaningDetails () {
           <h3 className='max-w-5xl text-2xl font-bold leading-tight text-[#252525] sm:text-3xl'>
             Why you should choose Waste Services Ltd for your communal area cleaning:
           </h3>
-          <ul className='mt-6 max-w-2xl space-y-0.5'>
-            {benefits.map((benefit) => <CheckItem key={benefit}>{benefit}</CheckItem>)}
+          <ul className='mt-5 grid grid-cols-1 gap-4 lg:mt-6 lg:grid-cols-2 lg:gap-5'>
+            {benefits.map((benefit, index) => <CheckPointCard key={benefit} index={index}>{benefit}</CheckPointCard>)}
           </ul>
         </div>
       </div>

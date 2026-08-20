@@ -1,108 +1,178 @@
-import { CirclePlus, HelpCircle } from 'lucide-react'
+"use client";
+
+import { useState } from "react";
+import {
+  ChevronDown,
+  ArrowRight,
+  Phone,
+} from "lucide-react";
 
 export default function FAQ() {
-  const questions = [
-    {
-      question: 'How does the rubbish removal service work?',
-      answers: ['We supply uniformed, ID and DBS checked labour and take the rubbish away almost anywhere in your home, business or outside of your property.'],
-    },
-    {
-      question: 'Where should I put the rubbish?',
-      answers: ['You can put the waste almost anywhere as long as it is safe for our team to access.'],
-    },
-    {
-      question: 'Who does all the loading?',
-      answers: [
-        "We do, our experienced waste collection team will load all waste as long the item is safe and we can access the rubbish and our tipper trucks. If the waste is a long way from the road or we can’t park close, you may find there is an extra charge for the additional labour time. We will confirm on the day.",
-      ],
-    },
-    {
-      question: 'What if there is more waste than you expected?',
-      answers: [
-        'We understand it sometimes is difficult to workout how much you have, our teams are more than happy to take more or less on the day. The team will confirm the size of the job at the start - the cost of the clearance estimated on our website will then apply.',
-        'Sometimes it is more than you thought and we will quote to clear the whole lot. If there is less than you thought, no problem we will also reduce the cost down appropriately to handle less waste.',
-      ],
-    },
-    {
-      question: 'Weight Limits',
-      answers: [
-        'Each cubic yard (0.83 cubic metre) comes with a 100kg weight limit. Our team will supply you with an educated quote in advance and the weight will be estimated in bands before the collection commences. All our trucks have built in weight measures to ensure we are compliant. We record the levels before and after your clearance to ensure we are within legal limits and to ascertain if there are any additional costs to your waste or rubbish removal.',
-      ],
-    },
-    {
-      question: 'Extra Heavy Items',
-      answers: [
-        'For really heavy stuff like bricks, concrete, soil, sand, tiles etc. we may have to pass-on the additional cost from the waste transfer site to you. You’ll appreciate that a bag of rubble weighs much more than a bag of domestic rubbish so the more accurate you can be with photos and description, the more accurate the pricing will be for you.',
-      ],
-    },
-    {
-      question: 'Time Allowance for Collections',
-      answers: [
-        'Our prices show the time allowed for the collections. In some cases your collection may take longer than this, for instance if the waste is difficult to access or there are safety concerns to address. If this is the case, we will add a supplementary charge of £15 for every 15 minutes additional time (inc. VAT).',
-      ],
-    },
-  ]
+  const [open, setOpen] = useState(null);
 
-  const surcharges = [
-    'Domestic Fridge/Freezer: £45',
-    'Gas Bottle: £15',
-    'Television: £15',
-    'Commercial Fridge/Freezer: From £95',
-    'Paint Tin: £2',
-    'Car Tyre: £8',
-    'Mattress: £25',
-    'Microwave: £15',
-    'Car Battery: £15',
-  ]
+  const faqs = [
+    {
+      question: "What areas do you cover?",
+      answer:
+        "We provide our services across London and surrounding areas. You can visit our Areas Covered page to see whether we operate in your location.",
+    },
+    {
+      question: "How much does rubbish removal cost?",
+      answer:
+        "The price depends on the amount and type of rubbish, access, and location. Contact our team for a quick quotation.",
+    },
+    {
+      question: "Do you offer same-day collection?",
+      answer:
+        "Yes, depending on availability. Contact us as early as possible and we will do our best to arrange a convenient collection time.",
+    },
+    {
+      question: "Do you provide garden clearance?",
+      answer:
+        "Yes. We offer garden clearance and green waste removal services for homes, landlords and businesses.",
+    },
+    {
+      question: "Can I book your service online?",
+      answer:
+        "Yes. You can contact us directly to arrange your service and receive a quotation.",
+    },
+  ];
 
   return (
-    <main className='bg-[#B9DCF5]/20'>
-      <header className='bg-[#11224D]/70 px-4 py-10 text-center sm:px-6 sm:py-12'>
-        <div className='mx-auto flex max-w-6xl items-center justify-center gap-3'>
-          <HelpCircle className='hidden size-10 text-[#B9DCF5] sm:block' aria-hidden='true' />
-          <h1 className='text-3xl font-bold uppercase leading-tight text-white sm:text-4xl lg:text-5xl'>
+    <main className="min-h-screen bg-[#f7fbff] text-[#11224D]">
+
+      <section className="relative overflow-hidden px-5 pb-24 pt-35">
+
+        <div className="absolute left-0 top-10 h-80 w-80 rounded-full bg-blue-100/40 blur-3xl" />
+        <div className="absolute right-0 top-32 h-96 w-96 rounded-full bg-blue-50 blur-3xl" />
+
+        <div className="relative mx-auto max-w-5xl text-center">
+
+          <p className="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-[#087FE8]">
             Frequently Asked Questions
-          </h1>
-        </div>
-      </header>
-
-      <div className='mx-auto w-full max-w-6xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-14'>
-        <div className='space-y-4'>
-          {questions.map(({ question, answers }) => (
-            <article key={question} className='group rounded-xl border border-[#1A68A3]/15 bg-white p-5 transition duration-300 hover:-translate-y-1 hover:border-[#1A68A3]/45 hover:shadow-[0_12px_30px_rgba(26,104,163,0.12)] sm:p-6'>
-              <h2 className='text-lg font-bold text-[#11224D] transition-colors group-hover:text-[#11224D] sm:text-xl'>
-                {question}
-              </h2>
-              <div className='mt-2 space-y-3 text-sm leading-relaxed text-neutral-700 sm:text-base'>
-                {answers.map((answer) => <p key={answer}>{answer}</p>)}
-              </div>
-            </article>
-          ))}
-        </div>
-
-        <section className='mt-4 rounded-xl border border-[#1A68A3]/15 bg-white p-5 transition duration-300 hover:border-[#1A68A3]/45 hover:shadow-[0_12px_30px_rgba(26,104,163,0.12)] sm:p-6'>
-          <h2 className='text-lg font-bold text-[#11224D] sm:text-xl'>Surcharges for some items</h2>
-          <p className='mt-2 text-sm leading-relaxed text-neutral-700 sm:text-base'>
-            To cover the fees levied by waste transfer sites, the following items may carry an additional charge:
           </p>
-          <div className='mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3'>
-            {surcharges.map((item) => (
-              <div key={item} className='group/item flex min-h-12 items-center gap-3 rounded-lg bg-[#B9DCF5]/30 px-4 py-3 text-sm text-[#11224D] transition duration-300 hover:bg-[#1A68A3] hover:shadow-md sm:text-base'>
-                <CirclePlus className='size-5 shrink-0 text-[#11224D] transition-transform duration-300 group-hover/item:rotate-90' aria-hidden='true' />
-                <span>{item}</span>
-              </div>
-            ))}
-          </div>
-        </section>
 
-        <section className='mt-4 rounded-xl border border-[#1A68A3]/15 bg-white p-5 transition duration-300 hover:-translate-y-1 hover:border-[#1A68A3]/45 hover:shadow-[0_12px_30px_rgba(26,104,163,0.12)] sm:p-6'>
-          <h2 className='text-lg font-bold text-[#11224D] sm:text-xl'>What waste or rubbish cannot be collected?</h2>
-          <div className='mt-2 space-y-3 text-sm leading-relaxed text-neutral-700 sm:text-base'>
-            <p>We can&apos;t remove raw meat or fish, paints, solvents, chemicals, oil, petrol, diesel, gas bottles or fire extinguishers.</p>
-            <p>We also can&apos;t work at heights, so the waste will need to be safely accessible.</p>
+          <h1 className="text-5xl font-black leading-tight text-[#11224D] md:text-7xl">
+            Got
+            <span className="block text-[#087FE8]">
+              Questions?
+            </span>
+          </h1>
+
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-500">
+            Find answers to some of the most common questions about our
+            rubbish removal and garden services.
+          </p>
+
+        </div>
+
+
+        <div className="relative mx-auto mt-14 max-w-4xl">
+
+          <div className="space-y-4">
+
+            {faqs.map((faq, index) => {
+              const isOpen = open === index;
+
+              return (
+                <div
+                  key={faq.question}
+                  className={`group overflow-hidden rounded-2xl border bg-white transition-all duration-500 ${
+                    isOpen
+                      ? "border-[#087FE8]/30 shadow-xl shadow-blue-100"
+                      : "border-slate-100 shadow-sm hover:-translate-y-1 hover:border-blue-100 hover:shadow-xl hover:shadow-blue-100"
+                  }`}
+                >
+
+                  <button
+                    onClick={() => setOpen(isOpen ? null : index)}
+                    className="flex w-full items-center justify-between gap-5 px-6 py-6 text-left"
+                  >
+
+                    <div className="flex items-center gap-4">
+
+                      <span
+                        className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-sm font-bold transition-all duration-500 ${
+                          isOpen
+                            ? "bg-[#11224D] text-white"
+                            : "bg-[#11224D]/5 text-[#11224D] group-hover:bg-[#11224D] group-hover:text-white"
+                        }`}
+                      >
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
+
+                      <span className="font-bold text-[#11224D] transition-colors duration-300 group-hover:text-[#087FE8]">
+                        {faq.question}
+                      </span>
+
+                    </div>
+
+                    <span
+                      className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full transition-all duration-500 ${
+                        isOpen
+                          ? "rotate-180 bg-[#087FE8] text-white"
+                          : "bg-slate-50 text-[#11224D] group-hover:bg-[#11224D] group-hover:text-white"
+                      }`}
+                    >
+                      <ChevronDown className="h-5 w-5" />
+                    </span>
+
+                  </button>
+
+
+                  <div
+                    className={`grid transition-all duration-500 ${
+                      isOpen
+                        ? "grid-rows-[1fr]"
+                        : "grid-rows-[0fr]"
+                    }`}
+                  >
+
+                    <div className="overflow-hidden">
+
+                      <div className="border-t border-slate-100 px-6 pb-6 pt-5 pl-20 text-sm leading-7 text-slate-500">
+                        {faq.answer}
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+              );
+            })}
+
           </div>
-        </section>
-      </div>
+
+
+          <div className="mt-12 overflow-hidden rounded-3xl bg-[#11224D] p-8 text-center shadow-2xl shadow-[#11224D]/20 transition-all duration-500 hover:shadow-[#11224D]/30">
+
+            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10 transition-all duration-500 hover:rotate-12 hover:scale-110 hover:bg-white/20">
+              <Phone className="h-6 w-6 text-white" />
+            </div>
+
+            <h2 className="mt-5 text-2xl font-black text-white">
+              Still Have Questions?
+            </h2>
+
+            <p className="mx-auto mt-3 max-w-lg text-sm leading-6 text-white/60">
+              Our friendly team is ready to help you with anything you need.
+            </p>
+
+            <a
+              href="tel:02082266477"
+              className="group mt-6 inline-flex items-center gap-3 rounded-full bg-white px-7 py-3 font-bold text-[#11224D] transition-all duration-300 hover:scale-105 hover:bg-[#087FE8] hover:text-white hover:shadow-xl"
+            >
+              020 8226 6477
+              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+            </a>
+
+          </div>
+
+        </div>
+
+      </section>
+
     </main>
-  )
+  );
 }

@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { Building2, Check, ChevronRight, Factory } from 'lucide-react'
+import { Building2, ChevronRight, Factory } from 'lucide-react'
+import CheckPointCard from '../CheckPointCard'
 
 export default function WhyChooseUs() {
   const benefits = [
@@ -22,18 +23,15 @@ export default function WhyChooseUs() {
       </div>
 
       <div className='relative z-10 mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-16'>
-        <h2 className='text-2xl font-bold leading-tight text-[#11224D] sm:text-3xl'>
+        <h2 className='mt-8 text-xl font-bold leading-tight text-[#11224D] sm:text-2xl lg:mt-10 lg:text-3xl'>
           Why Choose London Waste Services Ltd for House Clearance?
         </h2>
 
-        <div className='mt-6 grid gap-2 sm:grid-cols-2 sm:gap-3 lg:grid-cols-3'>
-          {benefits.map((benefit) => (
-            <div key={benefit} className='group flex items-start gap-3 rounded-lg px-3 py-2.5 text-sm text-[#11224D] transition duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-md sm:text-base'>
-              <Check className='mt-0.5 size-5 shrink-0 text-[#1A68A3] transition-transform duration-300 group-hover:scale-125' strokeWidth={4} />
-              <span className='leading-relaxed'>{benefit}</span>
-            </div>
+        <ul className='mt-5 grid grid-cols-1 gap-4 lg:mt-6 lg:grid-cols-2 lg:gap-5'>
+          {benefits.map((benefit, index) => (
+            <CheckPointCard key={benefit} index={index}>{benefit}</CheckPointCard>
           ))}
-        </div>
+        </ul>
 
         <p className='mt-4 text-sm text-neutral-700 sm:text-base'>
           For helpful information and common FAQs -{' '}
@@ -52,7 +50,7 @@ export default function WhyChooseUs() {
             <p>We are usually able to provide 24 hour collection when required - it is always worth checking our availability as the teams can get booked up fast.</p>
           </div>
 
-          <Link href='tel:02082266477' className='group mt-7 flex min-h-12 w-full items-center justify-center gap-2 rounded-md bg-[#11224D] px-4 py-3 text-center text-sm font-bold uppercase leading-snug text-white transition duration-300 hover:-translate-y-1 hover:bg-[#1A68A3] hover:text-[#11224D] hover:shadow-lg focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#1A68A3]/30 sm:text-base lg:text-xl'>
+          <Link href='tel:02082266477' className='group mt-8 flex w-full items-center justify-center gap-3 rounded-2xl bg-[#11224D] px-5 py-4 text-center text-sm font-bold uppercase leading-relaxed text-white shadow-lg shadow-[#11224D]/10 transition-all duration-500 hover:-translate-y-1 hover:bg-[#0497E2] hover:shadow-xl hover:shadow-[#0497E2]/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#11224D] sm:px-7 sm:text-base lg:text-lg [&>svg]:size-9 [&>svg]:rounded-full [&>svg]:bg-white/10 [&>svg]:p-2 [&>svg]:transition-all [&>svg]:duration-500 hover:[&>svg]:bg-white hover:[&>svg]:text-[#11224D]'>
             <span>
               For house clearance availability in London and the Home Counties call{' '}
               <span className='whitespace-nowrap'>020 8226 6477</span>

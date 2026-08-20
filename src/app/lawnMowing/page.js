@@ -4,6 +4,8 @@ import LawnMowingDetails from '@/components/lawnMowing/LawnMowingDetails'
 import GardenServiceCards from '@/components/lawnMowing/GardenServiceCards'
 import React from 'react'
 import QuoteForm from '@/components/home/QuoteForm'
+import GetPrices from '@/components/houseClearance/GetPrices'
+import HowItWorks from '@/components/home/HowItWorks'
 
 export default function page () {
   return (
@@ -12,6 +14,8 @@ export default function page () {
         <LawnMowingServices/>
         <LawnMowingDetails/>
         <GardenServiceCards/>
+        <HowItWorks/>
+        <GetPrices/>
         <QuoteForm/>
     </div>
   )

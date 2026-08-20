@@ -6,6 +6,8 @@ import RubbishService from "@/components/home/RubbishService";
 import QuoteForm from "@/components/home/QuoteForm";
 import SecondaryNav from "@/components/layout/SecondaryNav";
 import Hero from "@/components/home/Hero";
+import HowItWorks from "@/components/home/HowItWorks";
+import AboutUs from "@/components/home/AboutUs";
 
 export default function Home() {
   return (
@@ -13,10 +15,12 @@ export default function Home() {
       <main>
         <Hero/>
         <SecondaryNav/>
+        <AboutUs/>
         <Order/>
         <RubbishRemoval/>
         <RubbishClearance/>
         <RubbishService/>
+        <HowItWorks/>
         <Benefits/>
         <QuoteForm/>
       </main>

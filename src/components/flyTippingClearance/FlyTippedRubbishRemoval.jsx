@@ -23,10 +23,11 @@ export default function FlyTippedRubbishRemoval() {
       <div className='mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-16'>
         <h2
           id='fly-tipped-rubbish-title'
-          className='text-2xl font-bold leading-tight text-[#11224D] sm:text-3xl'
+          className='text-2xl font-bold leading-tight text-[#11224D] sm:text-3xl lg:text-4xl'
         >
           Fly Tipped Rubbish Removal
         </h2>
+        <div className='h-1 w-12 rounded-full bg-linear-to-r from-[#11224D] to-[#4873AF]'></div>
 
         <div className='mt-6 space-y-4 text-sm leading-relaxed text-neutral-700 sm:text-base'>
           <p>

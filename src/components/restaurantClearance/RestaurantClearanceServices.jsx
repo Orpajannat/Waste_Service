@@ -22,10 +22,11 @@ export default function RestaurantClearanceServices() {
       <div className='mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-16'>
         <h2
           id='restaurant-clearance-title'
-          className='text-2xl font-bold leading-tight text-[#11224D] sm:text-3xl'
+          className='text-2xl font-bold leading-tight text-[#11224D] sm:text-3xl lg:text-4xl'
         >
           Reliable Chingford Restaurant Clearance Services
         </h2>
+        <div className='h-1 w-12 rounded-full bg-linear-to-r from-[#11224D] to-[#4873AF]'></div>
 
         <p className='mt-6 text-sm leading-relaxed text-neutral-700 sm:text-base'>
           These are just some of the examples of the restaurant waste we have cleared already this year:
