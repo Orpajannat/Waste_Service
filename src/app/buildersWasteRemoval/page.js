@@ -13,12 +13,12 @@ export default function page () {
   return (
     <div>
         <BuildersHero/>
+        <BuildersWasteInfo/>
         <GetPrices/>
         <HowItWorks/>
         <RubbishService/>
         <BuildersWasteServices/>
         <WhyChooseOurService/>
-        <BuildersWasteInfo/>
         <ServiceHighlights/>
         <QuoteForm/>
     </div>

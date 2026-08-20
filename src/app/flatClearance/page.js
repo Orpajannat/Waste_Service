@@ -13,9 +13,9 @@ export default function page () {
   return (
     <div>
         <FlatHero/>
+        <FlatClearanceIntro/>
         <GetPrices/>
         <HowItWorks/>
-        <FlatClearanceIntro/>
         <WhyChooseUs/>
         <GarageRubbishClearance/>
         <ServiceHighlights/>

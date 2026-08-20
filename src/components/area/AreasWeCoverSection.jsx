@@ -50,7 +50,7 @@ export default function AreasWeCoverSection() {
           Popular Areas
         </span>
 
-        <h2 className="text-3xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-4xl md:text-5xl">
+        <h2 className="text-3xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-4xl md:text-4xl">
           Areas We Cover
         </h2>
 

@@ -1,42 +1,7 @@
-import Link from 'next/link'
-import { ChevronRight, Recycle } from 'lucide-react'
-
-const wasteTypes = ['Bathroom Fixtures', 'Kitchens & Appliances', 'Timber and Wood', 'Windows & Doors', 'Garden Waste', 'Plasterboard', 'Rubble and Brickwork', 'Flooring', 'Conservatories', 'And more...']
-
-export default function BuildersWasteInfo() {
-  return (
-    <section className='bg-linear-to-b from-[#FFFFFF] to-[#E9F4FC]'>
-      <div className='mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-16'>
-        <div className='rounded-2xl border-l-4 border-[#1A68A3] px-4 py-5 transition duration-300 hover:bg-[#B9DCF5]/10 hover:shadow-[0_14px_40px_rgba(26,104,163,0.10)] sm:px-6 sm:py-7 lg:px-8'>
-          <h2 className='text-2xl font-bold leading-tight text-[#11224D] sm:text-3xl'>What we know about clearing builders waste in Chingford</h2>
-          <p className='mt-5 max-w-5xl text-sm leading-relaxed text-[#344054] sm:text-base lg:text-lg'>
-            Having worked for many homeowners, plumbers and builders, we know it is critical for safety and productivity to keep a building site, home development or building renovation free from building rubble. Whether your site is a simple bathroom refit, house renovation or a commercial industrial project, it is important you choose an experienced, Waste Carrier Licenced waste removal operator. We can confidently handle all building waste you need removed with the minimum of hassle.
-          </p>
-          <p className='mt-3 text-sm text-[#344054] sm:text-base lg:text-lg'>London Waste Services weekly clears the following from building projects:</p>
-
-          <ul className='mt-3 grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-5'>
-            {wasteTypes.map((wasteType) => (
-              <li key={wasteType} className='group flex min-h-10 items-center justify-between gap-3 rounded-full bg-[#B9DCF5]/30 px-4 py-2 text-sm text-[#11224D] hover:text-white transition duration-300 motion-safe:hover:-translate-y-1 hover:bg-[#1A68A3] hover:shadow-md sm:text-base'>
-                <span>{wasteType}</span>
-                <Recycle aria-hidden='true' className='size-5 shrink-0 text-[#11224D]/55 transition duration-300 motion-safe:group-hover:rotate-12 motion-safe:group-hover:scale-110 group-hover:text-white' strokeWidth={3} />
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div className='mt-8 rounded-2xl px-4 py-5 transition duration-300 hover:bg-[#B9DCF5]/10 sm:mt-10 sm:px-6 sm:py-7 lg:px-8'>
-          <h3 className='text-2xl font-bold leading-tight text-[#11224D] sm:text-3xl'>24 hour service Chingford builders waste</h3>
-          <p className='mt-5 max-w-5xl text-sm leading-relaxed text-[#344054] sm:text-base lg:text-lg'>
-            For our residential customers as well as builders, plumbing, plasterers, bathroom and kitchen fitters plus letting agents and solicitors, we understand that a quick-turnaround is sometimes important. We are usually able to provide same-day builders waste collection when required. It is always worth checking our availability as the teams can get booked up fast.
-          </p>
-          <Link href='tel:02082266477' className="group mt-8 flex w-full items-center justify-center gap-3 rounded-2xl bg-[#11224D] px-5 py-4 text-center text-sm font-bold uppercase leading-relaxed text-white shadow-lg shadow-[#11224D]/10 transition-all duration-500 hover:-translate-y-1 hover:bg-[#0497E2] hover:shadow-xl hover:shadow-[#0497E2]/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#11224D] sm:px-7 sm:text-base lg:text-lg">
-            <span>For builders waste collection availability around London &amp; the Home Counties call <span className='whitespace-nowrap'>020 8226 6477</span></span>
-            <span className='flex size-9 shrink-0 items-center justify-center rounded-full bg-white/10 transition-all duration-500 group-hover:bg-white group-hover:text-[#11224D]'>
-              <ChevronRight aria-hidden='true' className='size-5 transition-transform duration-500 group-hover:translate-x-1' strokeWidth={3} />
-            </span>
-          </Link>
-        </div>
-      </div>
-    </section>
-  )
-}
+import Image from 'next/image';
+import Link from 'next/link';
+import { ArrowRight, Check, Clock3, Phone } from 'lucide-react';
+const types=['Bathroom Fixtures','Kitchens & Appliances','Timber and Wood','Windows & Doors','Garden Waste','Plasterboard','Rubble and Brickwork','Flooring','Conservatories','And more'];
+export default function BuildersWasteInfo(){return <section className="bg-[#f6f3eb]"><div className="mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28"><div className="grid gap-10 lg:grid-cols-[.8fr_1.2fr] lg:gap-16"><div><p className="text-xs font-extrabold uppercase tracking-[.18em] text-[#b56808]">What we collect</p><h2 className="mt-5 text-3xl font-bold leading-[1.05] text-[#102a4c] sm:text-4xl">Building waste expertise for every project size.</h2><p className="mt-6 text-base leading-8 text-slate-600">Keeping rubble and renovation waste under control improves site safety and productivity. Our licensed teams support homeowners and trades across domestic and commercial work.</p></div><ul className="grid border-t border-[#102a4c]/15 sm:grid-cols-2">{types.map(t=><li key={t} className="group flex min-h-14 items-center gap-3 border-b border-[#102a4c]/15 p-3 text-sm font-semibold text-[#38536b] transition hover:bg-white hover:pl-5 hover:text-[#102a4c]"><Check className="size-4 text-[#d67d0b]" strokeWidth={3}/>{t}</li>)}</ul></div>
+ <div className="group relative isolate mt-16 min-h-[360px] overflow-hidden rounded-[2rem] bg-[#102a4c]"><Image src="/images/waste4.jpg" alt="Builders waste collection in progress" fill sizes="(max-width:1280px) 100vw,1280px" className="-z-20 object-cover transition duration-700 group-hover:scale-[1.03]"/><div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(7,29,59,.97),rgba(7,29,59,.78)_55%,rgba(7,29,59,.25))]"/><div className="flex min-h-[360px] items-center p-7 sm:p-10 lg:p-14"><div className="max-w-2xl text-white"><div className="flex items-center gap-3 text-xs font-extrabold uppercase tracking-[.18em] text-[#ffd126]"><Clock3 className="size-5"/>Fast collection availability</div><h3 className="mt-5 text-3xl font-bold sm:text-4xl lg:text-4xl">Same-day builders waste collection may be available.</h3><p className="mt-6 text-base leading-8 text-white/75 sm:text-lg">We understand that homeowners, builders and fitters sometimes need a quick turnaround. Contact us early to confirm the best available collection window.</p><div className="mt-8 flex flex-col gap-3 sm:flex-row"><a href="tel:02082266477" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#ffd126] px-6 py-3 font-extrabold text-[#102a4c] transition hover:-translate-y-0.5 hover:bg-white"><Phone className="size-4"/>020 8226 6477</a><Link href="/#prices" className="group/link inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/30 px-6 py-3 font-bold transition hover:bg-white hover:text-[#102a4c]">View prices<ArrowRight className="size-4 transition group-hover/link:translate-x-1"/></Link></div></div></div></div>
+ </div></section>}

@@ -13,7 +13,7 @@ export default function page () {
         <LawnHero/>
         <LawnMowingServices/>
         <LawnMowingDetails/>
-        <GardenServiceCards/>
+        <GardenServiceCards theme="blue"/>
         <HowItWorks/>
         <GetPrices/>
         <QuoteForm/>

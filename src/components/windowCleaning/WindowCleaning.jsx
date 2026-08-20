@@ -1,24 +1,4 @@
-import React from 'react'
-
-export default function WindowCleaning () {
-  return (
-    <section className='bg-white'>
-      <div className='mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-16'>
-        <div className='rounded-2xl border-l-4 border-[#1A68A3] px-5 py-6 transition duration-300 hover:bg-[#B9DCF5]/20 hover:shadow-[0_12px_30px_rgba(26,104,163,0.10)] sm:px-7 sm:py-8 lg:px-9'>
-          <h2 className='text-2xl font-bold uppercase leading-tight text-[#11224D] sm:text-3xl lg:text-4xl'>
-            Window Cleaning in Chingford
-          </h2>
-
-          <div className='mt-4 max-w-5xl space-y-3 text-sm leading-relaxed text-neutral-700 sm:text-base lg:text-lg'>
-            <p className='font-semibold text-2xl'>
-              We provide window cleaning services around Chingford.
-            </p>
-            <p>
-              <span className='font-bold'>Waste Services Ltd</span> offers professional window cleaning services in Chingford. Our well-trained and vetted cleaners will do a fantastic job in keeping your property’s windows bright and clean, ensuring that windows, frames and sills are cleaned professionally. You can benefit from our great expertise and affordable prices for Chingford window cleaning. Just give us a call on 020 8226 6477 to make an appointment with one of our local experts.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-}
+import Link from 'next/link';
+import { ArrowRight, Check, Phone, Sparkles } from 'lucide-react';
+const points=['Interior and exterior glass','Frames and window sills','Residential and managed properties'];
+export default function WindowCleaning(){return <section className="bg-[#f7f8f4]"><div className="mx-auto grid w-full max-w-7xl gap-10 px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-[.82fr_1.18fr] lg:items-center lg:gap-16 lg:px-8 lg:py-28"><div><p className="text-xs font-extrabold uppercase tracking-[.18em] text-[#b56808]">Clearer views, professionally finished</p><h2 className="mt-5 text-3xl font-bold leading-[1.04] text-[#102a4c] sm:text-4xl lg:text-4xl">Clean glass.<span className="block text-[#d67d0b]">A brighter property.</span></h2><p className="mt-6 text-base leading-8 text-slate-600 sm:text-lg">Our trained and vetted local cleaners care for windows, frames and sills with close attention to the finish.</p><div className="mt-8 flex flex-col gap-3 sm:flex-row"><Link href="/#prices" className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#102a4c] px-6 py-3 text-sm font-extrabold text-white transition hover:-translate-y-0.5 hover:bg-[#f0aa26] hover:text-[#102a4c]">Check prices<ArrowRight className="size-4 transition group-hover:translate-x-1"/></Link><a href="tel:02082266477" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-[#102a4c]/20 px-6 py-3 text-sm font-bold text-[#102a4c] transition hover:bg-white"><Phone className="size-4"/>020 8226 6477</a></div></div><div className="border-t border-[#102a4c]/15">{points.map((p,i)=><div key={p} className="group grid min-h-28 grid-cols-[3rem_3.5rem_1fr] items-center gap-4 border-b border-[#102a4c]/15 p-4 transition hover:bg-white hover:pl-6"><span className="text-xs font-black text-[#d67d0b]">0{i+1}</span><span className="grid size-11 place-items-center rounded-full bg-[#102a4c] text-white transition group-hover:rotate-6 group-hover:bg-[#f0aa26] group-hover:text-[#102a4c]">{i===0?<Sparkles className="size-5"/>:<Check className="size-5"/>}</span><h3 className="text-xl font-bold text-[#102a4c] sm:text-2xl">{p}</h3></div>)}</div></div></section>}

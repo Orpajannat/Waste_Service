@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Link from 'next/link';
 import { ChevronDown, ChevronRight, Menu } from 'lucide-react';
+import CartLink from '../cart/CartLink';
 
 export default function Navbar() {
 
@@ -342,6 +343,10 @@ export default function Navbar() {
                         </div>
 
                     ))}
+
+                    <div className='border-t border-[#11224D]/10 lg:hidden'>
+                        <CartLink mobileMenu />
+                    </div>
 
                 </div>
 

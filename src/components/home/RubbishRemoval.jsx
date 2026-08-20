@@ -1,81 +1,105 @@
-import React from 'react'
-import { Recycle, ArrowUpRight } from 'lucide-react';
+import Link from 'next/link'
+import {
+  Armchair,
+  ArrowRight,
+  Building2,
+  HardHat,
+  Hammer,
+  Home,
+  Refrigerator,
+  Trash2,
+  TreePine,
+  Wrench,
+} from 'lucide-react'
+
+const services = [
+  { title: 'House Rubbish Clearance', icon: Home, href: '/houseClearance' },
+  { title: 'White Goods Appliances (inc. fridges/freezers)', icon: Refrigerator, href: '/prices?service=kitchen-appliances' },
+  { title: 'Builders Waste & Rubble Removal', icon: HardHat, href: '/buildersWasteRemoval' },
+  { title: 'Home Improvement Waste', icon: Hammer, href: '/buildersWasteRemoval' },
+  { title: 'Plumbers Waste', icon: Wrench, href: '/buildersWasteRemoval' },
+  { title: 'Garden Clearance (inc. sheds & garages)', icon: TreePine, href: '/gardenClearance' },
+  { title: 'Old Furniture (inc. sofas & cabinets)', icon: Armchair, href: '/prices?service=furniture' },
+  { title: 'Office Waste Clearance', icon: Building2, href: '/officeWasteClearance' },
+  { title: 'General House Junk Removal', icon: Trash2, href: '/prices?service=show-all' },
+]
 
 export default function RubbishRemoval() {
-    const List = [
-        { title: "House Rubbish Clearance" },
-        { title: "White Goods Appliances (inc. fridges/freezers)" },
-        { title: "Builders Waste & Rubble Removal" },
-        { title: "Home Improvement Waste" },
-        { title: "Plumbers Waste" },
-        { title: "Garden Clearance (inc. sheds & garages)" },
-        { title: "Old Furniture (inc. sofas & cabinets)" },
-        { title: "Office Waste Clearance" },
-        { title: "General House Junk Removal" },
-    ]
+  return (
+    <section className='relative overflow-hidden bg-[#0B1D3F] py-12 text-white sm:py-14 lg:py-16'>
+      <div aria-hidden='true' className='absolute -left-32 top-10 size-80 rounded-full border-[70px] border-white/[0.025]' />
+      <div aria-hidden='true' className='absolute -right-24 bottom-0 size-72 rounded-full bg-[#0497E2]/10 blur-3xl' />
 
-    return (
-        <div className="bg-linear-to-b from-[#E9F4FC] via-white to-[#E9F4FC]">
+      <div className='relative mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[0.68fr_1.32fr] lg:gap-10 lg:px-8 xl:gap-12'>
+        <div className='lg:sticky lg:top-28 lg:self-start'>
+          <span className='inline-flex rounded-full border border-white/15 bg-white/5 px-3.5 py-1.5 text-[0.68rem] font-black uppercase tracking-[0.18em] text-[#8FD3F4] backdrop-blur'>
+            What we collect
+          </span>
 
-            <div className="container mx-auto flex w-full max-w-7xl flex-col items-start justify-start px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
+          <h2 className='mt-5 max-w-xl text-3xl font-black leading-[1.06] tracking-[-0.035em] sm:text-4xl lg:text-4xl'>
+            Rubbish removal,
+            <span className='block text-[#55B9EA]'>made straightforward.</span>
+          </h2>
 
-                <div className="mb-8">
+          <p className='mt-5 max-w-lg text-sm leading-6 text-white/65 sm:text-base sm:leading-7'>
+            From everyday household junk to bulky furniture and building waste, our Chingford collection team handles the lifting, loading and responsible disposal.
+          </p>
 
-                    <p className="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-[#0497E2]">
-                        Our Services
-                    </p>
+          <div className='mt-6 flex items-center gap-3 border-l-2 border-[#F4B942] pl-4'>
+            <p className='text-sm leading-6 text-white/70'>
+              <strong className='block text-base text-white'>One team. One simple collection.</strong>
+              Choose a service to view your options.
+            </p>
+          </div>
 
-                    <h1 className="text-3xl font-black leading-tight text-[#11224D] sm:text-4xl lg:text-5xl">
-                        Chingford Rubbish Removal
-                    </h1>
-
-                    <div className="mt-4 h-1 w-14 rounded-full bg-[#0497E2] transition-all duration-500 hover:w-24"></div>
-
-                </div>
-
-
-                <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:gap-5">
-
-                    {List.map((list, index) => (
-
-                        <div
-                            key={index}
-                            className="group relative flex min-h-20 cursor-pointer items-center gap-4 overflow-hidden rounded-2xl border border-[#11224D]/10 bg-white px-4 py-4 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-[#0497E2]/30 hover:shadow-xl hover:shadow-[#11224D]/10 sm:px-5"
-                        >
-
-                            <div className="absolute left-0 top-0 h-full w-1 bg-[#0497E2] transition-all duration-500 group-hover:w-2"></div>
-
-
-                            <div className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-[#11224D]/5 transition-all duration-500 group-hover:rotate-6 group-hover:scale-110 group-hover:bg-[#11224D]">
-
-                                <Recycle
-                                    aria-hidden="true"
-                                    className="size-6 text-[#11224D] transition-all duration-500 group-hover:rotate-180 group-hover:text-white"
-                                />
-
-                            </div>
-
-
-                            <div className="min-w-0 flex-1">
-
-                                <span className="mb-1 block text-xs font-bold tracking-widest text-[#0497E2]">
-                                    SERVICE {String(index + 1).padStart(2, '0')}
-                                </span>
-
-                                <p className="text-base font-bold leading-snug text-[#11224D] transition-colors duration-300 group-hover:text-[#0497E2] sm:text-lg">
-                                    {list.title}
-                                </p>
-
-                            </div>
-
-                        </div>
-
-                    ))}
-
-                </div>
-
-            </div>
-
+          <Link href='/prices?service=show-all' className='group mt-6 inline-flex items-center gap-2.5 rounded-full bg-white px-5 py-2.5 text-sm font-black text-[#11224D] transition-all duration-300 hover:-translate-y-1 hover:bg-[#F4B942] hover:shadow-xl hover:shadow-black/20 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white'>
+            View all waste types
+            <ArrowRight aria-hidden='true' className='size-4 transition-transform duration-300 group-hover:translate-x-1' />
+          </Link>
         </div>
-    )
+
+        <div className='grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-3'>
+          {services.map((service, index) => {
+            const Icon = service.icon
+
+            return (
+              <Link
+                key={service.title}
+                href={service.href}
+                className='group relative flex min-h-40 flex-col justify-between overflow-hidden rounded-[1.4rem] border border-white/10 bg-white/[0.055] p-4 shadow-sm backdrop-blur-sm transition-all duration-500 hover:-translate-y-1.5 hover:border-white hover:bg-white hover:shadow-2xl hover:shadow-black/20 focus-visible:-translate-y-1 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#55B9EA] sm:min-h-44 sm:p-5'
+              >
+                <div aria-hidden='true' className='absolute -right-10 -top-10 size-32 rounded-full bg-[#0497E2]/10 transition-transform duration-700 group-hover:scale-[2.2]' />
+
+                <div className='relative flex items-start justify-between gap-4'>
+                  <span className='flex size-10 shrink-0 items-center justify-center rounded-xl bg-[#55B9EA] text-[#0B1D3F] shadow-lg shadow-black/10 transition-all duration-500 group-hover:rotate-6 group-hover:scale-110 group-hover:bg-[#11224D] group-hover:text-white'>
+                    <Icon aria-hidden='true' className='size-5' strokeWidth={1.8} />
+                  </span>
+                  <span className='text-xs font-black tracking-[0.16em] text-white/35 transition-colors duration-300 group-hover:text-[#0497E2]'>
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
+                </div>
+
+                <div className='relative mt-5'>
+                  <h3 className='max-w-xs text-base font-black leading-snug text-white transition-colors duration-300 group-hover:text-[#11224D] sm:text-lg'>
+                    {service.title}
+                  </h3>
+
+                  <div className='mt-3 flex items-center justify-between gap-3 border-t border-white/10 pt-3 transition-colors duration-300 group-hover:border-[#11224D]/10'>
+                    <span className='text-xs font-bold uppercase tracking-[0.14em] text-[#8FD3F4] transition-colors duration-300 group-hover:text-[#0497E2]'>
+                      Explore service
+                    </span>
+                    <span className='flex size-8 shrink-0 items-center justify-center rounded-full border border-white/15 text-white transition-all duration-300 group-hover:border-[#11224D] group-hover:bg-[#11224D] group-hover:text-white'>
+                      <ArrowRight aria-hidden='true' className='size-4 transition-transform duration-300 group-hover:translate-x-1' />
+                    </span>
+                  </div>
+                </div>
+
+                <span className='absolute inset-x-6 bottom-0 h-1 origin-left scale-x-0 rounded-full bg-linear-to-r from-[#0497E2] to-[#F4B942] transition-transform duration-500 group-hover:scale-x-100' />
+              </Link>
+            )
+          })}
+        </div>
+      </div>
+    </section>
+  )
 }

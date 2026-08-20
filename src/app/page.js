@@ -8,6 +8,7 @@ import SecondaryNav from "@/components/layout/SecondaryNav";
 import Hero from "@/components/home/Hero";
 import HowItWorks from "@/components/home/HowItWorks";
 import AboutUs from "@/components/home/AboutUs";
+import Impact from "@/components/home/Impact";
 
 export default function Home() {
   return (
@@ -16,11 +17,11 @@ export default function Home() {
         <Hero/>
         <SecondaryNav/>
         <AboutUs/>
+        <Impact/>
         <Order/>
         <RubbishRemoval/>
         <RubbishClearance/>
         <RubbishService/>
-        <HowItWorks/>
         <Benefits/>
         <QuoteForm/>
       </main>

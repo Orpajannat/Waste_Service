@@ -1,6 +1,8 @@
 'use client'
 
 import React, { useMemo, useState } from 'react'
+import Link from 'next/link'
+import { useCart } from '../cart/CartContext'
 import {
   ChevronRight,
   Armchair,
@@ -122,10 +124,15 @@ const LOAD_SIZES = [
 const ALL_ITEMS = Object.values(ITEMS_BY_CATEGORY).flat()
 
 export default function ManVanBooking ({ defaultMode = 'lorry', initialCategoryId = null }) {
+  const { addItems } = useCart()
   const [mode, setMode] = useState(defaultMode)
   const [selectedLoadSize, setSelectedLoadSize] = useState(null)
   const [selectedCategories, setSelectedCategories] = useState(
-    initialCategoryId ? [initialCategoryId] : []
+    initialCategoryId === 'show-all'
+      ? CATEGORIES.map((category) => category.id)
+      : initialCategoryId
+        ? [initialCategoryId]
+        : []
   )
   const [quantities, setQuantities] = useState({}) // itemId -> qty
   const [justAdded, setJustAdded] = useState(false)
@@ -185,6 +192,16 @@ export default function ManVanBooking ({ defaultMode = 'lorry', initialCategoryI
 
   const handleAddToBasket = () => {
     if (!hasSelection) return
+    if (mode === 'lorry') {
+      const size = LOAD_SIZES.find((load) => load.id === selectedLoadSize)
+      if (size) addItems([{ id: `load-${size.id}`, name: size.name, detail: `${size.maxWeight} · ${size.volume} · ${size.time}`, unitPrice: size.priceIncVat, quantity: 1 }])
+    } else {
+      addItems(Object.entries(quantities).map(([itemId, quantity]) => {
+        const item = ALL_ITEMS.find((entry) => entry.id === itemId)
+        const category = CATEGORIES.find((entry) => (ITEMS_BY_CATEGORY[entry.id] || []).some((entryItem) => entryItem.id === itemId))
+        return { id: `item-${itemId}`, name: item.name, detail: category?.label || 'Waste collection', unitPrice: item.price, quantity }
+      }))
+    }
     setJustAdded(true)
     setTimeout(() => setJustAdded(false), 2500)
   }
@@ -390,7 +407,13 @@ export default function ManVanBooking ({ defaultMode = 'lorry', initialCategoryI
           >
             {justAdded ? 'Added to Basket ✓' : 'Add to Basket'}
           </button>
-          <div className='group order-1 inline-flex shrink-0 items-center justify-center gap-2 self-center rounded-lg bg-[#F7B965] px-5 py-3 transition-colors duration-200 hover:bg-[#F5C583] sm:order-2'>
+          {justAdded && (
+            <Link href='/checkout' className='order-3 inline-flex items-center justify-center gap-2 rounded-lg border border-[#11224D] px-5 py-3 text-sm font-bold text-[#11224D] transition hover:bg-[#11224D] hover:text-white sm:order-2'>
+              Go to Checkout
+              <ChevronRight className='size-4' />
+            </Link>
+          )}
+          <div className='group order-1 inline-flex shrink-0 items-center justify-center gap-2 self-center rounded-lg bg-[#F7B965] px-5 py-3 transition-colors duration-200 hover:bg-[#F5C583] sm:order-3'>
             <span className='text-sm font-semibold text-[#11224D] sm:text-base'>Total</span>
             <span className='text-lg font-extrabold text-[#11224D] sm:text-xl'>£{total.toFixed(2)}</span>
             <span className='text-xs font-medium text-[#11224D]/70'>(inc. VAT)</span>

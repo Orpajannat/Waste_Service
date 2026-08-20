@@ -4,6 +4,7 @@ import { usePathname } from 'next/navigation'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import ScrollToTop from '../buttons/ScrollToTop'
+import { CartProvider } from '../cart/CartContext'
 
 export default function SiteChrome({ children }) {
   const pathname = usePathname()
@@ -14,11 +15,11 @@ export default function SiteChrome({ children }) {
   }
 
   return (
-    <>
+    <CartProvider>
       <Header />
       <ScrollToTop/>
       {children}
       <Footer />
-    </>
+    </CartProvider>
   )
 }

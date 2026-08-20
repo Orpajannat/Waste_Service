@@ -11,11 +11,11 @@ export default function page () {
   return (
     <div>
         <CommunalAreaHero/>
-        <HowItWorks/>
         <CommunalAreaService/>
+        <HowItWorks/>
+        <GetPrices/>
         <CommunalAreaDetails/>
         <WindowServiceCards/>
-        <GetPrices/>
         <QuoteForm/>
     </div>
   )

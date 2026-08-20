@@ -11,8 +11,8 @@ export default function RestaurantClearancePage () {
   return (
     <main>
         <RestaurantHero/>
-        <GetPrices/>
         <RestaurantClearanceIntro/>
+        <GetPrices/>
         <WhyChooseUs/>
         <HowItWorks/>
         <RubbishService/>

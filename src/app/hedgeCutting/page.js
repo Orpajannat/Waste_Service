@@ -12,7 +12,7 @@ export default function HedgeCuttingPage () {
       <HedgeCuttingHero/>
       <HedgeCuttingServices/>
       <HedgeCuttingDetails/>
-      <GardenServiceCards/>
+      <GardenServiceCards theme="blue"/>
       <HowItWorks/>
       <GetPrices/>
       <QuoteForm/>

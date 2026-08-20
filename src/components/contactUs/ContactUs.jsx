@@ -1,14 +1,61 @@
 "use client";
 
+import { useState } from "react";
 import {
   Phone,
   Mail,
   MapPin,
   Clock,
   ArrowRight,
+  CircleCheck,
+  CircleAlert,
+  LoaderCircle,
 } from "lucide-react";
 
 export default function ContactUs() {
+  const [submission, setSubmission] = useState({
+    state: "idle",
+    message: "",
+  });
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    setSubmission({ state: "loading", message: "" });
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(Object.fromEntries(formData.entries())),
+      });
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.message || "We could not send your enquiry.");
+      }
+
+      form.reset();
+      setSubmission({
+        state: "success",
+        message:
+          result.message ||
+          "Thanks — your enquiry has been sent. We’ll be in touch shortly.",
+      });
+    } catch (error) {
+      setSubmission({
+        state: "error",
+        message:
+          error instanceof Error
+            ? error.message
+            : "We could not send your enquiry. Please try again.",
+      });
+    }
+  }
+
   return (
     <main className="min-h-screen bg-[#f7fbff] text-[#11224D]">
 
@@ -25,7 +72,7 @@ export default function ContactUs() {
               Get In Touch
             </p>
 
-            <h1 className="text-5xl font-black leading-tight text-[#11224D] md:text-7xl">
+            <h1 className="text-3xl font-black leading-tight text-[#11224D] sm:text-4xl">
               Let&apos;s
               <span className="block text-[#087FE8]">
                 Talk
@@ -165,19 +212,40 @@ export default function ContactUs() {
               </div>
 
 
-              <form className="space-y-6">
+              <form
+                className="space-y-6"
+                onSubmit={handleSubmit}
+                aria-busy={submission.state === "loading"}
+              >
+
+                <div className="sr-only" aria-hidden="true">
+                  <label htmlFor="company">Company website</label>
+                  <input
+                    id="company"
+                    name="company"
+                    type="text"
+                    tabIndex={-1}
+                    autoComplete="off"
+                  />
+                </div>
 
                 <div className="grid gap-6 sm:grid-cols-2">
 
                   <div className="group/input">
 
-                    <label className="mb-2 block text-sm font-bold text-[#11224D]">
+                    <label htmlFor="contact-name" className="mb-2 block text-sm font-bold text-[#11224D]">
                       Your Name
                     </label>
 
                     <input
+                      id="contact-name"
+                      name="name"
                       type="text"
                       placeholder="Enter your name"
+                      autoComplete="name"
+                      minLength={2}
+                      maxLength={100}
+                      required
                       className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 text-sm outline-none transition-all duration-300 placeholder:text-slate-400 focus:border-[#087FE8] focus:bg-white focus:ring-4 focus:ring-blue-100 hover:border-[#11224D]/30"
                     />
 
@@ -186,13 +254,19 @@ export default function ContactUs() {
 
                   <div className="group/input">
 
-                    <label className="mb-2 block text-sm font-bold text-[#11224D]">
+                    <label htmlFor="contact-phone" className="mb-2 block text-sm font-bold text-[#11224D]">
                       Phone Number
                     </label>
 
                     <input
+                      id="contact-phone"
+                      name="phone"
                       type="tel"
                       placeholder="Enter your phone number"
+                      autoComplete="tel"
+                      minLength={7}
+                      maxLength={30}
+                      required
                       className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 text-sm outline-none transition-all duration-300 placeholder:text-slate-400 focus:border-[#087FE8] focus:bg-white focus:ring-4 focus:ring-blue-100 hover:border-[#11224D]/30"
                     />
 
@@ -203,13 +277,18 @@ export default function ContactUs() {
 
                 <div>
 
-                  <label className="mb-2 block text-sm font-bold text-[#11224D]">
+                  <label htmlFor="contact-email" className="mb-2 block text-sm font-bold text-[#11224D]">
                     Email Address
                   </label>
 
                   <input
+                    id="contact-email"
+                    name="email"
                     type="email"
                     placeholder="Enter your email"
+                    autoComplete="email"
+                    maxLength={150}
+                    required
                     className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 text-sm outline-none transition-all duration-300 placeholder:text-slate-400 focus:border-[#087FE8] focus:bg-white focus:ring-4 focus:ring-blue-100 hover:border-[#11224D]/30"
                   />
 
@@ -218,18 +297,22 @@ export default function ContactUs() {
 
                 <div>
 
-                  <label className="mb-2 block text-sm font-bold text-[#11224D]">
+                  <label htmlFor="contact-service" className="mb-2 block text-sm font-bold text-[#11224D]">
                     Service Required
                   </label>
 
                   <select
+                    id="contact-service"
+                    name="service"
+                    required
                     className="w-full cursor-pointer rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 text-sm text-slate-500 outline-none transition-all duration-300 focus:border-[#087FE8] focus:bg-white focus:ring-4 focus:ring-blue-100 hover:border-[#11224D]/30"
                   >
                     <option value="">Select a service</option>
-                    <option value="rubbish">Rubbish Removal</option>
-                    <option value="garden">Garden Services</option>
-                    <option value="clearance">Property Clearance</option>
-                    <option value="other">Other</option>
+                    <option value="house">House clearance</option>
+                    <option value="garden">Garden clearance</option>
+                    <option value="office">Office clearance</option>
+                    <option value="builders">Builders waste removal</option>
+                    <option value="other">Other service</option>
                   </select>
 
                 </div>
@@ -237,27 +320,56 @@ export default function ContactUs() {
 
                 <div>
 
-                  <label className="mb-2 block text-sm font-bold text-[#11224D]">
+                  <label htmlFor="contact-message" className="mb-2 block text-sm font-bold text-[#11224D]">
                     Your Message
                   </label>
 
                   <textarea
+                    id="contact-message"
+                    name="message"
                     rows="5"
                     placeholder="Tell us how we can help..."
+                    minLength={10}
+                    maxLength={2000}
+                    required
                     className="w-full resize-none rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 text-sm outline-none transition-all duration-300 placeholder:text-slate-400 focus:border-[#087FE8] focus:bg-white focus:ring-4 focus:ring-blue-100 hover:border-[#11224D]/30"
                   />
 
                 </div>
 
 
+                {submission.state !== "idle" && submission.state !== "loading" && (
+                  <div
+                    className={`flex items-start gap-3 rounded-xl border px-4 py-3 text-sm font-medium ${
+                      submission.state === "success"
+                        ? "border-emerald-200 bg-emerald-50 text-emerald-800"
+                        : "border-red-200 bg-red-50 text-red-700"
+                    }`}
+                    role={submission.state === "error" ? "alert" : "status"}
+                    aria-live="polite"
+                  >
+                    {submission.state === "success" ? (
+                      <CircleCheck className="mt-0.5 h-5 w-5 shrink-0" />
+                    ) : (
+                      <CircleAlert className="mt-0.5 h-5 w-5 shrink-0" />
+                    )}
+                    <span>{submission.message}</span>
+                  </div>
+                )}
+
                 <button
                   type="submit"
-                  className="group flex w-full items-center justify-center gap-3 rounded-xl bg-[#11224D] px-6 py-4 font-bold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#087FE8] hover:shadow-xl hover:shadow-blue-200"
+                  disabled={submission.state === "loading"}
+                  className="group flex w-full items-center justify-center gap-3 rounded-xl bg-[#11224D] px-6 py-4 font-bold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#087FE8] hover:shadow-xl hover:shadow-blue-200 disabled:cursor-wait disabled:opacity-70 disabled:hover:translate-y-0"
                 >
-                  Send Message
+                  {submission.state === "loading" ? "Sending..." : "Send Message"}
 
                   <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-[#11224D] transition-all duration-300 group-hover:translate-x-1">
-                    <ArrowRight className="h-4 w-4" />
+                    {submission.state === "loading" ? (
+                      <LoaderCircle className="h-4 w-4 animate-spin" />
+                    ) : (
+                      <ArrowRight className="h-4 w-4" />
+                    )}
                   </span>
 
                 </button>

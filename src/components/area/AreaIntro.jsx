@@ -13,7 +13,7 @@ export default function AreaIntro() {
         <span className="inline-block rounded-full bg-blue-50 px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider text-blue-600 sm:text-xs">
         Our Coverage Map
       </span>
-      <h2 className="text-3xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-4xl md:text-5xl lg:text-6xl">
+      <h2 className="text-3xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-4xl md:text-4xl lg:text-4xl">
         Where We
         <span className="block text-blue-600">Operate</span>
       </h2>

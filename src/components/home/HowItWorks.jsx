@@ -79,7 +79,7 @@ export default function HowItWorks() {
             Our Simple Process
           </span>
 
-          <h2 className="mt-5 text-4xl font-black tracking-tight text-slate-900 transition-all duration-500 hover:text-blue-600 sm:text-5xl lg:text-6xl">
+          <h2 className="mt-5 text-3xl font-black tracking-tight text-slate-900 transition-all duration-500 hover:text-blue-600 sm:text-4xl lg:text-4xl">
             How It Works
           </h2>
 

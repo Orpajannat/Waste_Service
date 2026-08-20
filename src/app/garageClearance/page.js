@@ -12,11 +12,11 @@ export default function page () {
   return (
     <div>
         <GarageHero/>
+        <RubbishService/>
         <GetPrices/>
         <HowItWorks/>
         <WhyChooseUs/>
         <ServiceHighlights/>
-        <RubbishService/>
         <HouseRubbishItems/>
         <QuoteForm/>
     </div>

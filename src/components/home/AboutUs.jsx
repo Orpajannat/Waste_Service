@@ -105,7 +105,7 @@ export default function AboutUs() {
             </div>
 
 
-            <h2 className="max-w-2xl text-4xl font-black leading-tight tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
+            <h2 className="max-w-2xl text-3xl font-black leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-4xl">
 
               We are a
 

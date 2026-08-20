@@ -52,7 +52,7 @@ export default function FAQ() {
             Frequently Asked Questions
           </p>
 
-          <h1 className="text-5xl font-black leading-tight text-[#11224D] md:text-7xl">
+          <h1 className="text-3xl font-black leading-tight text-[#11224D] sm:text-4xl">
             Got
             <span className="block text-[#087FE8]">
               Questions?

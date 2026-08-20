@@ -3,6 +3,7 @@ import React from 'react'
 import { ArrowRight } from 'lucide-react';
 import Navbar from './Navbar';
 import Link from 'next/link';
+import CartLink from '../cart/CartLink';
 
 export default function Header () {
   return (
@@ -22,10 +23,13 @@ export default function Header () {
             <Navbar/>
 
             <div className='order-3 ml-auto flex shrink-0 items-center justify-center gap-3 lg:ml-0'>
+                <div className='hidden lg:block'>
+                    <CartLink />
+                </div>
                 <a href='tel:02082266477' className='hidden whitespace-nowrap text-lg font-bold leading-none text-[#0398E9] xl:block'>020 8226 6477</a>
-                <Link href="/#prices" className='group flex items-center justify-center gap-2 rounded-full border border-[#11224D] bg-[#11224D] px-3 py-1.5 text-sm font-semibold text-white transition-colors hover:bg-white hover:text-[#11224D] sm:px-5 lg:px-4 xl:px-6'>
+                <Link href="/#prices" className='group flex items-center justify-center gap-1.5 whitespace-nowrap rounded-full border border-[#11224D] bg-[#11224D] px-2 py-1 text-xs font-semibold text-white transition-colors hover:bg-white hover:text-[#11224D] sm:px-2.5 md:gap-2 md:px-5 md:py-1.5 md:text-sm lg:px-4 xl:px-6'>
                     Prices &amp; Book
-                    <ArrowRight className='size-5 rounded-full bg-white p-1 text-[#11224D] transition duration-200 group-hover:translate-x-1'/>
+                    <ArrowRight className='size-4 rounded-full bg-white p-0.5 text-[#11224D] transition duration-200 group-hover:translate-x-1 md:size-5 md:p-1'/>
                 </Link >
             </div>
         </div>

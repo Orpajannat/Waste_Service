@@ -12,9 +12,9 @@ export default function page () {
   return (
     <div>
         <GardenHero/>
-        <GetPrices/>
         <GardenClearanceService/>
         <WhyChooseUs/>
+        <GetPrices/>
         <HowItWorks/>
         <ServiceHighlights/>
         <GardenRubbishItems/>

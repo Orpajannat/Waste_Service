@@ -1,70 +1,89 @@
-import Link from 'next/link'
-import { ChevronRight, Recycle } from 'lucide-react'
+import Link from 'next/link';
+import { ArrowRight, Check, MapPin, Phone, Recycle, ShieldCheck, Truck } from 'lucide-react';
+
+const servicePromises = [
+  { icon: MapPin, title: 'Assess the location', description: 'Tell us where the waste has been dumped, what it contains and whether there are any access restrictions.' },
+  { icon: Truck, title: 'Send the right collection team', description: 'We match the vehicle and crew to the volume and type of rubbish, from a small load to a larger clearance.' },
+  { icon: ShieldCheck, title: 'Remove it safely', description: 'Our uniformed team loads the waste carefully and works to leave the affected space clear and usable again.' },
+  { icon: Recycle, title: 'Handle it responsibly', description: 'Collected waste is taken through licensed channels, with recyclable material separated wherever possible.' },
+];
 
 const wasteTypes = [
-  'All Waste Removed',
-  'General House Waste',
-  'Garden Clearance (incl. Sheds & Garages)',
-  'Builders Waste & Rubble Removal',
-  'White Goods Appliances (incl. fridges/freezers)',
-  'No Job too Small or Too Big',
-  'Old Furniture (incl. sofas/ cabinet)',
-  'Home Improvement Waste',
-]
+  'General household waste', 'Garden waste, sheds and garages',
+  'Builders waste and rubble', 'Fridges, freezers and white goods',
+  'Old furniture, sofas and cabinets', 'Home-improvement waste',
+  'Small isolated loads', 'Larger mixed clearances',
+];
 
 export default function FlyTippingServices() {
   return (
-    <section className='bg-white' aria-labelledby='fly-tipping-services-title'>
-      <div className='mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-16'>
-        <h2
-          id='fly-tipping-services-title'
-          className='text-2xl font-bold uppercase leading-tight text-[#11224D] sm:text-3xl lg:text-4xl'
-        >
-          Chingford Fly Tipping Rubbish Waste Clearance
-        </h2>
+    <section className="relative overflow-hidden bg-[#081f3d] text-white">
+      <div className="pointer-events-none absolute -right-24 top-16 size-72 rounded-full border-[3rem] border-[#ffd126]/5" aria-hidden="true" />
 
-        <h3 className='mt-5 text-xl font-bold leading-tight text-[#11224D] sm:text-2xl pb-5'>
-          Fly Tipped Rubbish Removal
-        </h3>
+      <div className="relative mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
+        <div className="grid gap-8 border-b border-white/15 pb-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-end lg:gap-16 lg:pb-16">
+          <div>
+            <div className="flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.18em] text-[#ffd126] sm:text-sm">
+              <span className="h-0.5 w-9 bg-[#ffd126]" aria-hidden="true" />
+              Chingford fly-tipping response
+            </div>
+            <h2 className="mt-5 text-3xl font-bold leading-[1.04] tracking-tight sm:text-4xl lg:text-4xl">
+              From dumped waste
+              <span className="block font-serif font-medium italic text-[#ffd126]">to a clear space.</span>
+            </h2>
+          </div>
+          <div>
+            <p className="text-base leading-8 text-white/68 sm:text-lg">
+              Fly-tipped rubbish can be disruptive, unsafe and difficult to manage alone. We organise the collection around the waste type, site access and urgency of the situation.
+            </p>
+            <p className="mt-4 text-sm leading-7 text-white/50 sm:text-base">
+              No load is automatically too small or too large—share the details and we will advise on the most suitable response.
+            </p>
+          </div>
+        </div>
 
-        <ul className='grid w-full grid-cols-1 gap-x-6 gap-y-3 sm:grid-cols-2 sm:gap-y-4 lg:gap-x-8 lg:gap-y-5'>
-          {wasteTypes.map((item) => (
-            <li
-              key={item}
-              className='group relative flex min-h-16 min-w-0 flex-row items-center gap-3 overflow-hidden rounded-xl border border-[#11224D]/10 bg-white px-3 py-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#0497E2]/30 hover:shadow-lg hover:shadow-[#11224D]/10 sm:min-h-18 sm:gap-4'
-            >
-              <span className='absolute left-0 top-0 h-full w-1 bg-[#0497E2] transition-all duration-300 group-hover:w-1.5' />
-
-              <span className='flex size-11 shrink-0 items-center justify-center rounded-lg bg-[#11224D]/5 transition-all duration-300 group-hover:rotate-6 group-hover:scale-110 group-hover:bg-[#11224D] sm:size-12'>
-                <Recycle
-                  aria-hidden='true'
-                  className='size-5 text-[#11224D] transition-all duration-300 group-hover:text-white sm:size-6'
-                  strokeWidth={2.5}
-                />
+        <ol>
+          {servicePromises.map(({ icon: Icon, title, description }, index) => (
+            <li key={title} className="group grid gap-5 border-b border-white/15 py-8 transition-colors duration-500 hover:bg-[#ffd126] hover:text-[#081f3d] md:grid-cols-[4rem_4rem_0.8fr_1.2fr] sm:items-center sm:px-4 lg:gap-8 lg:py-9">
+              <span className="text-sm font-black tracking-[0.15em] text-[#ffd126] transition-colors group-hover:text-[#081f3d]/50">0{index + 1}</span>
+              <span className="grid size-13 place-items-center rounded-full border border-white/20 text-[#ffd126] transition duration-500 group-hover:rotate-6 group-hover:border-[#081f3d] group-hover:bg-[#081f3d]">
+                <Icon className="size-6" strokeWidth={1.8} aria-hidden="true" />
               </span>
-
-              <span className='min-w-0 text-base font-bold leading-snug text-[#11224D] transition-colors duration-300 group-hover:text-[#0497E2] sm:text-lg'>
-                {item}
-              </span>
+              <h3 className="text-xl font-bold sm:text-2xl">{title}</h3>
+              <p className="text-sm leading-7 text-white/62 transition-colors group-hover:text-[#081f3d]/75 sm:text-base">{description}</p>
             </li>
           ))}
-        </ul>
+        </ol>
 
-        <Link
-          href='tel:02082266477'
-          className='group mt-8 flex w-full items-center justify-center gap-3 rounded-2xl bg-[#11224D] px-5 py-4 text-center text-sm font-bold uppercase leading-relaxed text-white shadow-lg shadow-[#11224D]/10 transition-all duration-500 hover:-translate-y-1 hover:bg-[#0497E2] hover:shadow-xl hover:shadow-[#0497E2]/20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#11224D] sm:px-7 sm:text-base lg:text-lg [&>svg]:size-9 [&>svg]:rounded-full [&>svg]:bg-white/10 [&>svg]:p-2 [&>svg]:transition-all [&>svg]:duration-500 hover:[&>svg]:bg-white hover:[&>svg]:text-[#11224D]'
-        >
-          <span>
-            For Chingford fly tipping clearance prices, call{' '}
-            <strong className='whitespace-nowrap'>020 8226 6477</strong> today
-          </span>
-          <ChevronRight
-            aria-hidden='true'
-            className='size-5 shrink-0 transition-transform duration-300 group-hover:translate-x-1 sm:size-6'
-            strokeWidth={3}
-          />
-        </Link>
+        <div className="mt-14 grid gap-8 rounded-[2rem] border border-white/15 bg-white/5 p-6 sm:p-8 lg:grid-cols-[0.72fr_1.28fr] lg:gap-12 lg:p-10">
+          <div>
+            <p className="text-xs font-extrabold uppercase tracking-[0.17em] text-[#ffd126]">Waste we can assess</p>
+            <h3 className="mt-4 text-3xl font-bold leading-tight sm:text-4xl">Mixed rubbish, handled by one local team.</h3>
+          </div>
+          <ul className="grid gap-x-8 sm:grid-cols-2">
+            {wasteTypes.map((item) => (
+              <li key={item} className="group/item flex min-h-12 items-center gap-3 border-b border-white/12 py-3 text-sm font-semibold text-white/78 transition hover:translate-x-1 hover:border-[#ffd126] hover:text-white sm:text-base">
+                <Check className="size-4 shrink-0 text-[#ffd126] transition-transform group-hover/item:scale-110" strokeWidth={3} aria-hidden="true" />
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="mt-10 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+          <p className="max-w-xl text-sm leading-7 text-white/58 sm:text-base">Send us the location and an honest description of the waste for the clearest collection guidance.</p>
+          <div className="flex flex-col gap-3 sm:flex-row">
+            <Link href="/contactUs" className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#ffd126] px-6 py-3 text-sm font-extrabold text-[#081f3d] transition duration-300 hover:-translate-y-0.5 hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
+              Request a clearance
+              <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+            </Link>
+            <a href="tel:02082266477" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/30 px-6 py-3 text-sm font-bold transition duration-300 hover:-translate-y-0.5 hover:border-white hover:bg-white hover:text-[#081f3d] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
+              <Phone className="size-4" aria-hidden="true" />
+              020 8226 6477
+            </a>
+          </div>
+        </div>
       </div>
     </section>
-  )
+  );
 }

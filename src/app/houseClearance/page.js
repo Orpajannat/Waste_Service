@@ -13,9 +13,9 @@ export default function page () {
   return (
     <div>
         <Hero/>
+        <HouseClearanceServices/>
         <GetPrices/>
         <RubbishService/>
-        <HouseClearanceServices/>
         <WhyChooseUs/>
         <HowItWorks/>
         <ServiceHighlights/>

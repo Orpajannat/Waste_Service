@@ -13,9 +13,9 @@ export default function page () {
   return (
     <div>
         <OfficeHero/>
+        <OfficeWasteServices/>
         <GetPrices/>
         <RubbishService/>
-        <OfficeWasteServices/>
         <WhyChooseUs/>
         <ServiceHighlights/>
         <HowItWorks/>
