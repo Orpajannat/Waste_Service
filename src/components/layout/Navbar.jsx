@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Link from 'next/link';
 import { ChevronDown, ChevronRight, Menu } from 'lucide-react';
 
@@ -8,6 +8,31 @@ export default function Navbar() {
 
     const [navOpen, setNavOpen] = useState(null)
     const [menuOpen, setMenuOpen] = useState(false)
+    const navRef = useRef(null)
+
+    useEffect(() => {
+        const closeMenusOutsideNavbar = (event) => {
+            if (navRef.current && !navRef.current.contains(event.target)) {
+                setNavOpen(null)
+                setMenuOpen(false)
+            }
+        }
+
+        const closeMenusWithEscape = (event) => {
+            if (event.key === 'Escape') {
+                setNavOpen(null)
+                setMenuOpen(false)
+            }
+        }
+
+        document.addEventListener('pointerdown', closeMenusOutsideNavbar)
+        document.addEventListener('keydown', closeMenusWithEscape)
+
+        return () => {
+            document.removeEventListener('pointerdown', closeMenusOutsideNavbar)
+            document.removeEventListener('keydown', closeMenusWithEscape)
+        }
+    }, [])
 
     const navItems = [
         {
@@ -71,6 +96,7 @@ export default function Navbar() {
 
     return (
         <nav
+            ref={navRef}
             className='order-1 w-auto shrink-0 bg-transparent text-[#11224D] lg:order-2 lg:min-w-0 lg:flex-1 lg:py-2'
             aria-label='Main navigation'
         >
