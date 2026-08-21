@@ -1,4 +1,4 @@
-import { MapPin } from "lucide-react";
+﻿import { MapPin } from "lucide-react";
 
 const legendItems = [
   { label: "Fully Covered", dotClass: "bg-blue-600" },
@@ -9,7 +9,7 @@ const legendItems = [
 export default function AreaIntro() {
   return (
     <div className='bg-linear-to-b from-[#FFFFFF] to-[#E9F4FC]'>
-      <div className="container mx-auto flex max-w-7xl flex-col items-center justify-center gap-4 px-4 py-8 text-center sm:px-6 sm:py-10 md:gap-5 lg:px-8 lg:py-14">
+      <div className="container mx-auto flex max-w-7xl flex-col items-center justify-center gap-4 px-4 pb-8 pt-28 text-center sm:px-6 sm:pb-10 sm:pt-32 md:gap-5 lg:px-8 lg:pb-14 lg:pt-36">
         <span className="inline-block rounded-full bg-blue-50 px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider text-blue-600 sm:text-xs">
         Our Coverage Map
       </span>
@@ -46,3 +46,4 @@ export default function AreaIntro() {
     </div>
   );
 }
+
