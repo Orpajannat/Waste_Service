@@ -18,7 +18,6 @@ export default function Home() {
         <SecondaryNav/>
         <RubbishRemoval/>
         <Order/>
-        <Benefits/>
         <RubbishService/>
         <QuoteForm/>
       </main>
