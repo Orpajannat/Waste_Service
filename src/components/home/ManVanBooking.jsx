@@ -1,8 +1,9 @@
-'use client'
+﻿'use client'
 
 import React, { useMemo, useState } from 'react'
-import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { useCart } from '../cart/CartContext'
+import CollectionDetails from './CollectionDetails'
 import {
   ChevronRight,
   Armchair,
@@ -39,7 +40,7 @@ export const CATEGORIES = [
   { id: 'show-all', label: 'Show All', icon: LayoutGrid },
 ]
 
-// NOTE: descriptions & prices below are placeholder catalogue data —
+// NOTE: descriptions & prices below are placeholder catalogue data â€”
 // swap in your real item list / pricing per category.
 const ITEMS_BY_CATEGORY = {
   sofas: [
@@ -111,20 +112,21 @@ const ITEMS_BY_CATEGORY = {
 }
 
 // NOTE: only the first three sizes' prices are confirmed from the reference
-// design; Medium / Large / Full are placeholders — adjust as needed.
+// design; Medium / Large / Full are placeholders â€” adjust as needed.
 const LOAD_SIZES = [
-  { id: 'mini', name: 'Mini Load', priceIncVat: 34.99, priceExVat: 29.16, maxWeight: '50KG', volume: '1.05 yds³', sacks: 6, time: '10mins', popular: true },
-  { id: 'small', name: 'Small Load', priceIncVat: 64.99, priceExVat: 54.16, maxWeight: '125KG', volume: '2.1 yds³', sacks: 12, time: '15mins', popular: true },
-  { id: 'small-plus', name: 'Small Load +', priceIncVat: 89.99, priceExVat: 74.99, maxWeight: '250KG', volume: '4.5 yds³', sacks: 25, time: '25mins', popular: false },
-  { id: 'medium', name: 'Medium Load', priceIncVat: 129.99, priceExVat: 108.32, maxWeight: '375KG', volume: '6.5 yds³', sacks: 35, time: '35mins', popular: false },
-  { id: 'large', name: 'Large Load', priceIncVat: 179.99, priceExVat: 149.99, maxWeight: '500KG', volume: '9 yds³', sacks: 48, time: '45mins', popular: false },
-  { id: 'full', name: 'Full Load', priceIncVat: 249.99, priceExVat: 208.32, maxWeight: '750KG', volume: '12 yds³', sacks: 65, time: '60mins', popular: false },
+  { id: 'mini', name: 'Mini Load', priceIncVat: 34.99, priceExVat: 29.16, maxWeight: '50KG', volume: '1.05 ydsÂ³', sacks: 6, time: '10mins', popular: true },
+  { id: 'small', name: 'Small Load', priceIncVat: 64.99, priceExVat: 54.16, maxWeight: '125KG', volume: '2.1 ydsÂ³', sacks: 12, time: '15mins', popular: true },
+  { id: 'small-plus', name: 'Small Load +', priceIncVat: 89.99, priceExVat: 74.99, maxWeight: '250KG', volume: '4.5 ydsÂ³', sacks: 25, time: '25mins', popular: false },
+  { id: 'medium', name: 'Medium Load', priceIncVat: 129.99, priceExVat: 108.32, maxWeight: '375KG', volume: '6.5 ydsÂ³', sacks: 35, time: '35mins', popular: false },
+  { id: 'large', name: 'Large Load', priceIncVat: 179.99, priceExVat: 149.99, maxWeight: '500KG', volume: '9 ydsÂ³', sacks: 48, time: '45mins', popular: false },
+  { id: 'full', name: 'Full Load', priceIncVat: 249.99, priceExVat: 208.32, maxWeight: '750KG', volume: '12 ydsÂ³', sacks: 65, time: '60mins', popular: false },
 ]
 
 const ALL_ITEMS = Object.values(ITEMS_BY_CATEGORY).flat()
 
 export default function ManVanBooking ({ defaultMode = 'lorry', initialCategoryId = null }) {
   const { addItems } = useCart()
+  const router = useRouter()
   const [mode, setMode] = useState(defaultMode)
   const [selectedLoadSize, setSelectedLoadSize] = useState(null)
   const [selectedCategories, setSelectedCategories] = useState(
@@ -135,7 +137,12 @@ export default function ManVanBooking ({ defaultMode = 'lorry', initialCategoryI
         : []
   )
   const [quantities, setQuantities] = useState({}) // itemId -> qty
-  const [justAdded, setJustAdded] = useState(false)
+  const [saturdayCollection, setSaturdayCollection] = useState(false)
+  const [paymentOption, setPaymentOption] = useState('now')
+  const [notice, setNotice] = useState('30')
+  const [collectionDate, setCollectionDate] = useState('')
+  const [accessConfirmed, setAccessConfirmed] = useState(false)
+  const [restrictedAccess, setRestrictedAccess] = useState('')
 
   const toggleCategory = (id) => {
     if (id === 'show-all') {
@@ -187,27 +194,38 @@ export default function ManVanBooking ({ defaultMode = 'lorry', initialCategoryI
     return size ? size.priceIncVat : 0
   }, [selectedLoadSize])
 
-  const total = mode === 'lorry' ? lorryTotal : individualTotal
+  const selectionTotal = mode === 'lorry' ? lorryTotal : individualTotal
   const hasSelection = mode === 'lorry' ? !!selectedLoadSize : Object.keys(quantities).length > 0
+  const total = selectionTotal + (hasSelection && saturdayCollection ? 50 : 0)
 
-  const handleAddToBasket = () => {
+  const handleAddToBasket = (event) => {
+    event.preventDefault()
     if (!hasSelection) return
+    const formData = new FormData(event.currentTarget)
+    const collectionDetail = [
+      formData.get('collectionDate'),
+      `${notice} minute notice`,
+      saturdayCollection ? 'Saturday collection' : null,
+      paymentOption === 'now' ? 'Pay now' : 'Pay on arrival',
+      restrictedAccess ? `Restricted access: ${restrictedAccess}` : null,
+      formData.get('accessRestrictions'),
+    ].filter(Boolean).join(' · ')
+
     if (mode === 'lorry') {
       const size = LOAD_SIZES.find((load) => load.id === selectedLoadSize)
-      if (size) addItems([{ id: `load-${size.id}`, name: size.name, detail: `${size.maxWeight} · ${size.volume} · ${size.time}`, unitPrice: size.priceIncVat, quantity: 1 }])
+      if (size) addItems([{ id: `load-${size.id}`, name: size.name, detail: `${size.maxWeight} · ${size.volume} · ${size.time} · ${collectionDetail}`, unitPrice: size.priceIncVat, quantity: 1 }])
     } else {
       addItems(Object.entries(quantities).map(([itemId, quantity]) => {
         const item = ALL_ITEMS.find((entry) => entry.id === itemId)
         const category = CATEGORIES.find((entry) => (ITEMS_BY_CATEGORY[entry.id] || []).some((entryItem) => entryItem.id === itemId))
-        return { id: `item-${itemId}`, name: item.name, detail: category?.label || 'Waste collection', unitPrice: item.price, quantity }
+        return { id: `item-${itemId}`, name: item.name, detail: `${category?.label || 'Waste collection'} · ${collectionDetail}`, unitPrice: item.price, quantity }
       }))
     }
-    setJustAdded(true)
-    setTimeout(() => setJustAdded(false), 2500)
+    if (saturdayCollection) addItems([{ id: 'saturday-collection', name: 'Saturday collection', detail: 'Weekend collection surcharge', unitPrice: 50, quantity: 1 }])
+    router.push('/checkout')
   }
-
   return (
-    <div className='w-full rounded-2xl border border-[#11224D]/10 bg-white p-4 text-left shadow-lg transition-shadow duration-300 hover:shadow-xl sm:p-6 lg:p-8'>
+    <div className='w-full rounded-2xl border border-[#0492E8]/10 bg-white p-4 text-left shadow-lg transition-shadow duration-300 hover:shadow-xl sm:p-6 lg:p-8'>
       {/* Mode selector */}
       <div className='flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:gap-8'>
         {[
@@ -255,27 +273,27 @@ export default function ManVanBooking ({ defaultMode = 'lorry', initialCategoryI
                   aria-pressed={isSelected}
                   onClick={() => setSelectedLoadSize(size.id)}
                   className={`group relative flex flex-col overflow-hidden rounded-xl border bg-white shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-[#0497E2] hover:shadow-xl hover:shadow-blue-100 ${
-                    isSelected ? 'border-[#0497E2] ring-2 ring-[#0497E2]' : 'border-[#11224D]/10'
+                    isSelected ? 'border-[#0497E2] ring-2 ring-[#0497E2]' : 'border-[#0492E8]/10'
                   }`}
                 >
                   {size.popular && (
                     <span className='absolute left-3 top-3 z-10 inline-flex items-center gap-1 rounded-full bg-[#F7B965] px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide text-[#11224D] transition-transform duration-300 group-hover:scale-105'>
-                      <Star className='size-3 fill-[#11224D]' /> Popular
+                      <Star className='size-3 fill-[#0492E8]' /> Popular
                     </span>
                   )}
                   <div className='flex h-32 items-center justify-center bg-gradient-to-b from-[#DCEBFA] to-white p-4 transition-colors duration-300 group-hover:from-[#CFE6FA] sm:h-36'>
                     <Truck className='size-14 text-[#1A68A3] transition-transform duration-300 group-hover:scale-110 group-hover:-translate-x-1 sm:size-16' strokeWidth={1.5} />
                   </div>
-                  <div className='bg-[#11224D] px-4 py-2.5 text-center text-base font-bold text-white transition-colors duration-300 group-hover:bg-[#1A68A3] sm:text-lg'>
+                  <div className='bg-[#0492E8] px-4 py-2.5 text-center text-base font-bold text-white transition-colors duration-300 group-hover:bg-[#1A68A3] sm:text-lg'>
                     {size.name}
                   </div>
                   <div className='flex flex-1 flex-col items-center gap-1 px-4 py-4 text-center'>
                     <p className='text-2xl font-extrabold text-[#0497E2] sm:text-3xl'>
-                      £{size.priceIncVat.toFixed(2)}
+                      Â£{size.priceIncVat.toFixed(2)}
                       <span className='ml-1 text-xs font-semibold text-[#0497E2]/70'>inc. VAT</span>
                     </p>
                     <p className='text-sm font-semibold text-[#4974AF]'>
-                      £{size.priceExVat.toFixed(2)} <span className='text-xs font-normal'>ex. VAT</span>
+                      Â£{size.priceExVat.toFixed(2)} <span className='text-xs font-normal'>ex. VAT</span>
                     </p>
                     <div className='mt-2 space-y-0.5 text-xs text-neutral-500 sm:text-sm'>
                       <p>Max Weight: <span className='font-semibold text-[#11224D]'>{size.maxWeight}</span></p>
@@ -283,7 +301,7 @@ export default function ManVanBooking ({ defaultMode = 'lorry', initialCategoryI
                       <p>Equivalent to: <span className='font-semibold text-[#11224D]'>{size.sacks} Black Sacks</span></p>
                     </div>
                   </div>
-                  <div className='border-t border-[#11224D]/10 bg-[#EAF3FB] px-4 py-2.5 text-center text-xs font-semibold text-[#11224D] transition-colors duration-300 group-hover:bg-[#DCEBFA] sm:text-sm'>
+                  <div className='border-t border-[#0492E8]/10 bg-[#EAF3FB] px-4 py-2.5 text-center text-xs font-semibold text-[#11224D] transition-colors duration-300 group-hover:bg-[#DCEBFA] sm:text-sm'>
                     Time Allowance: <span className='font-bold'>{size.time}</span>
                   </div>
                 </button>
@@ -343,7 +361,7 @@ export default function ManVanBooking ({ defaultMode = 'lorry', initialCategoryI
                     <div
                       key={item.id}
                       className={`group relative flex flex-col rounded-xl border bg-white p-4 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-[#0497E2] hover:shadow-lg hover:shadow-blue-100 ${
-                        isSelected ? 'border-[#0497E2] ring-1 ring-[#0497E2]' : 'border-[#11224D]/10'
+                        isSelected ? 'border-[#0497E2] ring-1 ring-[#0497E2]' : 'border-[#0492E8]/10'
                       }`}
                     >
                       <div className='flex items-start justify-between gap-2'>
@@ -374,7 +392,7 @@ export default function ManVanBooking ({ defaultMode = 'lorry', initialCategoryI
                           <button
                             type='button'
                             onClick={() => toggleItem(item)}
-                            className='shrink-0 rounded-md border border-[#11224D]/15 px-2 py-1 text-xs font-bold text-[#4974AF] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#0497E2] hover:bg-[#EAF3FB] hover:text-[#0497E2] hover:shadow-sm'
+                            className='shrink-0 rounded-md border border-[#0492E8]/15 px-2 py-1 text-xs font-bold text-[#4974AF] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#0497E2] hover:bg-[#EAF3FB] hover:text-[#0497E2] hover:shadow-sm'
                           >
                             + Add
                           </button>
@@ -382,7 +400,7 @@ export default function ManVanBooking ({ defaultMode = 'lorry', initialCategoryI
                       </div>
                       <p className='mt-3 text-sm font-bold leading-snug text-[#11224D] transition-colors duration-200 group-hover:text-[#0497E2]'>{item.name}</p>
                       <p className='mt-1 flex-1 text-xs leading-relaxed text-neutral-500'>{item.description}</p>
-                      <p className='mt-3 text-base font-extrabold text-[#0497E2]'>£{item.price.toFixed(2)}</p>
+                      <p className='mt-3 text-base font-extrabold text-[#0497E2]'>Â£{item.price.toFixed(2)}</p>
                     </div>
                   )
                 })}
@@ -392,30 +410,41 @@ export default function ManVanBooking ({ defaultMode = 'lorry', initialCategoryI
         </div>
       )}
 
+      {hasSelection && (
+        <CollectionDetails
+          onSubmit={handleAddToBasket}
+          saturdayCollection={saturdayCollection}
+          setSaturdayCollection={setSaturdayCollection}
+          collectionDate={collectionDate}
+          setCollectionDate={setCollectionDate}
+          accessConfirmed={accessConfirmed}
+          setAccessConfirmed={setAccessConfirmed}
+          restrictedAccess={restrictedAccess}
+          setRestrictedAccess={setRestrictedAccess}
+          paymentOption={paymentOption}
+          setPaymentOption={setPaymentOption}
+          notice={notice}
+          setNotice={setNotice}
+        />
+      )}
       {/* Footer: Add to basket + running total */}
       {mode && (
-        <div className='sticky bottom-3 z-20 mt-10 flex flex-col items-stretch gap-3 rounded-xl border border-[#11224D]/10 bg-white/95 p-3 shadow-xl backdrop-blur sm:flex-row sm:items-center sm:justify-between sm:gap-6 sm:p-4'>
+        <div className='sticky bottom-3 z-20 mt-10 flex flex-col items-stretch gap-3 rounded-xl border border-[#0492E8]/10 bg-white/95 p-3 shadow-xl backdrop-blur sm:flex-row sm:items-center sm:justify-between sm:gap-6 sm:p-4'>
           <button
-            type='button'
-            onClick={handleAddToBasket}
+            type='submit'
+            form='collection-details'
             disabled={!hasSelection}
             className={`order-2 flex-1 rounded-lg px-6 py-3 text-sm font-bold uppercase tracking-wide transition-all duration-200 sm:order-1 sm:text-base ${
               hasSelection
-                ? 'bg-gradient-to-r from-[#1A68A3] via-[#11224D] to-[#1A68A3] text-white hover:-translate-y-0.5 hover:shadow-lg hover:brightness-110'
-                : 'cursor-not-allowed bg-[#11224D]/10 text-[#11224D]/40'
+                ? 'bg-gradient-to-r from-[#1A68A3] via-[#0492E8] to-[#1A68A3] text-white hover:-translate-y-0.5 hover:shadow-lg hover:brightness-110'
+                : 'cursor-not-allowed bg-[#0492E8]/10 text-[#11224D]/40'
             }`}
           >
-            {justAdded ? 'Added to Basket ✓' : 'Add to Basket'}
+            Add to Basket
           </button>
-          {justAdded && (
-            <Link href='/checkout' className='order-3 inline-flex items-center justify-center gap-2 rounded-lg border border-[#11224D] px-5 py-3 text-sm font-bold text-[#11224D] transition hover:bg-[#11224D] hover:text-white sm:order-2'>
-              Go to Checkout
-              <ChevronRight className='size-4' />
-            </Link>
-          )}
           <div className='group order-1 inline-flex shrink-0 items-center justify-center gap-2 self-center rounded-lg bg-[#F7B965] px-5 py-3 transition-colors duration-200 hover:bg-[#F5C583] sm:order-3'>
             <span className='text-sm font-semibold text-[#11224D] sm:text-base'>Total</span>
-            <span className='text-lg font-extrabold text-[#11224D] sm:text-xl'>£{total.toFixed(2)}</span>
+            <span className='text-lg font-extrabold text-[#11224D] sm:text-xl'>Â£{total.toFixed(2)}</span>
             <span className='text-xs font-medium text-[#11224D]/70'>(inc. VAT)</span>
           </div>
         </div>

@@ -6,6 +6,7 @@ import GetPrices from '@/components/houseClearance/GetPrices'
 import HouseRubbishItems from '@/components/houseClearance/HouseRubbishItems'
 import ServiceHighlights from '@/components/houseClearance/ServiceHighlights'
 import WhyChooseUs from '@/components/houseClearance/WhyChooseUs'
+import GarageRubbishClearance from '@/components/flatClearance/GarageRubbishClearance'
 import React from 'react'
 
 export default function page () {
@@ -15,6 +16,7 @@ export default function page () {
         <RubbishService/>
         <GetPrices/>
         <HowItWorks/>
+        <GarageRubbishClearance/>
         <WhyChooseUs/>
         <ServiceHighlights/>
         <HouseRubbishItems/>

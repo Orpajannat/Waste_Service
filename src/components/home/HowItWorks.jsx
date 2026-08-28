@@ -100,7 +100,7 @@ export default function HowItWorks() {
             <div className="relative mx-auto aspect-square w-[280px] overflow-hidden rounded-full border-[10px] border-white shadow-2xl shadow-blue-100 transition-all duration-700 group-hover:scale-[1.03] group-hover:border-blue-50 group-hover:shadow-blue-300 sm:w-[400px] lg:w-[470px]">
 
               <Image
-                src="/images/Works.jpg"
+                src="/images/rubbishVan.jpg"
                 alt="Moving team carrying boxes"
                 fill
                 priority

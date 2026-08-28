@@ -35,7 +35,7 @@ const benefits = [
 
 export default function Benefits() {
   return (
-    <section className='relative isolate min-h-[52rem] overflow-hidden bg-[#07142E] py-16 text-white sm:py-20 lg:flex lg:min-h-[50rem] lg:items-center lg:py-24'>
+    <section className='relative isolate min-h-[52rem] overflow-hidden bg-[#0492E8] py-16 text-white sm:py-20 lg:flex lg:min-h-[50rem] lg:items-center lg:py-24'>
       <Image
         src='/images/Place.webp'
         alt='A neighbourhood served by Waste Services'
@@ -43,8 +43,8 @@ export default function Benefits() {
         sizes='100vw'
         className='-z-20 object-cover object-center'
       />
-      <div className='absolute inset-0 -z-10 bg-[#07142E]/72' />
-      <div className='absolute inset-0 -z-10 bg-linear-to-r from-[#07142E] via-[#07142E]/90 to-[#07142E]/50 lg:via-[#07142E]/78 lg:to-[#07142E]/60' />
+      <div className='absolute inset-0 -z-10 bg-[#0492E8]/72' />
+      <div className='absolute inset-0 -z-10 bg-linear-to-r from-[#0492E8] via-[#0492E8]/90 to-[#0492E8]/50 lg:via-[#0492E8]/78 lg:to-[#0492E8]/60' />
       <div aria-hidden='true' className='absolute -left-24 -top-24 size-72 rounded-full border-[56px] border-white/[0.035]' />
 
       <div className='mx-auto grid w-full max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.78fr_1.22fr] lg:items-center lg:gap-16 lg:px-8 xl:gap-24'>

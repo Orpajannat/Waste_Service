@@ -13,7 +13,7 @@ export default function Hero() {
         sizes="100vw"
         className="-z-30 object-cover object-[38%_center] sm:object-center"
       />
-      <div className="absolute inset-0 -z-20 bg-gradient-to-t from-[#071d3b]/80 via-[#071d3b]/15 to-[#071d3b]/15 lg:bg-[linear-gradient(90deg,rgba(7,29,59,0.08)_20%,rgba(7,29,59,0.2)_48%,rgba(7,29,59,0.72)_72%,rgba(7,29,59,0.92)_100%)]" />
+      {/* <div className="absolute inset-0 -z-20 bg-gradient-to-t from-[#071d3b]/80 via-[#071d3b]/15 to-[#071d3b]/15 lg:bg-[linear-gradient(90deg,rgba(7,29,59,0.08)_20%,rgba(7,29,59,0.2)_48%,rgba(7,29,59,0.72)_72%,rgba(7,29,59,0.92)_100%)]" /> */}
 
       <div className="mx-auto flex min-h-[620px] w-full max-w-7xl items-end px-4 py-8 sm:min-h-[660px] sm:px-6 sm:py-10 lg:min-h-[700px] lg:items-center lg:justify-end lg:px-8 lg:py-16">
         <div className="group relative w-full overflow-hidden rounded-[1.75rem] border border-white/20 bg-[#071d3b]/88 p-6 text-white shadow-[0_28px_70px_-30px_rgba(2,14,33,0.9)] backdrop-blur-md transition duration-500 hover:-translate-y-1 hover:border-white/35 sm:p-8 lg:w-[min(36rem,48%)] lg:p-10">

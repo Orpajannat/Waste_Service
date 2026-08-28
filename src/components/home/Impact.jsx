@@ -37,17 +37,17 @@ export default function Impact() {
           <div className='group relative mx-auto w-full max-w-xl lg:mx-0'>
             <div aria-hidden='true' className='absolute -inset-3 rounded-[2.5rem_2.5rem_7rem_2.5rem] border border-[#F4B942]/35 transition-transform duration-700 group-hover:translate-x-1 group-hover:-translate-y-1 sm:-inset-4' />
 
-            <div className='relative aspect-[4/5] overflow-hidden rounded-[2rem_2rem_6rem_2rem] bg-[#DDEAF1] shadow-2xl shadow-[#11224D]/15'>
+            <div className='relative aspect-[4/5] overflow-hidden rounded-[2rem_2rem_6rem_2rem] bg-[#DDEAF1] shadow-2xl shadow-[#0492E8]/15'>
               <Image
-                src='/images/impact.jpg'
+                src='/images/rubbishRemoval.jpg'
                 alt='A clean residential neighbourhood served by Waste Services'
                 fill
                 sizes='(max-width: 1023px) 100vw, 42vw'
                 className='object-cover object-[52%_70%] transition-transform duration-1000 group-hover:scale-105'
               />
-              <div className='absolute inset-0 bg-linear-to-t from-[#11224D]/65 via-transparent to-white/5' />
+              <div className='absolute inset-0 bg-linear-to-t from-[#0492E8]/65 via-transparent to-white/5' />
 
-              <div className='absolute inset-x-5 bottom-5 rounded-2xl border border-white/20 bg-[#07142E]/75 p-4 text-white shadow-xl backdrop-blur-md sm:inset-x-7 sm:bottom-7 sm:p-5'>
+              <div className='absolute inset-x-5 bottom-5 rounded-2xl border border-white/20 bg-[#0492E8]/75 p-4 text-white shadow-xl backdrop-blur-md sm:inset-x-7 sm:bottom-7 sm:p-5'>
                 <div className='flex items-center gap-3'>
                   <span className='flex size-10 shrink-0 items-center justify-center rounded-full bg-[#F4B942] text-[#11224D]'>
                     <Users aria-hidden='true' className='size-5' />
@@ -68,7 +68,7 @@ export default function Impact() {
           </div>
 
           <div>
-            <div className='group flex items-center gap-4 border-b border-[#11224D]/15 pb-8 sm:gap-6'>
+            <div className='group flex items-center gap-4 border-b border-[#0492E8]/15 pb-8 sm:gap-6'>
               <span className='flex size-14 shrink-0 items-center justify-center rounded-2xl bg-[#0497E2]/10 text-[#0497E2] transition-all duration-500 group-hover:rotate-6 group-hover:bg-[#0497E2] group-hover:text-white sm:size-16'>
                 <Recycle aria-hidden='true' className='size-7 transition-transform duration-700 group-hover:rotate-180 sm:size-8' />
               </span>
@@ -80,7 +80,7 @@ export default function Impact() {
               </div>
             </div>
 
-            <div className='grid divide-y divide-[#11224D]/15 border-b border-[#11224D]/15 sm:grid-cols-3 sm:divide-x sm:divide-y-0'>
+            <div className='grid divide-y divide-[#0492E8]/15 border-b border-[#0492E8]/15 sm:grid-cols-3 sm:divide-x sm:divide-y-0'>
               {impactStats.map((stat) => (
                 <div key={stat.value} className='group px-1 py-6 first:pl-0 sm:px-6 sm:first:pl-0 sm:last:pr-0'>
                   <p className='text-3xl font-black tracking-tight text-[#11224D] transition-colors duration-300 group-hover:text-[#0497E2] sm:text-4xl'>
@@ -93,13 +93,13 @@ export default function Impact() {
 
             <div className='mt-8 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between'>
               <div className='flex items-center gap-3 text-sm text-slate-600'>
-                <span className='flex size-10 shrink-0 items-center justify-center rounded-full bg-[#11224D] text-white'>
+                <span className='flex size-10 shrink-0 items-center justify-center rounded-full bg-[#0492E8] text-white'>
                   <ShieldCheck aria-hidden='true' className='size-5' />
                 </span>
                 <span>Fully insured. Responsible from collection to recycling.</span>
               </div>
 
-              <Link href='/contactUs' className='group inline-flex shrink-0 items-center gap-3 self-start rounded-full bg-[#11224D] px-5 py-3 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#0497E2] hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#11224D] sm:self-auto'>
+              <Link href='/contactUs' className='group inline-flex shrink-0 items-center gap-3 self-start rounded-full bg-[#0492E8] px-5 py-3 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#0497E2] hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0492E8] sm:self-auto'>
                 Meet our team
                 <ArrowUpRight aria-hidden='true' className='size-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5' />
               </Link>

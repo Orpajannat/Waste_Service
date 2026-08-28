@@ -16,13 +16,10 @@ export default function Home() {
       <main>
         <Hero/>
         <SecondaryNav/>
-        <AboutUs/>
-        <Impact/>
-        <Order/>
         <RubbishRemoval/>
-        <RubbishClearance/>
-        <RubbishService/>
+        <Order/>
         <Benefits/>
+        <RubbishService/>
         <QuoteForm/>
       </main>
     </div>

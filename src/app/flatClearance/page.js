@@ -1,6 +1,5 @@
 import FlatClearanceIntro from '@/components/flatClearance/FlatClearanceIntro'
 import FlatHero from '@/components/flatClearance/FlatHero'
-import GarageRubbishClearance from '@/components/flatClearance/GarageRubbishClearance'
 import FlyTippedRubbishRemoval from '@/components/flyTippingClearance/FlyTippedRubbishRemoval'
 import HowItWorks from '@/components/home/HowItWorks'
 import RubbishService from '@/components/home/RubbishService'
@@ -17,7 +16,6 @@ export default function page () {
         <GetPrices/>
         <HowItWorks/>
         <WhyChooseUs/>
-        <GarageRubbishClearance/>
         <ServiceHighlights/>
         <RubbishService/>
         <FlyTippedRubbishRemoval/>

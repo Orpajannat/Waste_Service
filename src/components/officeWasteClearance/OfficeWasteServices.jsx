@@ -27,7 +27,7 @@ export default function OfficeWasteServices() {
         <div className="grid gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:items-center lg:gap-16">
           <div className="group relative min-h-[360px] overflow-hidden rounded-[2rem] bg-[#102a4c] shadow-[0_28px_65px_-34px_rgba(16,42,76,0.7)] sm:min-h-[380px]">
             <Image
-              src="/images/officewaste1.jpg"
+              src="/images/officeRubbish.jpg"
               alt="Electronic office equipment prepared for responsible recycling"
               fill
               sizes="(max-width: 1024px) 100vw, 38vw"

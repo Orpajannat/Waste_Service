@@ -48,10 +48,10 @@ const categories = [
 ];
 
 const highlightImages = [
-  { src: '/images/highlight1.jpeg', alt: 'Household waste prepared for collection' },
-  { src: '/images/highlight2.jpeg', alt: 'Household items ready for responsible removal' },
-  { src: '/images/highlight3.jpeg', alt: 'Clearance materials organised for collection' },
-  { src: '/images/highlight4.jpeg', alt: 'Waste clearance team handling a collection' },
+  { src: '/images/highlight1.jpg', alt: 'Household waste prepared for collection' },
+  { src: '/images/highlight2.jpg', alt: 'Household items ready for responsible removal' },
+  { src: '/images/highlight3.jpg', alt: 'Clearance materials organised for collection' },
+  { src: '/images/highlight4.jpg', alt: 'Waste clearance team handling a collection' },
 ];
 
 export default function HouseRubbishItems() {

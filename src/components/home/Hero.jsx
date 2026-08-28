@@ -12,21 +12,18 @@ export default function Hero() {
   return (
     <section className='relative flex min-h-svh w-full items-center overflow-hidden bg-[#07142E] text-white'>
       <Image
-        src='/images/Hero2.jpg'
+        src='/images/HeroImage.jpg'
         alt='Colour-coded waste and recycling bins in a green public space'
         fill
         sizes='100vw'
-        className='object-cover object-[62%_center] sm:object-center'
+        className='object-cover object-center sm:object-top'
         priority
       />
 
-      <div className='absolute inset-0 bg-[#07142E]/35' />
-      <div className='absolute inset-0 bg-linear-to-r from-[#07142E]/95 via-[#07142E]/75 to-[#07142E]/10 sm:via-[#07142E]/65 lg:via-[#07142E]/45' />
-      <div className='absolute inset-0 bg-linear-to-t from-[#07142E]/80 via-transparent to-[#07142E]/25' />
-      <div aria-hidden='true' className='absolute -left-24 top-1/4 size-64 rounded-full border-[48px] border-white/[0.04]' />
+
 
       <div className='relative mx-auto w-full max-w-7xl px-4 pb-10 pt-28 sm:px-6 sm:pb-12 sm:pt-32 lg:px-8 lg:pb-14 lg:pt-36'>
-        <div className='max-w-3xl'>
+        <div className='max-w-3xl rounded-[2rem] border border-white/10 bg-[#07142E]/35 p-6 shadow-2xl shadow-black/30 backdrop-blur-xl sm:p-8 lg:p-10'>
           <div className='inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-black uppercase tracking-[0.2em] text-white shadow-lg backdrop-blur-md transition-all duration-300 hover:border-[#F4B942]/60 hover:bg-white/15'>
             <span className='size-2 rounded-full bg-[#F4B942] shadow-[0_0_0_5px_rgba(244,185,66,0.14)]' />
             Local waste collection specialists

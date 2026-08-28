@@ -57,7 +57,7 @@ export default function SecondaryNav() {
               <Link
                 key={promise.title}
                 href={promise.href}
-                className='group relative flex min-h-72 min-w-0 flex-col overflow-hidden rounded-[1.75rem] border border-[#11224D]/10 bg-[#F8FAFB] p-5 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-[#0497E2]/30 hover:bg-white hover:shadow-2xl hover:shadow-[#11224D]/10 focus-visible:-translate-y-1 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0497E2] sm:p-6'
+                className='group relative flex min-h-72 min-w-0 flex-col overflow-hidden rounded-[1.75rem] border border-[#0492E8]/10 bg-[#F8FAFB] p-5 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-[#0497E2]/30 hover:bg-white hover:shadow-2xl hover:shadow-[#0492E8]/10 focus-visible:-translate-y-1 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0497E2] sm:p-6'
               >
                 <div className='flex items-start justify-between gap-4'>
                   <span className={`flex size-13 shrink-0 items-center justify-center rounded-2xl text-white shadow-lg transition-all duration-500 group-hover:rotate-6 group-hover:scale-110 ${promise.accent}`}>
@@ -76,9 +76,9 @@ export default function SecondaryNav() {
                     {promise.description}
                   </p>
 
-                  <div className='mt-6 flex items-center justify-between border-t border-[#11224D]/10 pt-4'>
+                  <div className='mt-6 flex items-center justify-between border-t border-[#0492E8]/10 pt-4'>
                     <span className='text-xs font-black uppercase tracking-[0.16em] text-[#11224D]/55 transition-colors duration-300 group-hover:text-[#0497E2]'>Learn more</span>
-                    <span className='flex size-9 shrink-0 items-center justify-center rounded-full bg-[#11224D] text-white transition-all duration-300 group-hover:rotate-45 group-hover:bg-[#0497E2]'>
+                    <span className='flex size-9 shrink-0 items-center justify-center rounded-full bg-[#0492E8] text-white transition-all duration-300 group-hover:rotate-45 group-hover:bg-[#0497E2]'>
                       <ArrowUpRight aria-hidden='true' className='size-4' />
                     </span>
                   </div>

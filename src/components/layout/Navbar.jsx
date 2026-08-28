@@ -45,7 +45,10 @@ export default function Navbar() {
                 { name: "Garden Clearance", href: "/gardenClearance" },
                 { name: "Flat Clearance", href: "/flatClearance" },
                 { name: "Garage Clearance", href: "/garageClearance" },
-                { name: "Builders Waste Removal", href: "/buildersWasteRemoval" }
+                { name: "Furniture Removal & Disposal", href: "/furnitureClearance" },
+                { name: "Builders Waste Removal", href: "/buildersWasteRemoval" },
+                { name: "Junk Collection", href: "/junkCollection" },
+                { name: "Wait & Load", href: "/waitLoad" }
             ]
         },
 
@@ -56,7 +59,11 @@ export default function Navbar() {
                 { name: "Builders Waste Removal", href: "/buildersWasteRemoval" },
                 { name: "Office Waste Clearance", href: "/officeWasteClearance" },
                 { name: "Fly Tipping Clearance", href: "/flyTippingClearance" },
+                { name: "Warehouse Rubbish Clearance", href: "/warehouseClearance" },
+                { name: "Hotel & Pub Clearance", href: "/hotelPubClearance" },
                 { name: "Restaurant Clearance", href: "/restaurantClearance" },
+                { name: "Shop Strip Out & Clearance", href: "/shopStripOutClearance" },
+                { name: "Wait & Load", href: "/waitLoad" }
             ]
         },
 

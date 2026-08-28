@@ -21,7 +21,7 @@ export default function WhyChooseUs() {
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-16">
           <div className="group relative min-h-[360px] overflow-hidden rounded-[2rem] bg-[#102a4c] shadow-[0_28px_65px_-35px_rgba(16,42,76,0.65)] sm:min-h-[380px]">
             <Image
-              src="/images/choose1.jpg"
+              src="/images/chooseUs.jpg"
               alt="Prepared waste bags and collection equipment ready for responsible removal"
               fill
               sizes="(max-width: 1024px) 100vw, 44vw"

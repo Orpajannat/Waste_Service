@@ -27,7 +27,7 @@ export default function Order() {
       <div className='relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         <div className='grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-end lg:gap-16'>
           <div>
-            <div className='inline-flex items-center gap-2 rounded-full border border-[#11224D]/10 bg-white px-4 py-2 text-xs font-black uppercase tracking-[0.2em] text-[#11224D] shadow-sm'>
+            <div className='inline-flex items-center gap-2 rounded-full border border-[#0492E8]/10 bg-white px-4 py-2 text-xs font-black uppercase tracking-[0.2em] text-[#11224D] shadow-sm'>
               <Recycle aria-hidden='true' className='size-4 text-[#0497E2]' />
               Prices &amp; booking
             </div>
@@ -38,11 +38,11 @@ export default function Order() {
             </h2>
           </div>
 
-          <div className='rounded-3xl border border-[#11224D]/10 bg-white p-5 shadow-sm sm:p-6'>
+          <div className='rounded-3xl border border-[#0492E8]/10 bg-white p-5 shadow-sm sm:p-6'>
             <p className='text-sm leading-6 text-slate-600 sm:text-base'>
               Choose a waste type to see clear prices and build your collection online. From one bulky item to a complete clearance, there is an option for every job.
             </p>
-            <div className='mt-5 flex flex-wrap gap-x-5 gap-y-3 border-t border-[#11224D]/10 pt-5 text-xs font-bold text-[#11224D] sm:text-sm'>
+            <div className='mt-5 flex flex-wrap gap-x-5 gap-y-3 border-t border-[#0492E8]/10 pt-5 text-xs font-bold text-[#11224D] sm:text-sm'>
               <span className='inline-flex items-center gap-2'><Check className='size-4 text-[#0497E2]' /> Clear pricing</span>
               <span className='inline-flex items-center gap-2'><Check className='size-4 text-[#0497E2]' /> Easy booking</span>
               <span className='inline-flex items-center gap-2'><ShieldCheck className='size-4 text-[#0497E2]' /> Fully insured</span>
@@ -50,7 +50,7 @@ export default function Order() {
           </div>
         </div>
 
-        <div className='mt-10 flex items-center justify-between gap-4 border-b border-[#11224D]/15 pb-4 sm:mt-14'>
+        <div className='mt-10 flex items-center justify-between gap-4 border-b border-[#0492E8]/15 pb-4 sm:mt-14'>
           <h3 className='text-lg font-black text-[#11224D] sm:text-xl'>Choose your collection</h3>
           <p className='hidden text-sm text-slate-500 sm:block'>{services.length} ways to get started</p>
         </div>
@@ -60,7 +60,7 @@ export default function Order() {
             <Link
               key={service.id}
               href={`/prices?service=${service.id}`}
-              className='group relative flex min-h-[19rem] min-w-0 flex-col overflow-hidden rounded-[1.75rem] border border-[#11224D]/10 bg-white shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-[#0497E2]/35 hover:shadow-2xl hover:shadow-[#11224D]/10 focus-visible:-translate-y-1 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0497E2]'
+              className='group relative flex min-h-[19rem] min-w-0 flex-col overflow-hidden rounded-[1.75rem] border border-[#0492E8]/10 bg-white shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-[#0497E2]/35 hover:shadow-2xl hover:shadow-[#0492E8]/10 focus-visible:-translate-y-1 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0497E2]'
             >
               <div className='relative m-2 mb-0 h-44 overflow-hidden rounded-[1.3rem] bg-white sm:h-48'>
                 <span className='absolute left-3 top-3 z-10 rounded-full border border-white/60 bg-white/85 px-2.5 py-1 text-[10px] font-black tracking-[0.15em] text-[#11224D] shadow-sm backdrop-blur'>
@@ -75,7 +75,7 @@ export default function Order() {
                   className='object-contain p-5 transition-transform duration-700 ease-out group-hover:scale-110 group-focus-visible:scale-110'
                 />
 
-                <div className='absolute inset-0 bg-linear-to-t from-[#11224D]/10 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100' />
+                <div className='absolute inset-0 bg-linear-to-t from-[#0492E8]/10 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100' />
               </div>
 
               <div className='flex flex-1 items-end justify-between gap-4 p-5'>
@@ -87,7 +87,7 @@ export default function Order() {
                   <p className='mt-2 text-sm text-slate-500'>View options &amp; prices</p>
                 </div>
 
-                <span className='flex size-11 shrink-0 items-center justify-center rounded-full bg-[#11224D] text-white transition-all duration-500 group-hover:rotate-45 group-hover:bg-[#0497E2] group-hover:shadow-lg group-hover:shadow-[#0497E2]/25'>
+                <span className='flex size-11 shrink-0 items-center justify-center rounded-full bg-[#0492E8] text-white transition-all duration-500 group-hover:rotate-45 group-hover:bg-[#0497E2] group-hover:shadow-lg group-hover:shadow-[#0497E2]/25'>
                   <ArrowUpRight aria-hidden='true' className='size-5' />
                 </span>
               </div>
@@ -97,7 +97,7 @@ export default function Order() {
           ))}
         </div>
 
-        <div className='mt-8 flex flex-col gap-4 rounded-3xl bg-[#11224D] px-5 py-6 text-white shadow-xl sm:flex-row sm:items-center sm:justify-between sm:px-7 lg:px-9'>
+        <div className='mt-8 flex flex-col gap-4 rounded-3xl bg-[#0492E8] px-5 py-6 text-white shadow-xl sm:flex-row sm:items-center sm:justify-between sm:px-7 lg:px-9'>
           <div>
             <p className='text-lg font-black sm:text-xl'>Not sure which option to choose?</p>
             <p className='mt-1 text-sm text-white/65'>Browse every waste type or speak with our friendly collection team.</p>

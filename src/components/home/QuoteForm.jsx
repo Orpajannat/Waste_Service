@@ -9,7 +9,7 @@ const steps = [
 
 export default function QuoteForm() {
   return (
-    <section id='form' className='relative overflow-hidden bg-linear-to-br from-[#0497E2] via-[#1679BA] to-[#11224D] py-16 text-white sm:py-20 lg:py-28'>
+    <section id='form' className='relative overflow-hidden bg-linear-to-br from-[#0497E2] via-[#1679BA] to-[#0492E8] py-16 text-white sm:py-20 lg:py-28'>
       <div aria-hidden='true' className='absolute -left-28 -top-32 size-80 rounded-full border-[58px] border-white/[0.07] sm:size-96' />
       <div aria-hidden='true' className='absolute -bottom-32 -right-20 size-80 rounded-full bg-[#F4B942]/20 blur-2xl' />
       <div aria-hidden='true' className='absolute right-[12%] top-10 hidden grid-cols-5 gap-3 opacity-25 lg:grid'>
@@ -49,7 +49,7 @@ export default function QuoteForm() {
             const Icon = step.icon
 
             return (
-              <article key={step.title} className='group relative overflow-hidden rounded-[1.75rem] border border-white/15 bg-[#07142E]/25 p-5 text-left shadow-sm backdrop-blur-md transition-all duration-500 hover:-translate-y-2 hover:border-white/35 hover:bg-[#07142E]/40 hover:shadow-2xl sm:p-6'>
+              <article key={step.title} className='group relative overflow-hidden rounded-[1.75rem] border border-white/15 bg-[#0492E8]/25 p-5 text-left shadow-sm backdrop-blur-md transition-all duration-500 hover:-translate-y-2 hover:border-white/35 hover:bg-[#0492E8]/40 hover:shadow-2xl sm:p-6'>
                 <div className='flex items-start justify-between gap-4'>
                   <span className='flex size-12 items-center justify-center rounded-2xl bg-white text-[#11224D] transition-all duration-500 group-hover:rotate-6 group-hover:scale-110 group-hover:bg-[#F4B942]'>
                     <Icon aria-hidden='true' className='size-6' />
