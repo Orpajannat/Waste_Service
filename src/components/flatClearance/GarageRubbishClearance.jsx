@@ -1,4 +1,4 @@
-import Image from 'next/image';
+﻿import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, Check, Phone } from 'lucide-react';
 
@@ -6,7 +6,7 @@ export default function GarageRubbishClearance() {
   return (
     <section className="bg-white">
       <div className="mx-auto grid w-full max-w-7xl gap-0 px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-2 lg:px-8 lg:py-28">
-        <div className="group relative min-h-[360px] overflow-hidden rounded-t-[2rem] bg-[#102a4c] lg:min-h-[620px] lg:rounded-l-[2rem] lg:rounded-tr-none">
+        <div className="group relative min-h-[360px] overflow-hidden rounded-t-[2rem] bg-sky-50 lg:min-h-[620px] lg:rounded-l-[2rem] lg:rounded-tr-none">
           <Image
             src="/images/garageRubbish.jpg"
             alt="Garage ready for rubbish clearance"
@@ -15,24 +15,24 @@ export default function GarageRubbishClearance() {
             className="object-cover transition duration-700 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#071d3b]/75 via-transparent to-transparent" />
-          <div className="absolute bottom-6 left-6 right-6 rounded-2xl border border-white/20 bg-[#071d3b]/80 p-5 text-white backdrop-blur-md sm:bottom-8 sm:left-8 sm:right-auto sm:max-w-sm">
+          <div className="absolute bottom-6 left-6 right-6 rounded-2xl border border-sky-200 bg-white/90 p-5 text-[#102a4c] backdrop-blur-md sm:bottom-8 sm:left-8 sm:right-auto sm:max-w-sm">
             <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-[#ffd126]">Local collection team</p>
             <p className="mt-2 text-lg font-bold">Branded vehicles. Experienced crews. Heavy lifting included.</p>
           </div>
         </div>
 
-        <div className="flex flex-col justify-center rounded-b-[2rem] bg-[#102a4c] p-7 text-white sm:p-10 lg:rounded-r-[2rem] lg:rounded-bl-none lg:p-12">
+        <div className="flex flex-col justify-center rounded-b-[2rem] border border-sky-200 bg-sky-50 p-7 text-[#102a4c] sm:p-10 lg:rounded-r-[2rem] lg:rounded-bl-none lg:p-12">
           <div className="flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.18em] text-[#ffd126] sm:text-sm">
             <span className="h-0.5 w-9 bg-[#ffd126]" />
             Garage &amp; shed clearance
           </div>
 
           <h2 className="mt-5 text-3xl font-bold leading-tight sm:text-4xl lg:text-4xl">
-            Turn an overcrowded garage back into useful space.
+            Turn an overcrowded Garage back into useful space.
           </h2>
 
-          <p className="mt-6 text-base leading-8 text-white/72 sm:text-lg">
-            Whether junk is blocking the entrance or the whole garage needs clearing, our team arrives with the right equipment to load and remove it safely.
+          <p className="mt-6 text-base leading-8 text-[#102a4c]/72 sm:text-lg">
+            Whether junk is blocking the entrance or the whole Garage needs clearing, our team arrives with the right equipment to load and remove it safely.
           </p>
 
           <ul className="mt-7 space-y-3">
@@ -41,7 +41,7 @@ export default function GarageRubbishClearance() {
               'Garage and shed collections across Greater London',
               'Same-day availability may be possible',
             ].map((item) => (
-              <li key={item} className="flex items-center gap-3 text-sm font-semibold text-white/90 sm:text-base">
+              <li key={item} className="flex items-center gap-3 text-sm font-semibold text-[#102a4c]/90 sm:text-base">
                 <span className="grid size-7 place-items-center rounded-full bg-[#ffd126] text-[#102a4c]">
                   <Check className="size-4" strokeWidth={3} />
                 </span>

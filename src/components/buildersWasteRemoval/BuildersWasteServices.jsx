@@ -1,4 +1,4 @@
-import Image from 'next/image';
+﻿import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, Check, HardHat } from 'lucide-react';
 
@@ -21,7 +21,7 @@ export default function BuildersWasteServices() {
             className="object-cover transition duration-700 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#071d3b]/75 via-transparent to-transparent" />
-          <div className="absolute bottom-6 left-6 flex items-center gap-3 rounded-2xl bg-[#071d3b]/82 p-4 text-white backdrop-blur-md">
+          <div className="absolute bottom-6 left-6 flex items-center gap-3 rounded-2xl bg-white/90 p-4 text-[#102a4c] backdrop-blur-md">
             <HardHat className="size-7 text-[#ffd126]" />
             <span className="font-bold">Site-ready collection teams</span>
           </div>

@@ -1,4 +1,4 @@
-import Link from 'next/link';
+﻿import Link from 'next/link';
 import { ArrowRight, Check, Footprints, Layers3, Sofa } from 'lucide-react';
 
 const challenges = [
@@ -26,10 +26,10 @@ export default function FlatClearanceIntro() {
 
           <div className="border-l-2 border-[#f0aa26] pl-5 sm:pl-7">
             <p className="text-lg leading-8 text-slate-600 sm:text-xl">
-              We manage single items, room clearances and complete flats—including storage areas, basements, lofts, garages and sheds.
+              We manage single items, room clearances and complete flatsâ€”including storage areas, basements, lofts, garages and sheds.
             </p>
             <p className="mt-4 text-base leading-7 text-slate-500">
-              Our local team plans around the property’s access and handles the lifting, carrying and removal from start to finish.
+              Our local team plans around the propertyâ€™s access and handles the lifting, carrying and removal from start to finish.
             </p>
           </div>
         </div>
@@ -42,7 +42,7 @@ export default function FlatClearanceIntro() {
             >
               <span className="text-xs font-black tracking-[0.15em] text-[#d67d0b]">0{index + 1}</span>
 
-              <span className="grid size-12 place-items-center rounded-full bg-[#102a4c] text-white transition duration-500 group-hover:rotate-6 group-hover:bg-[#f0aa26] group-hover:text-[#102a4c]">
+              <span className="grid size-12 place-items-center rounded-full border border-sky-200 bg-sky-50 text-[#102a4c] transition duration-500 group-hover:rotate-6 group-hover:bg-[#f0aa26] group-hover:text-[#102a4c]">
                 <Icon className="size-5" />
               </span>
 

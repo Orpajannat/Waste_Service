@@ -1,4 +1,4 @@
-import Image from 'next/image';
+﻿import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, Check, ShieldCheck } from 'lucide-react';
 
@@ -73,10 +73,10 @@ export default function HedgeCuttingDetails() {
               />
             </div>
 
-            <div className="rounded-[2rem] bg-[#102a4c] p-7 text-white">
+            <div className="rounded-[2rem] border border-sky-200 bg-sky-50 p-7 text-[#102a4c]">
               <ShieldCheck className="size-7 text-[#7dc6f2]" />
               <h3 className="mt-4 text-2xl font-bold">Experienced local care</h3>
-              <p className="mt-3 text-sm leading-7 text-white/70">
+              <p className="mt-3 text-sm leading-7 text-[#102a4c]/70">
                 Professional equipment, close attention to detail and a satisfaction-led finish.
               </p>
             </div>

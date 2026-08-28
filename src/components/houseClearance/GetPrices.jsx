@@ -1,10 +1,10 @@
-import Image from 'next/image';
+﻿import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
 export default function GetPrices() {
   return (
-    <section className="group relative isolate flex min-h-[360px] w-full overflow-hidden bg-[#102a4c] sm:min-h-[400px] lg:min-h-[360px]">
+    <section className="group relative isolate flex min-h-[360px] w-full overflow-hidden bg-sky-50 sm:min-h-[400px] lg:min-h-[360px]">
       <Image
         src="/images/cleaning.jpg"
         alt="Professional clearance team ready for a responsible collection"

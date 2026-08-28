@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import {
@@ -145,17 +145,17 @@ export default function FAQ() {
           </div>
 
 
-          <div className="mt-12 overflow-hidden rounded-3xl bg-[#11224D] p-8 text-center shadow-2xl shadow-[#11224D]/20 transition-all duration-500 hover:shadow-[#11224D]/30">
+          <div className="mt-12 overflow-hidden rounded-3xl border border-sky-200 bg-sky-50 p-8 text-center shadow-2xl shadow-[#11224D]/20 transition-all duration-500 hover:shadow-[#11224D]/30">
 
-            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10 transition-all duration-500 hover:rotate-12 hover:scale-110 hover:bg-white/20">
-              <Phone className="h-6 w-6 text-white" />
+            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-white transition-all duration-500 hover:rotate-12 hover:scale-110 hover:bg-sky-100">
+              <Phone className="h-6 w-6 text-sky-600" />
             </div>
 
-            <h2 className="mt-5 text-2xl font-black text-white">
+            <h2 className="mt-5 text-2xl font-black text-[#11224D]">
               Still Have Questions?
             </h2>
 
-            <p className="mx-auto mt-3 max-w-lg text-sm leading-6 text-white/60">
+            <p className="mx-auto mt-3 max-w-lg text-sm leading-6 text-slate-600">
               Our friendly team is ready to help you with anything you need.
             </p>
 

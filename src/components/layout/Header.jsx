@@ -1,4 +1,4 @@
-import Image from 'next/image'
+﻿import Image from 'next/image'
 import React from 'react'
 import { ArrowRight } from 'lucide-react';
 import Navbar from './Navbar';

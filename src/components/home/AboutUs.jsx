@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import {
   ArrowUpRight,
   CheckCircle2,
@@ -60,7 +60,7 @@ export default function AboutUs() {
 
                 <div className="absolute bottom-5 left-5 translate-y-4 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
 
-                  <div className="rounded-2xl border border-white/20 bg-white/90 px-5 py-4 shadow-xl backdrop-blur-md">
+                  <div className="rounded-2xl border border-sky-200 bg-white/90 px-5 py-4 shadow-xl backdrop-blur-md">
 
                     <p className="text-xs font-bold uppercase tracking-widest text-[#11224D]">
                       Professional Moving
@@ -77,13 +77,13 @@ export default function AboutUs() {
               </div>
             </div>
 
-            <div className="absolute -bottom-6 left-8 rounded-2xl bg-[#0492E8] px-6 py-4 text-white shadow-xl shadow-[#0492E8]/25 transition-all duration-500 hover:-translate-y-2 hover:scale-105 hover:shadow-2xl hover:shadow-[#0492E8]/30">
+            <div className="absolute -bottom-6 left-8 rounded-2xl bg-[#0492E8] px-6 py-4 text-[#102a4c] shadow-xl shadow-[#0492E8]/25 transition-all duration-500 hover:-translate-y-2 hover:scale-105 hover:shadow-2xl hover:shadow-[#0492E8]/30">
 
               <p className="text-2xl font-black">
                 10+
               </p>
 
-              <p className="text-xs font-medium text-white/70">
+              <p className="text-xs font-medium text-[#102a4c]/70">
                 Years Experience
               </p>
 
@@ -207,7 +207,7 @@ export default function AboutUs() {
                 <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-[#0492E8] transition-all duration-500 hover:w-full" />
               </span>
 
-              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#0492E8] text-white transition-all duration-500 hover:rotate-45 hover:scale-110 hover:bg-blue-600">
+              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#0492E8] text-[#102a4c] transition-all duration-500 hover:rotate-45 hover:scale-110 hover:bg-blue-600">
                 <ArrowUpRight className="h-4 w-4" />
               </div>
 

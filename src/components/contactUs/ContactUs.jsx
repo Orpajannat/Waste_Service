@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import {
@@ -43,7 +43,7 @@ export default function ContactUs() {
         state: "success",
         message:
           result.message ||
-          "Thanks — your enquiry has been sent. We’ll be in touch shortly.",
+          "Thanks â€” your enquiry has been sent. Weâ€™ll be in touch shortly.",
       });
     } catch (error) {
       setSubmission({

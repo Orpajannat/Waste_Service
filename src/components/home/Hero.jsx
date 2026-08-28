@@ -1,4 +1,4 @@
-import Image from 'next/image'
+﻿import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowDown, ArrowRight, Check, Recycle, ShieldCheck, Truck } from 'lucide-react'
 
@@ -10,7 +10,7 @@ const assurances = [
 
 export default function Hero() {
   return (
-    <section className='relative flex min-h-svh w-full items-center overflow-hidden bg-[#07142E] text-white'>
+    <section className='relative flex min-h-svh w-full items-center overflow-hidden bg-sky-50 text-[#102a4c]'>
       <Image
         src='/images/HeroImage.jpg'
         alt='Colour-coded waste and recycling bins in a green public space'
@@ -23,8 +23,8 @@ export default function Hero() {
 
 
       <div className='relative mx-auto w-full max-w-7xl px-4 pb-10 pt-28 sm:px-6 sm:pb-12 sm:pt-32 lg:px-8 lg:pb-14 lg:pt-36'>
-        <div className='max-w-3xl rounded-[2rem] border border-white/10 bg-[#07142E]/35 p-6 shadow-2xl shadow-black/30 backdrop-blur-xl sm:p-8 lg:p-10'>
-          <div className='inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-black uppercase tracking-[0.2em] text-white shadow-lg backdrop-blur-md transition-all duration-300 hover:border-[#F4B942]/60 hover:bg-white/15'>
+        <div className='max-w-3xl rounded-[2rem] border border-sky-200 bg-white/80 p-6 shadow-2xl shadow-black/30 backdrop-blur-xl sm:p-8 lg:p-10'>
+          <div className='inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-black uppercase tracking-[0.2em] text-[#102a4c] shadow-lg backdrop-blur-md transition-all duration-300 hover:border-[#F4B942]/60 hover:bg-white/15'>
             <span className='size-2 rounded-full bg-[#F4B942] shadow-[0_0_0_5px_rgba(244,185,66,0.14)]' />
             Local waste collection specialists
           </div>
@@ -34,10 +34,10 @@ export default function Hero() {
             <span className='block text-[#68C4EF]'>Space restored.</span>
           </h1>
 
-          <p className='mt-6 max-w-2xl text-base font-semibold leading-7 text-white/90 sm:text-lg lg:text-xl'>
+          <p className='mt-6 max-w-2xl text-base font-semibold leading-7 text-[#102a4c]/90 sm:text-lg lg:text-xl'>
             Professional rubbish clearance for homes and businesses throughout London and the Home Counties.
           </p>
-          <p className='mt-3 max-w-2xl text-sm leading-6 text-white/65 sm:text-base'>
+          <p className='mt-3 max-w-2xl text-sm leading-6 text-[#102a4c]/65 sm:text-base'>
             From garage junk and old furniture to complete property clearances, our experienced team handles the lifting, loading and responsible disposal.
           </p>
 
@@ -47,7 +47,7 @@ export default function Hero() {
               <ArrowRight aria-hidden='true' className='size-5 transition-transform duration-300 group-hover:translate-x-1' />
             </Link>
 
-            <Link href='/contactUs' className='group inline-flex w-full items-center justify-center gap-3 rounded-full border border-white/30 bg-white/10 px-6 py-4 text-sm font-black text-white backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-white hover:bg-white hover:text-[#11224D] hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white sm:w-auto sm:text-base'>
+            <Link href='/contactUs' className='group inline-flex w-full items-center justify-center gap-3 rounded-full border border-white/30 bg-white/10 px-6 py-4 text-sm font-black text-[#102a4c] backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-white hover:bg-white hover:text-[#11224D] hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white sm:w-auto sm:text-base'>
               Talk to our team
               <ArrowRight aria-hidden='true' className='size-5 transition-transform duration-300 group-hover:translate-x-1' />
             </Link>
@@ -58,13 +58,13 @@ export default function Hero() {
               const Icon = item.icon
 
               return (
-                <div key={item.value} className='group flex items-center gap-3 rounded-2xl border border-white/15 bg-[#07142E]/35 p-3 shadow-sm backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-white/35 hover:bg-[#07142E]/55 hover:shadow-lg sm:p-4'>
+                <div key={item.value} className='group flex items-center gap-3 rounded-2xl border border-white/15 bg-white/80 p-3 shadow-sm backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-white/35 hover:bg-white/95 hover:shadow-lg sm:p-4'>
                   <span className='flex size-10 shrink-0 items-center justify-center rounded-xl bg-white/10 text-[#68C4EF] transition-all duration-300 group-hover:rotate-6 group-hover:bg-white group-hover:text-[#11224D]'>
                     <Icon aria-hidden='true' className='size-5' />
                   </span>
                   <p className='min-w-0 leading-tight'>
-                    <strong className='block text-sm font-black text-white sm:text-base'>{item.value}</strong>
-                    <span className='text-xs text-white/55 sm:text-sm'>{item.label}</span>
+                    <strong className='block text-sm font-black text-[#102a4c] sm:text-base'>{item.value}</strong>
+                    <span className='text-xs text-[#102a4c]/55 sm:text-sm'>{item.label}</span>
                   </p>
                 </div>
               )
@@ -73,11 +73,11 @@ export default function Hero() {
         </div>
 
         <div className='mt-8 flex items-center justify-between gap-5 border-t border-white/15 pt-5 sm:mt-10'>
-          <p className='inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-white/55 sm:text-sm'>
+          <p className='inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-[#102a4c]/55 sm:text-sm'>
             <Check aria-hidden='true' className='size-4 text-[#F4B942]' />
-            Friendly team · Clear pricing · Responsible disposal
+            Friendly team Â· Clear pricing Â· Responsible disposal
           </p>
-          <Link href='/#prices' aria-label='Scroll to prices and booking' className='group hidden size-11 shrink-0 items-center justify-center rounded-full border border-white/25 bg-white/10 text-white backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-white hover:bg-white hover:text-[#11224D] sm:flex'>
+          <Link href='/#prices' aria-label='Scroll to prices and booking' className='group hidden size-11 shrink-0 items-center justify-center rounded-full border border-white/25 bg-white/10 text-[#102a4c] backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-white hover:bg-white hover:text-[#11224D] sm:flex'>
             <ArrowDown aria-hidden='true' className='size-5 transition-transform duration-300 group-hover:translate-y-1' />
           </Link>
         </div>

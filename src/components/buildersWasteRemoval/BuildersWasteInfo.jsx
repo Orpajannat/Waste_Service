@@ -1,4 +1,4 @@
-import Image from 'next/image';
+﻿import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, Check, Clock3, Phone } from 'lucide-react';
 
@@ -12,7 +12,7 @@ const types = [
   'Rubble and Brickwork',
   'Flooring',
   'Conservatories',
-  'And more',
+  'and more',
 ];
 
 export default function BuildersWasteInfo() {
@@ -24,11 +24,11 @@ export default function BuildersWasteInfo() {
             <p className="text-xs font-extrabold uppercase tracking-[.18em] text-[#b56808]">What we collect</p>
 
             <h2 className="mt-5 text-3xl font-bold leading-[1.05] text-[#102a4c] sm:text-4xl">
-              Building waste expertise for every project size.
+              Building Waste expertise for every project size.
             </h2>
 
             <p className="mt-6 text-base leading-8 text-slate-600">
-              Keeping rubble and renovation waste under control improves site safety and productivity. Our licensed teams support homeowners and trades across domestic and commercial work.
+              Keeping rubble and renovation Waste under control improves site safety and productivity. Our licensed teams support homeowners and trades across domestic and commercial work.
             </p>
           </div>
 
@@ -45,10 +45,10 @@ export default function BuildersWasteInfo() {
           </ul>
         </div>
 
-        <div className="group relative isolate mt-16 min-h-[360px] overflow-hidden rounded-[2rem] bg-[#102a4c]">
+        <div className="group relative isolate mt-16 min-h-[360px] overflow-hidden rounded-[2rem] bg-sky-50">
           <Image
-            src="/images/waste4.jpg"
-            alt="Builders waste collection in progress"
+            src="/images/Waste4.jpg"
+            alt="Builders Waste collection in progress"
             fill
             sizes="(max-width:1280px) 100vw,1280px"
             className="-z-20 object-cover transition duration-700 group-hover:scale-[1.03]"
@@ -64,11 +64,11 @@ export default function BuildersWasteInfo() {
               </div>
 
               <h3 className="mt-5 text-3xl font-bold sm:text-4xl lg:text-4xl">
-                Same-day builders waste collection may be available.
+                Same-day Builders Waste collection may be available.
               </h3>
 
-              <p className="mt-6 text-base leading-8 text-white/75 sm:text-lg">
-                We understand that homeowners, builders and fitters sometimes need a quick turnaround. Contact us early to confirm the best available collection window.
+              <p className="mt-6 text-base leading-8 text-white/80 sm:text-lg">
+                we understand that homeowners, Builders and fitters sometimes need a quick turnaround. Contact us early to confirm the best available collection window.
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -82,7 +82,7 @@ export default function BuildersWasteInfo() {
 
                 <Link
                   href="/#prices"
-                  className="group/link inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/30 px-6 py-3 font-bold transition hover:bg-white hover:text-[#102a4c]"
+                  className="group/link inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/50 px-6 py-3 font-bold text-white transition hover:bg-white hover:text-[#102a4c]"
                 >
                   View prices
                   <ArrowRight className="size-4 transition group-hover/link:translate-x-1" />

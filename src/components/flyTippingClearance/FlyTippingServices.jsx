@@ -1,4 +1,4 @@
-import Link from 'next/link';
+﻿import Link from 'next/link';
 import { ArrowRight, Check, MapPin, Phone, Recycle, ShieldCheck, Truck } from 'lucide-react';
 
 const servicePromises = [
@@ -17,7 +17,7 @@ const wasteTypes = [
 
 export default function FlyTippingServices() {
   return (
-    <section className="relative overflow-hidden bg-[#081f3d] text-white">
+    <section className="relative overflow-hidden border-y border-sky-100 bg-sky-50 text-[#102a4c]">
       <div className="pointer-events-none absolute -right-24 top-16 size-72 rounded-full border-[3rem] border-[#ffd126]/5" aria-hidden="true" />
 
       <div className="relative mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
@@ -33,11 +33,11 @@ export default function FlyTippingServices() {
             </h2>
           </div>
           <div>
-            <p className="text-base leading-8 text-white/68 sm:text-lg">
+            <p className="text-base leading-8 text-[#102a4c]/68 sm:text-lg">
               Fly-tipped rubbish can be disruptive, unsafe and difficult to manage alone. We organise the collection around the waste type, site access and urgency of the situation.
             </p>
-            <p className="mt-4 text-sm leading-7 text-white/50 sm:text-base">
-              No load is automatically too small or too large—share the details and we will advise on the most suitable response.
+            <p className="mt-4 text-sm leading-7 text-[#102a4c]/50 sm:text-base">
+              No load is automatically too small or too largeâ€”share the details and we will advise on the most suitable response.
             </p>
           </div>
         </div>
@@ -50,7 +50,7 @@ export default function FlyTippingServices() {
                 <Icon className="size-6" strokeWidth={1.8} aria-hidden="true" />
               </span>
               <h3 className="text-xl font-bold sm:text-2xl">{title}</h3>
-              <p className="text-sm leading-7 text-white/62 transition-colors group-hover:text-[#081f3d]/75 sm:text-base">{description}</p>
+              <p className="text-sm leading-7 text-[#102a4c]/62 transition-colors group-hover:text-[#081f3d]/75 sm:text-base">{description}</p>
             </li>
           ))}
         </ol>
@@ -62,7 +62,7 @@ export default function FlyTippingServices() {
           </div>
           <ul className="grid gap-x-8 sm:grid-cols-2">
             {wasteTypes.map((item) => (
-              <li key={item} className="group/item flex min-h-12 items-center gap-3 border-b border-white/12 py-3 text-sm font-semibold text-white/78 transition hover:translate-x-1 hover:border-[#ffd126] hover:text-white sm:text-base">
+              <li key={item} className="group/item flex min-h-12 items-center gap-3 border-b border-white/12 py-3 text-sm font-semibold text-[#102a4c]/78 transition hover:translate-x-1 hover:border-[#ffd126] hover:text-white sm:text-base">
                 <Check className="size-4 shrink-0 text-[#ffd126] transition-transform group-hover/item:scale-110" strokeWidth={3} aria-hidden="true" />
                 {item}
               </li>
@@ -71,7 +71,7 @@ export default function FlyTippingServices() {
         </div>
 
         <div className="mt-10 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
-          <p className="max-w-xl text-sm leading-7 text-white/58 sm:text-base">Send us the location and an honest description of the waste for the clearest collection guidance.</p>
+          <p className="max-w-xl text-sm leading-7 text-[#102a4c]/58 sm:text-base">Send us the location and an honest description of the waste for the clearest collection guidance.</p>
           <div className="flex flex-col gap-3 sm:flex-row">
             <Link href="/contactUs" className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#ffd126] px-6 py-3 text-sm font-extrabold text-[#081f3d] transition duration-300 hover:-translate-y-0.5 hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
               Request a clearance

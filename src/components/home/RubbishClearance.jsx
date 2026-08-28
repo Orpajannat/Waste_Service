@@ -1,4 +1,4 @@
-import Image from 'next/image'
+﻿import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight, Check, Recycle, ShieldCheck, Truck, Users } from 'lucide-react'
 
@@ -47,14 +47,14 @@ export default function RubbishClearance() {
               className='object-cover object-center transition-transform duration-1000 group-hover:scale-105'
             />
             <div className='absolute inset-0 bg-linear-to-t from-[#0492E8] via-[#0492E8]/20 to-transparent' />
-            <div className='absolute inset-x-0 bottom-0 p-6 text-white sm:p-8 lg:p-10'>
-              <span className='text-xs font-black uppercase tracking-[0.2em] text-[#8FD3F4]'>01 · Local expertise</span>
+            <div className='absolute inset-x-0 bottom-0 p-6 text-[#102a4c] sm:p-8 lg:p-10'>
+              <span className='text-xs font-black uppercase tracking-[0.2em] text-[#8FD3F4]'>01 Â· Local expertise</span>
               <h3 className='mt-3 max-w-xl text-3xl font-black leading-tight sm:text-4xl'>Experienced people, careful work.</h3>
-              <p className='mt-4 max-w-2xl text-sm leading-6 text-white/75 sm:text-base'>
+              <p className='mt-4 max-w-2xl text-sm leading-6 text-[#102a4c]/75 sm:text-base'>
                 Our staff bring years of practical experience to every job and complete all work in line with Health and Safety guidelines. We do the lifting, loading and final sweep so your space is left ready to use.
               </p>
             </div>
-            <span className='absolute right-6 top-6 flex size-12 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white backdrop-blur transition-all duration-500 group-hover:rotate-6 group-hover:scale-110 group-hover:bg-[#0497E2]'>
+            <span className='absolute right-6 top-6 flex size-12 items-center justify-center rounded-full border border-white/20 bg-white/10 text-[#102a4c] backdrop-blur transition-all duration-500 group-hover:rotate-6 group-hover:scale-110 group-hover:bg-[#0497E2]'>
               <Users aria-hidden='true' className='size-5' />
             </span>
           </article>
@@ -70,7 +70,7 @@ export default function RubbishClearance() {
               />
             </div>
             <div className='flex flex-col justify-center p-6'>
-              <span className='text-xs font-black uppercase tracking-[0.18em] text-[#0497E2]'>02 · Responsible</span>
+              <span className='text-xs font-black uppercase tracking-[0.18em] text-[#0497E2]'>02 Â· Responsible</span>
               <h3 className='mt-3 text-2xl font-black leading-tight text-[#11224D]'>Waste handled the right way.</h3>
               <p className='mt-3 text-sm leading-6 text-slate-600'>
                 As an approved waste carrier, we aim to recycle upwards of 95% of everything collected and reduce unnecessary landfill.
@@ -87,10 +87,10 @@ export default function RubbishClearance() {
               className='object-cover object-[50%_70%] transition-transform duration-700 group-hover:scale-105'
             />
             <div className='absolute inset-0 bg-linear-to-r from-[#0492E8]/90 via-[#0492E8]/45 to-transparent' />
-            <div className='absolute inset-y-0 left-0 flex max-w-sm flex-col justify-center p-6 text-white sm:p-8'>
-              <span className='text-xs font-black uppercase tracking-[0.18em] text-[#F4B942]'>03 · Dependable</span>
+            <div className='absolute inset-y-0 left-0 flex max-w-sm flex-col justify-center p-6 text-[#102a4c] sm:p-8'>
+              <span className='text-xs font-black uppercase tracking-[0.18em] text-[#F4B942]'>03 Â· Dependable</span>
               <h3 className='mt-3 text-2xl font-black leading-tight sm:text-3xl'>Ready when your collection is.</h3>
-              <p className='mt-3 text-sm leading-6 text-white/75'>
+              <p className='mt-3 text-sm leading-6 text-[#102a4c]/75'>
                 Branded vehicles and friendly teams work six days a week across the Home Counties.
               </p>
             </div>
@@ -108,7 +108,7 @@ export default function RubbishClearance() {
               We are fully insured, licensed and committed to safe, economical rubbish removal for homes and businesses. Our team manages the hard work from arrival through to responsible disposal.
             </p>
 
-            <a href='tel:02082266477' className='group mt-7 inline-flex items-center gap-3 rounded-full bg-[#0492E8] px-5 py-3.5 text-sm font-black text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#0497E2] hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0492E8]'>
+            <a href='tel:02082266477' className='group mt-7 inline-flex items-center gap-3 rounded-full bg-[#0492E8] px-5 py-3.5 text-sm font-black text-[#102a4c] shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#0497E2] hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0492E8]'>
               Call 020 8226 6477
               <ArrowRight aria-hidden='true' className='size-4 transition-transform duration-300 group-hover:translate-x-1' />
             </a>
@@ -131,7 +131,7 @@ export default function RubbishClearance() {
 
         <div className='mt-12 flex flex-col gap-5 rounded-[2rem] bg-[#E5F2F8] p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8'>
           <div className='flex items-start gap-4'>
-            <span className='flex size-12 shrink-0 items-center justify-center rounded-2xl bg-[#0492E8] text-white'>
+            <span className='flex size-12 shrink-0 items-center justify-center rounded-2xl bg-[#0492E8] text-[#102a4c]'>
               <ShieldCheck aria-hidden='true' className='size-6' />
             </span>
             <div>

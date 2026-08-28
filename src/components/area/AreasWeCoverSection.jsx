@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { Building2, ChevronRight, MapPin, X } from "lucide-react";
 import { useState } from "react";
@@ -70,7 +70,7 @@ export default function AreasWeCoverSection() {
               <div className="mb-4 flex items-center gap-3">
 
                 <span className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-blue-600 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6">
-                  <Building2 className="h-4 w-4 text-white" />
+                  <Building2 className="h-4 w-4 text-[#102a4c]" />
                 </span>
 
                 <h3 className="text-[15px] font-bold text-slate-900 transition-colors duration-200 group-hover:text-blue-600 sm:text-base">
@@ -133,7 +133,7 @@ export default function AreasWeCoverSection() {
             <div className="flex items-center gap-3">
 
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-600">
-                <MapPin className="h-5 w-5 text-white" />
+                <MapPin className="h-5 w-5 text-[#102a4c]" />
               </div>
 
               <div>

@@ -1,4 +1,4 @@
-import Image from 'next/image';
+﻿import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, Check, ShieldCheck } from 'lucide-react';
 
@@ -77,13 +77,13 @@ export default function LawnMowingDetails() {
           ))}
         </div>
 
-        <div className="mt-12 rounded-[2rem] bg-[#102a4c] p-7 text-white sm:p-9">
+        <div className="mt-12 rounded-[2rem] border border-sky-200 bg-sky-50 p-7 text-[#102a4c] sm:p-9">
           <div className="flex items-center gap-3">
             <ShieldCheck className="size-7 text-[#7dc6f2]" />
             <h3 className="text-2xl font-bold sm:text-3xl">Why choose our lawn team</h3>
           </div>
 
-          <p className="mt-4 max-w-3xl leading-7 text-white/70">
+          <p className="mt-4 max-w-3xl leading-7 text-[#102a4c]/70">
             Experienced local staff, professional equipment, close attention to detail and dependable value for scheduled lawn maintenance.
           </p>
         </div>

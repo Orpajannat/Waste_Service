@@ -1,4 +1,4 @@
-import Link from 'next/link';
+﻿import Link from 'next/link';
 import { ArrowRight, Leaf, Recycle, ShieldCheck, Truck } from 'lucide-react';
 
 const servicePoints = [

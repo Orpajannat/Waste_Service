@@ -1,4 +1,4 @@
-import Image from 'next/image'
+﻿import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight, CheckCircle2, Recycle } from 'lucide-react'
 
@@ -93,7 +93,7 @@ export default function ServiceList() {
                   {String(index + 1).padStart(2, '0')}
                 </span>
 
-                <span className='absolute bottom-4 left-4 rounded-full bg-[#0492E8]/80 px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.16em] text-white backdrop-blur transition-colors duration-300 group-hover:bg-[#0497E2]'>
+                <span className='absolute bottom-4 left-4 rounded-full bg-[#0492E8]/80 px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.16em] text-[#102a4c] backdrop-blur transition-colors duration-300 group-hover:bg-[#0497E2]'>
                   {service.eyebrow}
                 </span>
               </div>
@@ -108,7 +108,7 @@ export default function ServiceList() {
 
                 <Link href={service.href} className='group/link mt-6 flex items-center justify-between gap-4 border-t border-[#0492E8]/10 pt-4 text-sm font-black text-[#11224D] transition-colors duration-300 hover:text-[#0497E2] focus-visible:outline-none focus-visible:text-[#0497E2]'>
                   Explore this service
-                  <span className='flex size-10 shrink-0 items-center justify-center rounded-full bg-[#0492E8] text-white transition-all duration-300 group-hover/link:translate-x-1 group-hover/link:bg-[#0497E2] group-focus-visible/link:translate-x-1 group-focus-visible/link:bg-[#0497E2]'>
+                  <span className='flex size-10 shrink-0 items-center justify-center rounded-full bg-[#0492E8] text-[#102a4c] transition-all duration-300 group-hover/link:translate-x-1 group-hover/link:bg-[#0497E2] group-focus-visible/link:translate-x-1 group-focus-visible/link:bg-[#0497E2]'>
                     <ArrowRight aria-hidden='true' className='size-4' />
                   </span>
                 </Link>
@@ -119,10 +119,10 @@ export default function ServiceList() {
           ))}
         </div>
 
-        <div className='mt-10 flex flex-col gap-5 rounded-[2rem] bg-[#0492E8] p-6 text-white shadow-xl sm:flex-row sm:items-center sm:justify-between sm:p-8 lg:px-10'>
+        <div className='mt-10 flex flex-col gap-5 rounded-[2rem] bg-[#0492E8] p-6 text-[#102a4c] shadow-xl sm:flex-row sm:items-center sm:justify-between sm:p-8 lg:px-10'>
           <div>
             <p className='text-2xl font-black'>Unsure which service fits your clearance?</p>
-            <p className='mt-2 max-w-2xl text-sm leading-6 text-white/65 sm:text-base'>Tell us what needs to go and our team will help you choose the most practical and cost-effective collection.</p>
+            <p className='mt-2 max-w-2xl text-sm leading-6 text-[#102a4c]/65 sm:text-base'>Tell us what needs to go and our team will help you choose the most practical and cost-effective collection.</p>
           </div>
           <Link href='/contactUs' className='group inline-flex shrink-0 items-center justify-center gap-3 self-start rounded-full bg-white px-5 py-3 text-sm font-black text-[#11224D] transition-all duration-300 hover:-translate-y-1 hover:bg-[#F4B942] hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white sm:self-auto'>
             Talk to our team

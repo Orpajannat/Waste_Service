@@ -1,4 +1,4 @@
-import Link from 'next/link';
+﻿import Link from 'next/link';
 import { ArrowRight, Building2, Check, Clock3, Phone, Recycle, ShieldCheck, Warehouse } from 'lucide-react';
 
 const clearanceAreas = [
@@ -54,7 +54,7 @@ export default function RestaurantClearanceIntro() {
           {clearanceAreas.map(({ icon: Icon, label, title, description }, index) => (
             <li key={title} className="group grid gap-5 border-b border-[#102a4c]/15 py-8 transition duration-500 hover:bg-white hover:px-4 md:grid-cols-[3rem_4rem_0.9fr_1.1fr] sm:items-center lg:gap-8 lg:py-9">
               <span className="text-xs font-black tracking-[0.15em] text-[#d67d0b]">0{index + 1}</span>
-              <span className="grid size-13 place-items-center rounded-full bg-[#102a4c] text-white transition duration-500 group-hover:rotate-6 group-hover:bg-[#f0aa26] group-hover:text-[#102a4c]">
+              <span className="grid size-13 place-items-center rounded-full border border-sky-200 bg-sky-50 text-[#102a4c] transition duration-500 group-hover:rotate-6 group-hover:bg-[#f0aa26] group-hover:text-[#102a4c]">
                 <Icon className="size-6" strokeWidth={1.8} aria-hidden="true" />
               </span>
               <div>
@@ -66,7 +66,7 @@ export default function RestaurantClearanceIntro() {
           ))}
         </ol>
 
-        <div className="mt-12 overflow-hidden rounded-[2rem] bg-[#102a4c] text-white">
+        <div className="mt-12 overflow-hidden rounded-[2rem] border border-sky-200 bg-sky-50 text-[#102a4c]">
           <div className="grid lg:grid-cols-[1fr_auto] lg:items-center">
             <div className="p-7 sm:p-9 lg:p-10">
               <div className="flex items-center gap-3 text-xs font-extrabold uppercase tracking-[0.17em] text-[#ffd126]">
@@ -74,7 +74,7 @@ export default function RestaurantClearanceIntro() {
                 Planned around your operation
               </div>
               <h3 className="mt-4 text-2xl font-bold leading-tight sm:text-3xl">A practical collection plan with minimal disruption.</h3>
-              <div className="mt-5 flex flex-col gap-3 text-sm font-semibold text-white/75 sm:flex-row sm:gap-6 sm:text-base">
+              <div className="mt-5 flex flex-col gap-3 text-sm font-semibold text-[#102a4c]/75 sm:flex-row sm:gap-6 sm:text-base">
                 <span className="flex items-center gap-2"><Check className="size-4 text-[#ffd126]" strokeWidth={3} />Flexible collection times</span>
                 <span className="flex items-center gap-2"><ShieldCheck className="size-4 text-[#ffd126]" />Fully insured waste carrier</span>
               </div>

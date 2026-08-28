@@ -284,7 +284,7 @@ export default function ManVanBooking ({ defaultMode = 'lorry', initialCategoryI
                   <div className='flex h-32 items-center justify-center bg-gradient-to-b from-[#DCEBFA] to-white p-4 transition-colors duration-300 group-hover:from-[#CFE6FA] sm:h-36'>
                     <Truck className='size-14 text-[#1A68A3] transition-transform duration-300 group-hover:scale-110 group-hover:-translate-x-1 sm:size-16' strokeWidth={1.5} />
                   </div>
-                  <div className='bg-[#0492E8] px-4 py-2.5 text-center text-base font-bold text-white transition-colors duration-300 group-hover:bg-[#1A68A3] sm:text-lg'>
+                  <div className='bg-[#0492E8] px-4 py-2.5 text-center text-base font-bold text-[#102a4c] transition-colors duration-300 group-hover:bg-[#1A68A3] sm:text-lg'>
                     {size.name}
                   </div>
                   <div className='flex flex-1 flex-col items-center gap-1 px-4 py-4 text-center'>
@@ -337,7 +337,7 @@ export default function ManVanBooking ({ defaultMode = 'lorry', initialCategoryI
                         isSelected ? 'border-[#0497E2] bg-[#0497E2]' : 'border-[#4974AF]/40 bg-white group-hover:border-[#0497E2]'
                       }`}
                     >
-                      {isSelected && <Check className='size-3.5 text-white' strokeWidth={3} />}
+                      {isSelected && <Check className='size-3.5 text-[#102a4c]' strokeWidth={3} />}
                     </span>
                     <span className='truncate text-xs font-bold leading-tight text-[#11224D] transition-colors duration-200 group-hover:text-[#0497E2] sm:text-sm'>
                       {category.label}
@@ -436,7 +436,7 @@ export default function ManVanBooking ({ defaultMode = 'lorry', initialCategoryI
             disabled={!hasSelection}
             className={`order-2 flex-1 rounded-lg px-6 py-3 text-sm font-bold uppercase tracking-wide transition-all duration-200 sm:order-1 sm:text-base ${
               hasSelection
-                ? 'bg-gradient-to-r from-[#1A68A3] via-[#0492E8] to-[#1A68A3] text-white hover:-translate-y-0.5 hover:shadow-lg hover:brightness-110'
+                ? 'bg-gradient-to-r from-[#1A68A3] via-[#0492E8] to-[#1A68A3] text-[#102a4c] hover:-translate-y-0.5 hover:shadow-lg hover:brightness-110'
                 : 'cursor-not-allowed bg-[#0492E8]/10 text-[#11224D]/40'
             }`}
           >

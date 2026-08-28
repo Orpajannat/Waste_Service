@@ -1,4 +1,4 @@
-import Image from 'next/image';
+﻿import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, Check, Recycle, ShieldCheck } from 'lucide-react';
 
@@ -88,7 +88,7 @@ export default function WhyChooseOurService() {
           </div>
         </div>
 
-        <div className="mt-20 overflow-hidden rounded-[2rem] bg-[#102a4c] text-white">
+        <div className="mt-20 overflow-hidden rounded-[2rem] border border-sky-200 bg-sky-50 text-[#102a4c]">
           <div className="grid lg:grid-cols-[.65fr_1.35fr]">
             <div className="p-7 sm:p-10">
               <ShieldCheck className="size-9 text-[#ffd126]" />
@@ -103,7 +103,7 @@ export default function WhyChooseOurService() {
                 >
                   <span className="text-sm font-black text-[#ffd126] group-hover:text-[#102a4c]/50">0{i + 1}</span>
                   <h4 className="mt-4 text-lg font-bold">{title}</h4>
-                  <p className="mt-3 text-sm leading-6 text-white/65 group-hover:text-[#102a4c]/75">{text}</p>
+                  <p className="mt-3 text-sm leading-6 text-[#102a4c]/65 group-hover:text-[#102a4c]/75">{text}</p>
                 </li>
               ))}
             </ol>

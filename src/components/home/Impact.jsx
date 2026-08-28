@@ -1,4 +1,4 @@
-import Image from 'next/image'
+﻿import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowUpRight, Clock3, Recycle, ShieldCheck, Users } from 'lucide-react'
 
@@ -47,14 +47,14 @@ export default function Impact() {
               />
               <div className='absolute inset-0 bg-linear-to-t from-[#0492E8]/65 via-transparent to-white/5' />
 
-              <div className='absolute inset-x-5 bottom-5 rounded-2xl border border-white/20 bg-[#0492E8]/75 p-4 text-white shadow-xl backdrop-blur-md sm:inset-x-7 sm:bottom-7 sm:p-5'>
+              <div className='absolute inset-x-5 bottom-5 rounded-2xl border border-white/20 bg-[#0492E8]/75 p-4 text-[#102a4c] shadow-xl backdrop-blur-md sm:inset-x-7 sm:bottom-7 sm:p-5'>
                 <div className='flex items-center gap-3'>
                   <span className='flex size-10 shrink-0 items-center justify-center rounded-full bg-[#F4B942] text-[#11224D]'>
                     <Users aria-hidden='true' className='size-5' />
                   </span>
                   <div>
                     <p className='font-bold'>A local team you can rely on</p>
-                    <p className='mt-0.5 text-sm text-white/70'>Friendly, experienced and fully insured.</p>
+                    <p className='mt-0.5 text-sm text-[#102a4c]/70'>Friendly, experienced and fully insured.</p>
                   </div>
                 </div>
               </div>
@@ -93,13 +93,13 @@ export default function Impact() {
 
             <div className='mt-8 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between'>
               <div className='flex items-center gap-3 text-sm text-slate-600'>
-                <span className='flex size-10 shrink-0 items-center justify-center rounded-full bg-[#0492E8] text-white'>
+                <span className='flex size-10 shrink-0 items-center justify-center rounded-full bg-[#0492E8] text-[#102a4c]'>
                   <ShieldCheck aria-hidden='true' className='size-5' />
                 </span>
                 <span>Fully insured. Responsible from collection to recycling.</span>
               </div>
 
-              <Link href='/contactUs' className='group inline-flex shrink-0 items-center gap-3 self-start rounded-full bg-[#0492E8] px-5 py-3 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#0497E2] hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0492E8] sm:self-auto'>
+              <Link href='/contactUs' className='group inline-flex shrink-0 items-center gap-3 self-start rounded-full bg-[#0492E8] px-5 py-3 text-sm font-bold text-[#102a4c] transition-all duration-300 hover:-translate-y-1 hover:bg-[#0497E2] hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0492E8] sm:self-auto'>
                 Meet our team
                 <ArrowUpRight aria-hidden='true' className='size-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5' />
               </Link>

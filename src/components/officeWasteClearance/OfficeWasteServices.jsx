@@ -1,4 +1,4 @@
-import Image from 'next/image';
+﻿import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, Check, Monitor, Phone, Recycle, Warehouse } from 'lucide-react';
 
@@ -11,7 +11,7 @@ const serviceScope = [
   {
     icon: Warehouse,
     title: 'Rooms & storage areas',
-    description: 'From one office or stockroom to a full workplace clearance, including hard-to-manage storage spaces.',
+    description: 'from one office or stockroom to a full workplace clearance, including hard-to-manage storage spaces.',
   },
   {
     icon: Recycle,
@@ -25,7 +25,7 @@ export default function OfficeWasteServices() {
     <section className="relative overflow-hidden bg-[#f7f8f4]">
       <div className="mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
         <div className="grid gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:items-center lg:gap-16">
-          <div className="group relative min-h-[360px] overflow-hidden rounded-[2rem] bg-[#102a4c] shadow-[0_28px_65px_-34px_rgba(16,42,76,0.7)] sm:min-h-[380px]">
+          <div className="group relative min-h-[360px] overflow-hidden rounded-[2rem] bg-sky-50 shadow-[0_28px_65px_-34px_rgba(16,42,76,0.7)] sm:min-h-[380px]">
             <Image
               src="/images/officeRubbish.jpg"
               alt="Electronic office equipment prepared for responsible recycling"
@@ -36,7 +36,7 @@ export default function OfficeWasteServices() {
             <div className="absolute inset-0 bg-gradient-to-t from-[#071d3b]/90 via-[#071d3b]/15 to-transparent" />
             <div className="absolute -right-16 -top-16 size-56 rounded-full border-[2.5rem] border-white/5" aria-hidden="true" />
 
-            <div className="absolute inset-x-6 bottom-6 rounded-2xl border border-white/15 bg-[#071d3b]/85 p-5 text-white backdrop-blur-sm sm:inset-x-8 sm:bottom-8">
+            <div className="absolute inset-x-6 bottom-6 rounded-2xl border border-sky-200 bg-white/90 p-5 text-[#102a4c] backdrop-blur-sm sm:inset-x-8 sm:bottom-8">
               <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-[#ffd126]">Business-ready collections</p>
               <p className="mt-2 text-lg font-bold leading-snug sm:text-xl">Planned to reduce disruption to your staff and working day.</p>
             </div>
@@ -50,7 +50,7 @@ export default function OfficeWasteServices() {
 
             <h2 className="mt-5 text-3xl font-bold leading-[1.04] tracking-tight text-[#102a4c] sm:text-4xl lg:text-4xl">
               Clear the workplace.
-              <span className="block text-[#d67d0b]">Keep business moving.</span>
+              <span className="block text-[#d67d0b]">Keep Business moving.</span>
             </h2>
 
             <p className="mt-6 max-w-2xl text-base leading-8 text-slate-600 sm:text-lg">
@@ -58,11 +58,11 @@ export default function OfficeWasteServices() {
             </p>
 
             <div className="mt-9 border-t border-[#102a4c]/15">
-              {serviceScope.map(({ icon: Icon, title, description }, index) => (
+              {serviceScope.map(({ icon: icon, title, description }, index) => (
                 <div key={title} className="group/row grid gap-4 border-b border-[#102a4c]/15 py-6 transition duration-300 hover:bg-white hover:px-4 sm:grid-cols-[2.5rem_3.5rem_1fr] sm:items-start">
                   <span className="text-xs font-black tracking-[0.14em] text-[#d67d0b]">0{index + 1}</span>
-                  <span className="grid size-11 place-items-center rounded-full bg-[#102a4c] text-white transition duration-500 group-hover/row:rotate-6 group-hover/row:bg-[#f0aa26] group-hover/row:text-[#102a4c]">
-                    <Icon className="size-5" aria-hidden="true" />
+                  <span className="grid size-11 place-items-center rounded-full border border-sky-200 bg-sky-50 text-[#102a4c] transition duration-500 group-hover/row:rotate-6 group-hover/row:bg-[#f0aa26] group-hover/row:text-[#102a4c]">
+                    <icon className="size-5" aria-hidden="true" />
                   </span>
                   <div>
                     <h3 className="text-xl font-bold text-[#102a4c] sm:text-2xl">{title}</h3>
