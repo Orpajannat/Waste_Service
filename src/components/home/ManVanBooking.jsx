@@ -429,23 +429,23 @@ export default function ManVanBooking ({ defaultMode = 'lorry', initialCategoryI
       )}
       {/* Footer: Add to basket + running total */}
       {mode && (
-        <div className='sticky bottom-3 z-20 mt-10 flex flex-col items-stretch gap-3 rounded-xl border border-[#0492E8]/10 bg-white/95 p-3 shadow-xl backdrop-blur sm:flex-row sm:items-center sm:justify-between sm:gap-6 sm:p-4'>
+        <div className='sticky bottom-3 z-20 mt-6 flex flex-col gap-3 rounded-2xl border border-slate-200 bg-white/95 p-3 shadow-[0_16px_50px_rgba(17,34,77,0.18)] backdrop-blur-xl sm:flex-row sm:items-center sm:gap-4 sm:p-4'>
           <button
             type='submit'
             form='collection-details'
             disabled={!hasSelection}
-            className={`order-2 flex-1 rounded-lg px-6 py-3 text-sm font-bold uppercase tracking-wide transition-all duration-200 sm:order-1 sm:text-base ${
+            className={`order-2 min-h-12 flex-1 rounded-xl px-6 py-3 text-sm font-black uppercase tracking-[0.08em] transition-all duration-200 sm:order-1 sm:text-base ${
               hasSelection
-                ? 'bg-gradient-to-r from-[#1A68A3] via-[#0492E8] to-[#1A68A3] text-[#102a4c] hover:-translate-y-0.5 hover:shadow-lg hover:brightness-110'
+                ? 'bg-[#11224D] text-white shadow-lg shadow-[#11224D]/15 hover:-translate-y-0.5 hover:bg-[#0497E2] hover:shadow-[#0497E2]/20'
                 : 'cursor-not-allowed bg-[#0492E8]/10 text-[#11224D]/40'
             }`}
           >
             Add to Basket
           </button>
-          <div className='group order-1 inline-flex shrink-0 items-center justify-center gap-2 self-center rounded-lg bg-[#F7B965] px-5 py-3 transition-colors duration-200 hover:bg-[#F5C583] sm:order-3'>
-            <span className='text-sm font-semibold text-[#11224D] sm:text-base'>Total</span>
-            <span className='text-lg font-extrabold text-[#11224D] sm:text-xl'>Â£{total.toFixed(2)}</span>
-            <span className='text-xs font-medium text-[#11224D]/70'>(inc. VAT)</span>
+          <div className='order-1 flex min-h-12 shrink-0 items-center justify-between gap-4 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 sm:order-3 sm:min-w-64 sm:justify-center sm:px-5'>
+            <span className='text-sm font-bold text-[#11224D]'>Total</span>
+            <span className='ml-auto text-xl font-black text-[#11224D] sm:ml-0'>£{total.toFixed(2)}</span>
+            <span className='text-[11px] font-semibold text-[#11224D]/55'>(inc. VAT)</span>
           </div>
         </div>
       )}

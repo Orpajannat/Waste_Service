@@ -3,19 +3,19 @@ import Link from 'next/link'
 import { ArrowUpRight, Check, Recycle, ShieldCheck } from 'lucide-react'
 
 const services = [
-  { id: 'man-van', image: '/images/truck.jpg', title: 'Man & Van', eyebrow: 'Flexible loads' },
-  { id: 'sofas', image: '/images/Sofa1.png', title: 'Sofas', eyebrow: 'Bulky furniture' },
-  { id: 'mattress-bed', image: '/images/Mattress.png', title: 'Mattress & Bed', eyebrow: 'Bedroom items' },
-  { id: 'furniture', image: '/images/Furniture.png', title: 'Furniture', eyebrow: 'Home clearance' },
-  { id: 'kitchen-appliances', image: '/images/Kitchen Appliance.png', title: 'Kitchen Appliances', eyebrow: 'Large appliances' },
-  { id: 'fridge-freezer', image: '/images/fridge.png', title: 'Fridge & Freezer', eyebrow: 'Responsible disposal' },
-  { id: 'electrical-it', image: '/images/Iron.png', title: 'Electrical & IT', eyebrow: 'Electrical waste' },
-  { id: 'garden-items', image: '/images/garden.png', title: 'Garden Items', eyebrow: 'Outdoor clearance' },
-  { id: 'hazardous-waste', image: '/images/haz.jfif', title: 'Hazardous Waste', eyebrow: 'Specialist handling' },
-  { id: 'office-items', image: '/images/office.jfif', title: 'Office Items', eyebrow: 'Workplace clearance' },
-  { id: 'commercial-items', image: '/images/waste.jpg', title: 'Commercial Items', eyebrow: 'Business waste' },
-  { id: 'bins-wheelie-bins', image: '/images/bin1.jfif', title: 'Bins', eyebrow: 'Everyday waste' },
-  { id: 'show-all', image: '/images/rubbish.jfif', title: 'All Waste Types', eyebrow: 'Browse everything' },
+  { id: 'man-van', image: '/images/option1.jpg', title: 'Man & Van', eyebrow: 'Flexible loads' },
+  { id: 'sofas', image: '/images/option2.jpg', title: 'Sofas', eyebrow: 'Bulky furniture' },
+  { id: 'mattress-bed', image: '/images/option3.jpg', title: 'Mattress & Bed', eyebrow: 'Bedroom items' },
+  { id: 'furniture', image: '/images/option4.jpg', title: 'Furniture', eyebrow: 'Home clearance' },
+  { id: 'kitchen-appliances', image: '/images/option5.jpg', title: 'Kitchen Appliances', eyebrow: 'Large appliances' },
+  { id: 'fridge-freezer', image: '/images/option6.jpg', title: 'Fridge & Freezer', eyebrow: 'Responsible disposal' },
+  { id: 'electrical-it', image: '/images/option7.jpg', title: 'Electrical & IT', eyebrow: 'Electrical waste' },
+  { id: 'garden-items', image: '/images/option8.jpg', title: 'Garden Items', eyebrow: 'Outdoor clearance' },
+  { id: 'hazardous-waste', image: '/images/option9.jpg', title: 'Hazardous Waste', eyebrow: 'Specialist handling' },
+  { id: 'office-items', image: '/images/option10.jpg', title: 'Office Items', eyebrow: 'Workplace clearance' },
+  { id: 'commercial-items', image: '/images/option11.jpg', title: 'Commercial Items', eyebrow: 'Business waste' },
+  { id: 'bins-wheelie-bins', image: '/images/option12.jpg', title: 'Bins', eyebrow: 'Everyday waste' },
+  { id: 'show-all', image: '/images/option13.jpg', title: 'All Waste Types', eyebrow: 'Browse everything' },
 ]
 
 export default function Order() {
