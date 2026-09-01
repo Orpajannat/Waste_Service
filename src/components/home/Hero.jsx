@@ -72,7 +72,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className='mt-8 flex items-center justify-between gap-5 border-t border-white/15 pt-5 sm:mt-10'>
+        {/* <div className='mt-8 flex items-center justify-between gap-5 border-t border-white/15 pt-5 sm:mt-10'>
           <p className='inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-[#102a4c]/55 sm:text-sm'>
             <Check aria-hidden='true' className='size-4 text-[#F4B942]' />
             Friendly team Â· Clear pricing Â· Responsible disposal
@@ -80,7 +80,7 @@ export default function Hero() {
           <Link href='/#prices' aria-label='Scroll to prices and booking' className='group hidden size-11 shrink-0 items-center justify-center rounded-full border border-white/25 bg-white/10 text-[#102a4c] backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-white hover:bg-white hover:text-[#11224D] sm:flex'>
             <ArrowDown aria-hidden='true' className='size-5 transition-transform duration-300 group-hover:translate-y-1' />
           </Link>
-        </div>
+        </div> */}
       </div>
     </section>
   )
