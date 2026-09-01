@@ -35,7 +35,7 @@ export default function Hero() {
           </h1>
 
           <p className='mt-6 max-w-2xl text-base font-semibold leading-7 text-[#102a4c]/90 sm:text-lg lg:text-xl'>
-            Professional rubbish clearance for homes and businesses throughout London and the Home Counties.
+            Professional rubbish clearance for homes and businesses throughout London and the Home Countries.
           </p>
           <p className='mt-3 max-w-2xl text-sm leading-6 text-[#102a4c]/65 sm:text-base'>
             From garage junk and old furniture to complete property clearances, our experienced team handles the lifting, loading and responsible disposal.

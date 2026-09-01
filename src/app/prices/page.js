@@ -33,7 +33,7 @@ export default async function PricesPage({ searchParams }) {
 
   return (
     <main className='min-h-screen bg-linear-to-b from-[#E9F4FC] via-white to-[#F5FAFE]'>
-      <section className='container mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-14'>
+      <section className='container mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-24'>
         <Link
           href='/#prices'
           className='group inline-flex items-center gap-2 rounded-full border border-[#11224D]/10 bg-white px-4 py-2 text-sm font-bold text-[#11224D] shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#0497E2]/30 hover:text-[#0497E2] hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0497E2]'
