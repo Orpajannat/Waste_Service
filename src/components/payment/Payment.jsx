@@ -41,7 +41,7 @@ function AddressFields({ prefix = 'billing' }) {
 function SectionHeading({ icon: Icon, step, title, hint }) {
   return (
     <div className='mb-5 flex items-center gap-4'>
-      <span className='relative grid size-11 shrink-0 place-items-center rounded-full bg-[#11224D] text-white shadow-[0_6px_16px_-4px_rgba(17,34,77,0.5)]'>
+      <span className='relative grid size-11 shrink-0 place-items-center rounded-full text-white shadow-[0_6px_16px_-4px_rgba(1,151,234,0.5)]' style={{ backgroundColor: '#0197EA' }}>
         <Icon className='size-5' />
         <span className='absolute -right-1 -top-1 grid size-5 place-items-center rounded-full bg-[#F4B942] text-[0.6rem] font-black text-[#11224D]'>{step}</span>
       </span>
@@ -75,14 +75,14 @@ export default function Payment() {
         </Link>
 
         <div className='mt-6 overflow-hidden rounded-3xl border border-white/10 bg-white shadow-[0_40px_80px_-30px_rgba(13,20,36,0.55)]'>
-          <header className='relative overflow-hidden bg-[#11224D] px-5 py-10 text-center sm:px-8'>
+          <header className='relative overflow-hidden px-5 py-10 text-center sm:px-8' style={{ backgroundColor: '#0197EA' }}>
             <div aria-hidden='true' className='pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(104,196,239,0.18),transparent_45%),radial-gradient(circle_at_85%_75%,rgba(244,185,66,0.16),transparent_45%)]' />
-            <p className='relative inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-bold uppercase tracking-[.2em] text-[#68C4EF] backdrop-blur-sm'>
+            <p className='relative inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-xs font-bold uppercase tracking-[.2em] text-white backdrop-blur-sm'>
               <LockKeyhole className='size-3.5' />
               Secure payment
             </p>
             <h1 className='relative mt-4 text-3xl font-black tracking-tight text-white sm:text-4xl'>Complete your order</h1>
-            <p className='relative mx-auto mt-2 max-w-2xl text-sm text-white/65'>Enter your billing information and review your collection before placing the order.</p>
+            <p className='relative mx-auto mt-2 max-w-2xl text-sm text-white/85'>Enter your billing information and review your collection before placing the order.</p>
           </header>
 
           {items.length === 0 ? (
@@ -174,7 +174,7 @@ export default function Payment() {
                 </div>
 
                 <aside className='overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-[0_20px_50px_-24px_rgba(16,24,40,0.35)] transition-shadow duration-300 hover:shadow-[0_28px_60px_-20px_rgba(16,24,40,0.45)] lg:sticky lg:top-28'>
-                  <div className='bg-[#11224D] px-5 py-4'>
+                  <div className='px-5 py-4' style={{ backgroundColor: '#0197EA' }}>
                     <h2 className='text-lg font-black text-white'>Your order</h2>
                   </div>
 
