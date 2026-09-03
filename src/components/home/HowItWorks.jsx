@@ -170,14 +170,14 @@ export default function HowItWorks() {
                   >
 
                     <div className="relative z-10 shrink-0">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-600 text-sm font-black text-[#102a4c] shadow-lg shadow-blue-200 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 group-hover:bg-blue-700 group-hover:shadow-blue-300">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-600 text-sm font-black text-white shadow-lg shadow-blue-200 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 group-hover:bg-blue-700 group-hover:shadow-blue-300">
                         {step.number}
                       </div>
                     </div>
 
                     <div className="shrink-0">
                       <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-blue-700 shadow-lg transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:from-blue-600 group-hover:to-indigo-700 group-hover:shadow-blue-300 sm:h-16 sm:w-16">
-                        <Icon className="h-7 w-7 text-[#102a4c] transition-transform duration-500 group-hover:scale-110" />
+                        <Icon className="h-7 w-7 text-white transition-transform duration-500 group-hover:scale-110" />
                       </div>
                     </div>
 

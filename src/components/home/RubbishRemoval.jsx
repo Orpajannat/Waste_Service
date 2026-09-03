@@ -32,7 +32,7 @@ export default function RubbishRemoval() {
 
       <div className='relative mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[0.68fr_1.32fr] lg:gap-10 lg:px-8 xl:gap-12'>
         <div className='lg:sticky lg:top-28 lg:self-start'>
-          <span className='inline-flex rounded-full border border-white/25 bg-[#037CC8]/30 px-3.5 py-1.5 text-[0.68rem] font-black uppercase tracking-[0.18em] text-[#102a4c]/90 backdrop-blur'>
+          <span className='inline-flex rounded-full border border-white/25 bg-[#037CC8]/30 px-3.5 py-1.5 text-[0.68rem] font-black uppercase tracking-[0.18em] text-white/90 backdrop-blur'>
             What we collect
           </span>
 
@@ -88,7 +88,7 @@ export default function RubbishRemoval() {
                     <span className='text-xs font-bold uppercase tracking-[0.14em] text-[#C8EEFF] transition-colors duration-300 group-hover:text-[#0497E2]'>
                       Explore service
                     </span>
-                    <span className='flex size-8 shrink-0 items-center justify-center rounded-full border border-white/30 text-[#102a4c] transition-all duration-300 group-hover:border-[#0492E8] group-hover:bg-[#0492E8] group-hover:text-white'>
+                    <span className='flex size-8 shrink-0 items-center justify-center rounded-full border border-white/30 text-white/90 transition-all duration-300 group-hover:border-[#0492E8] group-hover:bg-[#0492E8] group-hover:text-white'>
                       <ArrowRight aria-hidden='true' className='size-4 transition-transform duration-300 group-hover:translate-x-1' />
                     </span>
                   </div>

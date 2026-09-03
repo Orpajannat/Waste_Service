@@ -78,8 +78,8 @@ export default function SecondaryNav() {
 
                   <div className='mt-6 flex items-center justify-between border-t border-[#0492E8]/10 pt-4'>
                     <span className='text-xs font-black uppercase tracking-[0.16em] text-[#11224D]/55 transition-colors duration-300 group-hover:text-[#0497E2]'>Learn more</span>
-                    <span className='flex size-9 shrink-0 items-center justify-center rounded-full bg-[#0492E8] text-[#102a4c] transition-all duration-300 group-hover:rotate-45 group-hover:bg-[#0497E2]'>
-                      <ArrowUpRight aria-hidden='true' className='size-4' />
+                    <span className='flex size-9 shrink-0 items-center justify-center rounded-full bg-[#0492E8] text-white transition-all duration-300 group-hover:rotate-45 group-hover:bg-[#0497E2]'>
+                      <ArrowUpRight aria-hidden='true' className='size-5' />
                     </span>
                   </div>
                 </div>

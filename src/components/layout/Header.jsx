@@ -1,13 +1,31 @@
 ﻿import Image from 'next/image'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { ArrowRight } from 'lucide-react';
 import Navbar from './Navbar';
 import Link from 'next/link';
 import CartLink from '../cart/CartLink';
 
 export default function Header () {
+    const [isScrolled, setIsScrolled] = useState(false)
+
+    useEffect(()=>{
+        const handleScroll = () => {
+            if (window.scrollY > 10) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+            
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return ()=> {
+            window.removeEventListener('scroll', handleScroll);
+        }
+    }, []);
   return (
-    <header className='fixed inset-x-0 top-3 z-50 mx-auto w-[calc(100%-1.5rem)] max-w-7xl rounded-2xl bg-white/80 shadow-lg backdrop-blur-md lg:top-5 lg:rounded-full'>
+    <header className={`fixed inset-x-0 z-50 mx-auto w-[calc(100%-1.5rem)] max-w-7xl rounded-2xl bg-white/80 shadow-lg backdrop-blur-md lg:rounded-full transition-all duration-300 ${isScrolled? 'top-0 lg:top-0' : 'top-3 lg:top-5'}`}>
         <div className='flex w-full flex-nowrap items-center justify-start gap-3 px-3 py-2 sm:gap-4 sm:px-6 lg:gap-5 lg:px-8'>
             <Link href="/" className='order-2 flex shrink-0 items-center lg:order-1'>
                <Image

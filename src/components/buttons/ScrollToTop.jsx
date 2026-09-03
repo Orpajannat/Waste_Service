@@ -21,7 +21,7 @@ export default function ScrollToTop () {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   return (
-    <div className='fixed right-10 bottom-10 z-50'>
+    <div>
         <button onClick={scrollToTop} className={`p-5 rounded-full bg-sky-500/50 hover:bg-[#11224D] ${showButton? 'opacity-100': 'opacity-0 pointer-events-none'}`}>
             <ArrowUp size={30}/>
         </button>

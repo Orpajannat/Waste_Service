@@ -87,7 +87,7 @@ export default function Order() {
                   <p className='mt-2 text-sm text-slate-500'>View options &amp; prices</p>
                 </div>
 
-                <span className='flex size-11 shrink-0 items-center justify-center rounded-full bg-[#0492E8] text-[#102a4c] transition-all duration-500 group-hover:rotate-45 group-hover:bg-[#0497E2] group-hover:shadow-lg group-hover:shadow-[#0497E2]/25'>
+                <span className='flex size-11 shrink-0 items-center justify-center rounded-full bg-[#0492E8] text-white transition-all duration-500 group-hover:rotate-45 group-hover:bg-[#0497E2] group-hover:shadow-lg group-hover:shadow-[#0497E2]/25'>
                   <ArrowUpRight aria-hidden='true' className='size-5' />
                 </span>
               </div>
@@ -99,14 +99,14 @@ export default function Order() {
 
         <div className='mt-8 flex flex-col gap-4 rounded-3xl bg-[#0492E8] px-5 py-6 text-[#102a4c] shadow-xl sm:flex-row sm:items-center sm:justify-between sm:px-7 lg:px-9'>
           <div>
-            <p className='text-lg font-black sm:text-xl'>Not sure which option to choose?</p>
-            <p className='mt-1 text-sm text-[#102a4c]/65'>Browse every waste type or speak with our friendly collection team.</p>
+            <p className='text-lg font-black text-white sm:text-xl'>Not sure which option to choose?</p>
+            <p className='mt-1 text-sm text-white/65'>Browse every waste type or speak with our friendly collection team.</p>
           </div>
           <div className='flex flex-wrap gap-3'>
             <Link href='/prices?service=show-all' className='rounded-full bg-white px-5 py-2.5 text-sm font-bold text-[#11224D] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#F4B942] hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white'>
               Browse all items
             </Link>
-            <Link href='/contactUs' className='rounded-full border border-white/25 px-5 py-2.5 text-sm font-bold text-[#102a4c] transition-all duration-300 hover:-translate-y-0.5 hover:border-white hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white'>
+            <Link href='/contactUs' className='rounded-full border border-white/25 px-5 py-2.5 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-white hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white'>
               Ask our team
             </Link>
           </div>

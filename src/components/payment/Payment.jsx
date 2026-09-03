@@ -214,7 +214,7 @@ export default function Payment() {
                       </span>
                     </label>
 
-                    <button type='submit' className='group mt-5 flex min-h-13 w-full items-center justify-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-[#11224D] to-[#1b3570] px-5 text-sm font-black uppercase tracking-wide text-white shadow-[0_14px_28px_-10px_rgba(17,34,77,0.6)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_20px_36px_-10px_rgba(17,34,77,0.7)] active:translate-y-0'>
+                    <button type='submit' className='group mt-5 flex min-h-13 w-full items-center justify-center gap-2 overflow-hidden rounded-full border border-[#0497E2] bg-[#0497E2] px-5 text-sm font-black uppercase tracking-wide text-white shadow-[0_14px_28px_-10px_rgba(17,34,77,0.6)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_20px_36px_-10px_rgba(17,34,77,0.7)] focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#0497E2] active:translate-y-0'>
                       <ShieldCheck className='size-5 transition-transform duration-200 group-hover:scale-110' />
                       Place order
                     </button>
